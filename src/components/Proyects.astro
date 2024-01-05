@@ -1,0 +1,179 @@
+---
+import AngularIcon from "./icons/Angular.astro";
+import CodeIcon from "./icons/Code.astro";
+import SassIcon from "./icons/Experience.astro";
+---
+
+<section class="proyects wrapper">
+  <h2 class="proyects__title">
+    <CodeIcon class="proyects__icon" />
+    Proyectos
+  </h2>
+
+  <div class="proyects__list">
+    <article class="proyect">
+      <img
+        class="proyect__img"
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+        alt=""
+      />
+      <div class="proyect__content">
+        <h3 class="proyect__title">Mapa MABBOX</h3>
+        <ul class="proyect__langs">
+          <li class="proyect__lang">
+            <AngularIcon class="proyect__icon" />
+            Angular
+          </li>
+          <li class="proyect__lang">
+            <AngularIcon class="proyect__icon" />
+            Angular Material
+          </li>
+          <li class="proyect__lang">
+            <SassIcon class="proyect__icon" />
+            Sass
+          </li>
+        </ul>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a
+          cumque cupiditate dolorem magni, eveniet sint magnam! Assumenda,
+          corporis sit.
+        </p>
+
+        <div class="proyect__buttons">
+          <a class="proyect__button" href="#">Demo</a>
+          <a class="proyect__button" href="#">Repositorio</a>
+        </div>
+      </div>
+    </article>
+    <article class="proyect">
+      <img
+        class="proyect__img"
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+        alt=""
+      />
+      <div class="proyect__content">
+        <h3 class="proyect__title">Mapa MABBOX</h3>
+        <ul class="proyect__langs">
+          <li class="proyect__lang">
+            <AngularIcon class="proyect__icon" />
+            Angular
+          </li>
+          <li class="proyect__lang">
+            <AngularIcon class="proyect__icon" />
+            Angular Material
+          </li>
+          <li class="proyect__lang">
+            <SassIcon class="proyect__icon" />
+            Sass
+          </li>
+        </ul>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a
+          cumque cupiditate dolorem magni, eveniet sint magnam! Assumenda,
+          corporis sit.
+        </p>
+
+        <div class="proyect__buttons">
+          <a class="proyect__button" href="#">Demo</a>
+          <a class="proyect__button" href="#">Repositorio</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .proyects {
+    padding: 1em;
+    margin-bottom: 3em;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .proyects__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fffc;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .proyects__icon {
+    width: 1em;
+  }
+  .proyects__list {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2em;
+  }
+
+  .proyect {
+    border-radius: 0.4em;
+    overflow: hidden;
+    background-color: #2222228a;
+    display: flex;
+    gap: 1em;
+  }
+  @media screen and (max-width: 1039px) {
+    .proyect {
+      flex-direction: column;
+    }
+    .proyects__list {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+  }
+
+  .proyect__img {
+    max-width: 13em;
+  }
+  @media screen and (max-width: 1039px) {
+    .proyect__img {
+      max-width: 100%;
+    }
+  }
+  .proyect__content {
+    width: 100%;
+    padding: 0.7em 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  @media screen and (max-width: 1039px) {
+    .proyect__content {
+      padding: 1em;
+    }
+  }
+  .proyect__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .proyect__langs {
+    display: grid;
+    display: flex;
+    gap: 0.6em;
+    flex-wrap: wrap;
+  }
+  .proyect__lang {
+    display: flex;
+    gap: 0.2em;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  .proyect__icon {
+    width: 1.4em;
+  }
+  .proyect__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .proyect__button {
+    border-bottom: 1px solid rgb(12, 128, 56);
+  }
+</style>

@@ -1,0 +1,97 @@
+---
+import LinkeInIcon from "./icons/LinkedIn.astro";
+import GitGubIcon from "./icons/LinkedIn.astro";
+
+import EmailIcon from "./icons/LinkedIn.astro";
+---
+
+<section class="home wrapper">
+  <h1 class="home__title">
+    Hey, soy Joselu <span class="home__available">Fronted Developer</span>
+  </h1>
+  <h2 class="home__subtitle">
+    Desarrollador web. Apasionado por las nuevas tecnologías. En búsqueda de una
+    oportunidad para crecer y aprender en este fascinante mundo del desarrollo.
+  </h2>
+
+  <ul class="home__socials">
+    <li class="home__social">
+      <LinkeInIcon />
+      <a
+        href="https://www.linkedin.com/in/j0selu/"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a
+      >
+    </li>
+    <li class="home__social">
+      <GitGubIcon />
+      <a
+        href="https://github.com/JoseIu"
+        target="_blank"
+        rel="noopener noreferrer">Github</a
+      >
+    </li>
+    <li class="home__social">
+      <EmailIcon />
+      <a
+        href="mailto:joseluissgz97@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer">joseluissgz97@gmail.com</a
+      >
+    </li>
+  </ul>
+</section>
+
+<style>
+  .home {
+    padding: 11em 1em 0 1em;
+    margin-bottom: 7em;
+  }
+  .home__title {
+    /* font-size: 2rem; */
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: 1em;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .home__available {
+    padding: 0.2em 1em;
+    border-radius: 0.5em;
+    /* font-size: 0.75rem; */
+    font-size: clamp(0.75rem, 1.5vw, 0.75rem);
+
+    background-color: rgba(12, 128, 57, 0.801);
+  }
+  .home__subtitle {
+    max-width: 700px;
+    /* font-size: 1.25rem; */
+    font-size: clamp(1rem, 3vw, 1.6rem);
+
+    margin-bottom: 1.5em;
+    line-height: 1.75rem;
+  }
+  .home__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .home__social {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    outline: 1px solid #ffffff1a;
+    color: #ffffff80;
+    background-color: #ffffff0d;
+
+    display: flex;
+
+    column-gap: 0.3em;
+    transition: all 0.2s ease;
+  }
+  .home__social:hover {
+    background-color: #ffffff1a;
+    transform: scale(1.1);
+  }
+</style>

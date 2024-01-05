@@ -1,0 +1,109 @@
+---
+import AstroIcon from "./icons/AstroIcon.astro";
+import ProfileIcon from "./icons/Profile.astro";
+import AngularIcon from "./icons/AngularIcon.astro";
+import SassIcon from "./icons/SassIcon.astro";
+import TsIcon from "./icons/TsIcon.astro";
+---
+
+<section class="about wrapper">
+  <h2 class="about__title">
+    <ProfileIcon class="about__img" />
+    Sobre mí
+  </h2>
+
+  <div class="about__conent">
+    <img
+      class="about__profile-img"
+      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+      alt="joselu"
+    />
+
+    <div class="about__descp">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, impedit
+        quod laudantium, a illum qui rem incidunt iste voluptatem culpa atque
+        eligendi laboriosam! Obcaecati, repudiandae aperiam necessitatibus
+        deserunt vitae enim ullam sapiente cupiditate, veniam modi hic.
+        Reiciendis, aliquid fugiat quibusdam, repellat quod culpa vero, rerum
+        animi eum facilis pariatur minus.
+      </p>
+      <h3 class="about__skills">Mejores skills</h3>
+      <ul class="about__langs">
+        <li class="about__item">
+          <AngularIcon class="about__icon" />
+        </li>
+        <li>
+          <TsIcon class="about__icon" />
+        </li>
+        <li>
+          <SassIcon class="about__icon" />
+        </li>
+        <li>
+          <AstroIcon class="about__icon" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .about__conent {
+    display: flex;
+    gap: 1em;
+  }
+  .about__img {
+    width: 1em;
+  }
+  .about__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fffc;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .about__descp {
+    padding: 1em;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+  }
+
+  .about__profile-img {
+    max-width: 25em;
+    border-radius: 0.5em;
+  }
+  @media screen and (max-width: 650px) {
+    .about__conent {
+      flex-direction: column;
+    }
+    .about__profile-img {
+      max-width: 100%;
+    }
+  }
+  .about__skills {
+    font-weight: 700;
+  }
+  .about__langs {
+    display: flex;
+    align-items: center;
+
+    gap: 1.3em;
+  }
+  .about__item {
+    display: flex;
+  }
+
+  .about__icon {
+    width: 2.5em;
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+interface Props {
+  time: string;
+  role: string;
+  description: string;
+}
+
+const { time, role, description } = Astro.props;
+---
+
+<li class="experience__item">
+  <div class="circle"></div>
+  <span class="experience__time">{time}</span>
+  <h3 class="experience__role">{role}</h3>
+  <p class="experience__description">
+    {description}
+  </p>
+</li>
+<style>
+  .circle {
+    position: absolute;
+    top: 0.35em;
+    left: -0.35em;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 50%;
+    background-color: rgb(12, 128, 56);
+  }
+  .experience__item {
+    position: relative;
+    padding: 0 0 0 1em;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8em;
+  }
+
+  .experience__time {
+    font-size: 0.875rem;
+    color: rgb(12, 128, 56);
+  }
+  .experience__role {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: yellow;
+  }
+  .experience__description {
+    font-weight: 400;
+  }
+</style>

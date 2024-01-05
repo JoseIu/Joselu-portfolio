@@ -1,0 +1,16 @@
+{
+  "name": "joselu",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/onest": "^5.0.2",
+    "astro": "^4.0.8"
+  }
+}

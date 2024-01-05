@@ -1,0 +1,74 @@
+---
+import ExperienceCard from "./ExperienceCard.astro";
+import ExperienceIcon from "./icons/Experience.astro";
+
+const experiences = [
+  {
+    id: 0,
+    time: "25/09/2023 - 01/12/2023",
+    role: "Fronten developer Xerintel Internet Technologies",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo magnamquaerat quae error. Reprehenderit, qui, aspernatur non aliquid eos illomollitia consectetur voluptatem, praesentium accusantium quisquammaiores. Eos, fuga vero?",
+  },
+  {
+    id: 1,
+    time: "25/09/2023 - 01/12/2023",
+    role: "Fronten developer Xerintel Internet Technologies",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo magnamquaerat quae error. Reprehenderit, qui, aspernatur non aliquid eos illomollitia consectetur voluptatem, praesentium accusantium quisquammaiores. Eos, fuga vero?",
+  },
+];
+---
+
+<section class="experience wrapper">
+  <h2 class="experience__title">
+    <ExperienceIcon class="experience__icon" />
+    Experiencia laboral
+  </h2>
+  <ol class="experience__list">
+    {
+      experiences.map((experience) => (
+        <ExperienceCard
+          time={experience.time}
+          role={experience.role}
+          description={experience.description}
+        />
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  .experience {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+
+    margin-bottom: 3em;
+  }
+  .experience__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fffc;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .experience__icon {
+    width: 1em;
+  }
+
+  .experience__list {
+    margin-left: 0.8em;
+    padding: 0.3em 0 0 0;
+    border-color: red;
+    border-left: solid #fff;
+    border-inline-start-width: 1px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+</style>
