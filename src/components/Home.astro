@@ -16,7 +16,7 @@ import EmailIcon from "./icons/LinkedIn.astro";
 
   <ul class="home__socials">
     <li class="home__social">
-      <LinkeInIcon />
+      <LinkeInIcon class="home__icon" />
       <a
         href="https://www.linkedin.com/in/j0selu/"
         target="_blank"
@@ -24,7 +24,7 @@ import EmailIcon from "./icons/LinkedIn.astro";
       >
     </li>
     <li class="home__social">
-      <GitGubIcon />
+      <GitGubIcon class="home__icon" />
       <a
         href="https://github.com/JoseIu"
         target="_blank"
@@ -32,7 +32,7 @@ import EmailIcon from "./icons/LinkedIn.astro";
       >
     </li>
     <li class="home__social">
-      <EmailIcon />
+      <EmailIcon class="home__icon" />
       <a
         href="mailto:joseluissgz97@gmail.com"
         target="_blank"
@@ -89,6 +89,9 @@ import EmailIcon from "./icons/LinkedIn.astro";
 
     column-gap: 0.3em;
     transition: all 0.2s ease;
+  }
+  .home__icon {
+    width: 1em;
   }
   .home__social:hover {
     background-color: #ffffff1a;

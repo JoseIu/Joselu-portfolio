@@ -1,18 +1,31 @@
 ---
-
+import GitHubIcon from "./icons/GitHub.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
 <footer class="footer wrapper">
-  <img src="#" alt="Logo" />
+  <span class="footer__logo">Joselu</span>
+
   <ul class="footer__socials">
     <li class="footer__item">
-      <a class="footer__link" href="">G</a>
+      <a
+        class="footer__link"
+        href="https://github.com/JoseIu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHubIcon class="footer__icon" />
+      </a>
     </li>
     <li class="footer__item">
-      <a class="footer__link" href="">Li</a>
-    </li>
-    <li class="footer__item">
-      <a class="footer__link" href="">Inst</a>
+      <a
+        class="footer__link"
+        href="https://www.linkedin.com/in/j0selu/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedInIcon class="footer__icon" />
+      </a>
     </li>
   </ul>
 </footer>
@@ -29,6 +42,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  .footer__logo {
+    width: 5em;
+    font-size: 1.2em;
+  }
   .footer__socials {
     width: 100%;
 
@@ -36,5 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: end;
+  }
+  .footer__icon {
+    width: 2em;
   }
 </style>
