@@ -5,91 +5,102 @@ import SassIcon from "./icons/Experience.astro";
 
 const proyects = [
   {
-    img: "",
-    title: "",
+    img: "./public/proyects/mab-box2.webp",
+    title: "Map-Box",
     tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
-    description: "",
+    description:
+      "Proyecto de mapa utilizando la API de Map-box, en que pude poner en practica standalone component, signals y componentizar.",
+    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
+    repo: "https://github.com/JoseIu/mapbox-app",
+  },
+  {
+    img: "./public/proyects/al-andalus.webp",
+    title: "Al-Andalus Doner Kebab",
+    tegnologies: ["HTML", "CSS", "JS"],
+    description:
+      "Página web para un pequeño restaurant Al Andalus Doner kebab. Web totalmente responsive haciendolo mobile first.",
+    demo: "https://al-andalus-doner-kebab.netlify.app/",
+    repo: "https://github.com/JoseIu/al-andalus-kebab.github.io",
+  },
+  {
+    img: "./public/proyects/users-filter.webp",
+    title: "Users Filter",
+    tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
+    description:
+      "Un filtro de usuarios por activos o inactivos, el cual se podra desactivar o activar con o sin filtros activados.",
+    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
+    repo: "https://github.com/JoseIu/mapbox-app",
+  },
+  {
+    img: "./public/proyects/search-gifs.webp",
+    title: "Buscador de gifs",
+    tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
+    description:
+      "Un buscador de GIFS suando la API ___, incluye un historial de busqueda.",
+    demo: "https://github.com/JoseIu/Angular-searchGifs",
+    repo: "https://angular-search-gifs.vercel.app/",
+  },
+  {
+    img: "./public/proyects/recetas.webp",
+    title: "Buscador de recetas",
+    tegnologies: ["HTML", "Sass", "JavaScript"],
+    description:
+      "Una app para buscar recetas,con un modal para ver los ingedientes. Tambien se pueden añadir a favoritos.",
+    demo: "https://buscad0r-recetas-api.netlify.app/",
+    repo: "https://github.com/JoseIu/buscador_recetas_API",
   },
 ];
 ---
 
-<section class="proyects wrapper">
+<section class="proyects wrapper" id="proyects">
   <h2 class="proyects__title">
     <CodeIcon class="proyects__icon" />
     Proyectos
   </h2>
 
   <div class="proyects__list">
-    <article class="proyect">
-      <img
-        class="proyect__img"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-        alt=""
-      />
-      <div class="proyect__content">
-        <h3 class="proyect__title">Mapa MABBOX</h3>
-        <ul class="proyect__langs">
-          <li class="proyect__lang">
-            <AngularIcon class="proyect__icon" />
-            Angular
-          </li>
-          <li class="proyect__lang">
-            <AngularIcon class="proyect__icon" />
-            Angular Material
-          </li>
-          <li class="proyect__lang">
-            <SassIcon class="proyect__icon" />
-            Sass
-          </li>
-        </ul>
+    {
+      proyects.map((proyect) => (
+        <article class="proyect">
+          <img
+            class="proyect__img"
+            src={proyect.img}
+            alt={proyect.title}
+            width="200"
+            height="400"
+          />
+          <div class="proyect__content">
+            <h3 class="proyect__title">{proyect.title}</h3>
+            <ul class="proyect__langs">
+              {proyect.tegnologies.map((teg) => (
+                <li class="proyect__lang">{teg}</li>
+              ))}
+            </ul>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a
-          cumque cupiditate dolorem magni, eveniet sint magnam! Assumenda,
-          corporis sit.
-        </p>
+            <p>{proyect.description}</p>
 
-        <div class="proyect__buttons">
-          <a class="proyect__button" href="#">Demo</a>
-          <a class="proyect__button" href="#">Repositorio</a>
-        </div>
-      </div>
-    </article>
-    <article class="proyect">
-      <img
-        class="proyect__img"
-        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-        alt=""
-      />
-      <div class="proyect__content">
-        <h3 class="proyect__title">Mapa MABBOX</h3>
-        <ul class="proyect__langs">
-          <li class="proyect__lang">
-            <AngularIcon class="proyect__icon" />
-            Angular
-          </li>
-          <li class="proyect__lang">
-            <AngularIcon class="proyect__icon" />
-            Angular Material
-          </li>
-          <li class="proyect__lang">
-            <SassIcon class="proyect__icon" />
-            Sass
-          </li>
-        </ul>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a
-          cumque cupiditate dolorem magni, eveniet sint magnam! Assumenda,
-          corporis sit.
-        </p>
-
-        <div class="proyect__buttons">
-          <a class="proyect__button" href="#">Demo</a>
-          <a class="proyect__button" href="#">Repositorio</a>
-        </div>
-      </div>
-    </article>
+            <div class="proyect__buttons">
+              <a
+                class="proyect__button"
+                href={proyect.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </a>
+              <a
+                class="proyect__button"
+                href={proyect.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repositorio
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
   </div>
 </section>
 
@@ -116,7 +127,7 @@ const proyects = [
   .proyects__list {
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 2em;
   }
 
@@ -124,50 +135,30 @@ const proyects = [
     border-radius: 0.4em;
     overflow: hidden;
     background-color: #2222228a;
-    display: flex;
-    gap: 1em;
-  }
-  @media screen and (max-width: 1039px) {
-    .proyect {
-      flex-direction: column;
-    }
-    .proyects__list {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    }
-  }
-
-  .proyect__img {
-    max-width: 13em;
-  }
-  @media screen and (max-width: 1039px) {
-    .proyect__img {
-      max-width: 100%;
-    }
   }
   .proyect__content {
+    padding: 1em;
     width: 100%;
-    padding: 0.7em 0.3em;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1em;
-  }
-  @media screen and (max-width: 1039px) {
-    .proyect__content {
-      padding: 1em;
-    }
   }
   .proyect__title {
     font-size: 1.3rem;
     font-weight: 700;
   }
   .proyect__langs {
-    display: grid;
     display: flex;
     gap: 0.6em;
     flex-wrap: wrap;
   }
   .proyect__lang {
+    font-weight: 500;
+    color: #fffc;
+    text-transform: uppercase;
+
     display: flex;
     gap: 0.2em;
     flex-wrap: wrap;
@@ -183,6 +174,11 @@ const proyects = [
     align-items: center;
   }
   .proyect__button {
+    color: #fffc;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .proyect__button:hover {
     border-bottom: 1px solid rgb(12, 128, 56);
   }
 </style>

@@ -6,7 +6,7 @@ import SassIcon from "./icons/SassIcon.astro";
 import TsIcon from "./icons/TsIcon.astro";
 ---
 
-<section class="about wrapper">
+<section class="about wrapper" id="about">
   <h2 class="about__title">
     <ProfileIcon class="about__img" />
     Sobre mí
@@ -15,18 +15,19 @@ import TsIcon from "./icons/TsIcon.astro";
   <div class="about__conent">
     <img
       class="about__profile-img"
-      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+      src="public/me.webp"
       alt="joselu"
+      width="300"
+      height="
+    400"
     />
 
     <div class="about__descp">
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, impedit
-        quod laudantium, a illum qui rem incidunt iste voluptatem culpa atque
-        eligendi laboriosam! Obcaecati, repudiandae aperiam necessitatibus
-        deserunt vitae enim ullam sapiente cupiditate, veniam modi hic.
-        Reiciendis, aliquid fugiat quibusdam, repellat quod culpa vero, rerum
-        animi eum facilis pariatur minus.
+        Desarrollador web enfocado en el Front-end, apasionado por las nuevas
+        tecnologías y amante de las motos. En búsqueda de una oportunidad para
+        crecer y aprender en este fascinante mundo del desarrollo, donde la
+        velocidad de la innovación se fusiona con mi pasión por las dos ruedas.
       </p>
       <h3 class="about__skills">Mejores skills</h3>
       <ul class="about__langs">
@@ -49,6 +50,7 @@ import TsIcon from "./icons/TsIcon.astro";
 
 <style>
   .about {
+    margin-bottom: 4em;
     padding: 1em;
     display: flex;
     flex-direction: column;
