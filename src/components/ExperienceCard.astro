@@ -3,9 +3,10 @@ interface Props {
   time: string;
   role: string;
   description: string;
+  description2?: string;
 }
 
-const { time, role, description } = Astro.props;
+const { time, role, description, description2 } = Astro.props;
 ---
 
 <li class="experience__item">
@@ -14,6 +15,9 @@ const { time, role, description } = Astro.props;
   <h3 class="experience__role">{role}</h3>
   <p class="experience__description">
     {description}
+  </p>
+  <p class="experience__description">
+    {description2}
   </p>
 </li>
 <style>
