@@ -36,8 +36,8 @@ export const PROYECTS = [
     tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
     description:
       "En la creación de este proyecto, utilicé Angular 16, HTML, SASS y TypeScript, empleando específicamente Angular's HttpClient para consumir eficientemente la API de Giphy a través de peticiones HTTP. Destaco tambien la implementación de un historial de búsquedas, permitiendo a los usuarios repetir búsquedas anteriores con un clic. Aseguré la eficiencia del historial al evitar duplicación de nombres. Este proyecto resalta mi capacidad para desarrollar aplicaciones interactivas y mi habilidad en el uso de herramientas avanzadas como Angular's HttpClient para optimizar la comunicación con la API.",
-    demo: "https://github.com/JoseIu/Angular-searchGifs",
-    repo: "https://angular-search-gifs.vercel.app/",
+    demo: "https://angular-search-gifs.vercel.app/",
+    repo: "https://github.com/JoseIu/Angular-searchGifs",
   },
   {
     id: "5",
