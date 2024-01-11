@@ -1,58 +1,12 @@
 ---
-import AngularIcon from "./icons/Angular.astro";
 import CodeIcon from "./icons/Code.astro";
-import SassIcon from "./icons/Experience.astro";
+import { PROYECTS } from "../db/proyectsDB.js";
+import ArrowRightIcon from "./icons/ArrowRight.astro";
 
-const proyects = [
-  {
-    img: "./proyects/mab-box2.webp",
-    title: "Map-Box",
-    tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
-    description:
-      "Proyecto de mapa utilizando la API de Map-box, en que pude poner en practica standalone component, signals y componentizar.",
-    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
-    repo: "https://github.com/JoseIu/mapbox-app",
-  },
-  {
-    img: "./proyects/al-andalus.webp",
-    title: "Al-Andalus Doner Kebab",
-    tegnologies: ["HTML", "CSS", "JS"],
-    description:
-      "Página web para un pequeño restaurant Al Andalus Doner kebab. Web totalmente responsive haciendolo mobile first.",
-    demo: "https://al-andalus-doner-kebab.netlify.app/",
-    repo: "https://github.com/JoseIu/al-andalus-kebab.github.io",
-  },
-  {
-    img: "./proyects/users-filter.webp",
-    title: "Users Filter",
-    tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
-    description:
-      "Un filtro de usuarios por activos o inactivos, el cual se podra desactivar o activar con o sin filtros activados.",
-    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
-    repo: "https://github.com/JoseIu/mapbox-app",
-  },
-  {
-    img: "./proyects/search-gifs.webp",
-    title: "Buscador de gifs",
-    tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
-    description:
-      "Un buscador de GIFS suando la API ___, incluye un historial de busqueda.",
-    demo: "https://github.com/JoseIu/Angular-searchGifs",
-    repo: "https://angular-search-gifs.vercel.app/",
-  },
-  {
-    img: "./proyects/recetas.webp",
-    title: "Buscador de recetas",
-    tegnologies: ["HTML", "Sass", "JavaScript"],
-    description:
-      "Una app para buscar recetas,con un modal para ver los ingedientes. Tambien se pueden añadir a favoritos.",
-    demo: "https://buscad0r-recetas-api.netlify.app/",
-    repo: "https://github.com/JoseIu/buscador_recetas_API",
-  },
-];
+const proyects = structuredClone(PROYECTS);
 ---
 
-<section class="proyects wrapper" id="proyects">
+<section class="proyects wrapper" id="proyects" transition:persist>
   <h2 class="proyects__title">
     <CodeIcon class="proyects__icon" />
     Proyectos
@@ -68,16 +22,22 @@ const proyects = [
             alt={proyect.title}
             width="200"
             height="400"
+            transition:name=`img${proyect.id}`
+            view-transition-name=`img-${proyect.id}`
           />
           <div class="proyect__content">
-            <h3 class="proyect__title">{proyect.title}</h3>
+            <h3 class="proyect__title">
+              {proyect.title}
+              <a class="proyect__more" href={`/info-proyects/${proyect.id}`} transition:name=`arrow${proyect.id}`
+            view-transition-name=`arrow-${proyect.id}`>
+                 <ArrowRightIcon clas="proyect__more-icon"/>
+              </a>
+            </h3>
             <ul class="proyect__langs">
               {proyect.tegnologies.map((teg) => (
                 <li class="proyect__lang">{teg}</li>
               ))}
             </ul>
-
-            <p>{proyect.description}</p>
 
             <div class="proyect__buttons">
               <a
@@ -148,7 +108,27 @@ const proyects = [
   .proyect__title {
     font-size: 1.3rem;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .proyect__more {
+    width: 2.3em;
+    font-size: 0.9rem;
+    padding: 0.3em;
+    border-radius: 0.3em;
+  
+
+    display: flex;
+    transition: all .2s ease;
+    
+  }
+  
+  .proyect__more:hover{
+    transform: scale(1.3);
+ 
+  }
+
   .proyect__langs {
     display: flex;
     gap: 0.6em;
