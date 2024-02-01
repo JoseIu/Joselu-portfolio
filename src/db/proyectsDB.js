@@ -1,13 +1,25 @@
 export const PROYECTS = [
   {
     id: "1",
-    img: "/proyects/mab-box2.webp",
-    title: "Map-Box",
-    tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
+    img: "/proyects/reading-list.webp",
+    title: "Reading book - Prueba técnica por @Midudev",
+    tegnologies: ["Angular 17", "TypeScript", "RxJs", "HTML", "Sass"],
     description:
-      "Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular 16, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.",
-    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
-    repo: "https://github.com/JoseIu/mapbox-app",
+      "Prueba técnica desarrollada por @Midudev, en la que se pone a prueba los conocimientos de Angular, TypeScript, RxJs, HTML y Sass. En este proyecto se pone en práctica el uso de la librería RxJs para el manejo de los datos",
+    features: [
+      "Creación de Lista de Lectura: El usuario debe ser capaz de crear una lista de lectura a partir de los libros disponibles. En la UI debe quedar claro qué libros están en la lista de lectura y cuáles no. También debe ser posible mover un libro de la lista de lectura a la lista de disponibles.",
+      "Filtrado de Libros por Género: Los usuarios deben poder filtrar la lista de libros disponibles por género, y se mostrará un contador con el número de libros disponibles, el número de libros en la lista de lectura y el número de libros disponibles en el género seleccionado.",
+      "Implementar una funcionalidad de búsqueda en la lista de libros disponibles.",
+      "Filtro para filtrar los libros por número de páginas.",
+      "Diseño responsive.",
+      "Sincronización de Estado: Debe haber una sincronización del estado global que refleje el número de libros en la lista de lectura y el número de libros todavía disponibles. Si un libro se mueve de la lista de disponibles a la lista de lectura, el recuento de ambos debe actualizarse en consecuencia.",
+      "Persistencia de Datos: La aplicación debe persistir los datos de la lista de lectura en el almacenamiento local del navegador. Al recargar la página, la lista de lectura debe mantenerse.",
+      "Sincronización entre pestañas: Si el usuario abre la aplicación en dos pestañas diferentes, los cambios realizados en una pestaña deben reflejarse en la otra. Sin necesidad de usar Backend.",
+      "Despliegue: La aplicación debe estar desplegada en algún servicio de hosting gratuito (Netlify, Vercel, Firebase, etc) y debe ser accesible a través de una URL pública. Indica la URL en el README.",
+    ],
+
+    demo: "https://reading-list-angular.vercel.app/books",
+    repo: "https://github.com/JoseIu/reading-list-angular",
   },
   {
     id: "2",
@@ -21,16 +33,28 @@ export const PROYECTS = [
   },
   {
     id: "3",
-    img: "/proyects/users-filter.webp",
-    title: "Users Filter",
-    tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
+    img: "/proyects/mab-box2.webp",
+    title: "Map-Box",
+    tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
     description:
-      "Desarrollé un filtro de usuarios que permite la clasificación por activos o inactivos. Los usuarios pueden desactivar o activar el filtro, incluso con filtros específicos en funcionamiento, proporcionando una experiencia versátil y fácil de usar",
+      "Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular 16, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.",
     demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
     repo: "https://github.com/JoseIu/mapbox-app",
   },
+
   {
     id: "4",
+    img: "/proyects/github-profile.webp",
+    title: "Buscador perfil GitHub",
+    tegnologies: ["Angular 16", "TypeScript", "HTML", "Sass"],
+    description:
+      "Applicacion que permite buscar perfiles de GitHub, utilizando la API de GitHub. En este proyecto se pone en práctica el uso HttpClient para el manejo de los datos y debouncer para la busqueda.",
+    demo: "https://angular-github-profile-one.vercel.app/user-profile",
+    repo: "https://github.com/JoseIu/angular-github-profile",
+  },
+
+  {
+    id: "5",
     img: "/proyects/search-gifs.webp",
     title: "Buscador de gifs",
     tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
@@ -40,7 +64,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/Angular-searchGifs",
   },
   {
-    id: "5",
+    id: "6",
     img: "/proyects/recetas.webp",
     title: "Buscador de recetas",
     tegnologies: ["HTML", "Sass", "JavaScript"],
@@ -48,5 +72,15 @@ export const PROYECTS = [
       "Desarrollé una aplicación para buscar recetas que incorpora un modal para visualizar los ingredientes. Además, los usuarios tienen la capacidad de añadir recetas a la lista de favoritos, proporcionando una experiencia interactiva y funcional. Este proyecto destaca mi habilidad para trabajar con tecnologías web clave y crear aplicaciones prácticas y atractivas.",
     demo: "https://buscad0r-recetas-api.netlify.app/",
     repo: "https://github.com/JoseIu/buscador_recetas_API",
+  },
+  {
+    id: "7",
+    img: "/proyects/users-filter.webp",
+    title: "Users Filter",
+    tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
+    description:
+      "Desarrollé un filtro de usuarios que permite la clasificación por activos o inactivos. Los usuarios pueden desactivar o activar el filtro, incluso con filtros específicos en funcionamiento, proporcionando una experiencia versátil y fácil de usar",
+    demo: "https://mapbox-app-lemon.vercel.app/maps/markers",
+    repo: "https://github.com/JoseIu/mapbox-app",
   },
 ];
