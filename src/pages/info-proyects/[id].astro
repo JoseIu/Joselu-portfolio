@@ -17,7 +17,7 @@ export const getStaticPaths = (() => {
 
 <Layout title={proyectSelected.title}>
   <main class="proyect-info wrapper">
-    <div class="proyect-info__header">
+    <header class="proyect-info__header">
       <a
         href="/#proyects"
         transition:name=`arrow${proyectSelected.id}`
@@ -26,7 +26,7 @@ export const getStaticPaths = (() => {
         <ArrowBackIcon class="proyect-info__arrow" /></a
       >
       <h1 class="proyect-info__title">{proyectSelected.title}</h1>
-    </div>
+    </header>
     <div class="proyect-info__card">
       <article class="proyect">
         <img
@@ -60,106 +60,130 @@ export const getStaticPaths = (() => {
         </div>
       </article>
     </div>
-  </main>
-</Layout>
-
-<style>
-  .proyect-info {
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3em;
-  }
-  .proyect-info__header {
-    padding: 2em;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .proyect-info__arrow {
-    position: absolute;
-    top: 1.85em;
-    left: 1em;
-    width: 2em;
-    transition: all 0.2s ease;
-  }
-  .proyect-info__arrow:hover {
-    transform: scale(1.2);
-  }
-  .proyect-info__title {
-    font-size: 2.5rem;
-
-    font-weight: 600;
-  }
-  .proyect-info__card {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-  }
-  .proyect {
-    width: 100%;
-
-    padding: 1em;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-  }
-  @media screen and (min-width: 960px) {
-    .proyect {
-      flex-direction: row;
+    {
+      proyectSelected.features?.length > 0 && (
+        <div class="features">
+          <h3 class="features__title">Funcionalidades</h3>
+          <ul>
+            {proyectSelected.features?.map((feature) => (
+              <li class="features__li"> ✔ {feature}</li>
+            ))}
+          </ul>
+        </div>
+      )
     }
-  }
-  .proyect__img {
-    object-fit: cover;
+  </main>
 
-    border-radius: 0.4em;
-  }
-  .proyect__content {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-  }
-  .proyect__title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .proyect__butons {
-    font-weight: 400;
-    display: flex;
-    justify-items: center;
-    gap: 2em;
-  }
-  .proyect__buton {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.377);
-    padding: 0.2em 0.2em 0 0.2em;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-  }
-  .proyect__buton:hover {
-    color: #fffc;
-    border-color: rgba(12, 128, 57, 0.801);
-  }
-  .proyect__langs {
-    display: flex;
-    justify-content: center;
-    gap: 0.6em;
-    flex-wrap: wrap;
-  }
-  .proyect__lang {
-    font-weight: 500;
-    color: #fffc;
-    text-transform: uppercase;
+  <style>
+    .proyect-info {
+      padding: 1em;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      row-gap: 3em;
+    }
+    .proyect-info__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 2em;
+    }
+    .proyect-info__arrow {
+      align-self: self-end;
+      width: 2em;
+      transition: all 0.2s ease;
+    }
+    .proyect-info__arrow:hover {
+      transform: scale(1.2);
+    }
+    .proyect-info__title {
+      /* font-size: 2.5rem; */
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
-    display: flex;
-    gap: 0.2em;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 0.8rem;
-  }
-</style>
+      font-weight: 600;
+    }
+    .proyect-info__card {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    }
+    .proyect {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+    @media screen and (min-width: 960px) {
+      .proyect {
+        flex-direction: row;
+      }
+    }
+    .proyect__img {
+      object-fit: cover;
+
+      border-radius: 0.4em;
+    }
+    .proyect__content {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+    .proyect__description {
+      text-wrap: pretty;
+    }
+    .proyect__title {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .proyect__butons {
+      font-weight: 400;
+      display: flex;
+      justify-items: center;
+      gap: 2em;
+    }
+    .proyect__buton {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.377);
+      padding: 0.2em 0.2em 0 0.2em;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .proyect__buton:hover {
+      color: #fffc;
+      border-color: rgba(12, 128, 57, 0.801);
+    }
+    .proyect__langs {
+      display: flex;
+      justify-content: center;
+      gap: 0.6em;
+      flex-wrap: wrap;
+    }
+    .proyect__lang {
+      font-weight: 500;
+      color: #fffc;
+      text-transform: uppercase;
+
+      display: flex;
+      gap: 0.2em;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .features__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1em;
+      color: rgba(12, 128, 57, 0.801);
+    }
+    .features__li {
+      margin-bottom: 0.5em;
+      line-height: 1.5em;
+      text-wrap: pretty;
+    }
+  </style>
+</Layout>
