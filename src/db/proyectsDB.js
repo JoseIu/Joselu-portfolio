@@ -23,6 +23,16 @@ export const PROYECTS = [
   },
   {
     id: "2",
+    img: "/proyects/pomodoro.webp",
+    title: "PomoDoro con tareas",
+    tegnologies: ["Angular 17", "TypeScript", "HTML", "Sass"],
+    description:
+      "PomoDoro con tareas es una aplicación que permite al usuario organizar su tiempo de trabajo y descanso. El usuario puede añadir tareas. La aplicación cuenta con un temporizador que avisa al usuario cuando el tiempo de trabajo o descanso ha terminado. Además, la aplicación cuenta con acciones sobre cada tareas como el de terminar la tarea, editar y eliminar.",
+    demo: "https://pomodoro-rho-weld.vercel.app/",
+    repo: "https://github.com/JoseIu/pomodoro",
+  },
+  {
+    id: "3",
     img: "/proyects/al-andalus.webp",
     title: "Al-Andalus Doner Kebab",
     tegnologies: ["HTML", "CSS", "JS"],
@@ -32,7 +42,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/al-andalus-kebab.github.io",
   },
   {
-    id: "3",
+    id: "4",
     img: "/proyects/mab-box2.webp",
     title: "Map-Box",
     tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
@@ -43,7 +53,7 @@ export const PROYECTS = [
   },
 
   {
-    id: "4",
+    id: "5",
     img: "/proyects/github-profile.webp",
     title: "Buscador perfil GitHub",
     tegnologies: ["Angular 16", "TypeScript", "HTML", "Sass"],
@@ -54,7 +64,7 @@ export const PROYECTS = [
   },
 
   {
-    id: "5",
+    id: "6",
     img: "/proyects/search-gifs.webp",
     title: "Buscador de gifs",
     tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
@@ -63,8 +73,19 @@ export const PROYECTS = [
     demo: "https://angular-search-gifs.vercel.app/",
     repo: "https://github.com/JoseIu/Angular-searchGifs",
   },
+
   {
-    id: "6",
+    id: "7",
+    img: "/proyects/rec-j.webp",
+    title: "Recording web",
+    tegnologies: ["Angular 17", "TypeScript", "HTML", "Sass"],
+    description:
+      "Pequeño proyecto que permite grabar audio y video, utilizando la API de MediaRecorder. En este proyecto se pone en práctica el uso de la API de MediaRecorder.",
+    demo: "https://rec-j.vercel.app/",
+    repo: "https://github.com/JoseIu/rec-j",
+  },
+  {
+    id: "8",
     img: "/proyects/recetas.webp",
     title: "Buscador de recetas",
     tegnologies: ["HTML", "Sass", "JavaScript"],
@@ -74,7 +95,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/buscador_recetas_API",
   },
   {
-    id: "7",
+    id: "9",
     img: "/proyects/users-filter.webp",
     title: "Users Filter",
     tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
