@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 export const PROYECTS = [
   {
-    id: "1",
+    id: uuidv4(),
     img: "/proyects/reading-list.webp",
     title: "Reading book - Prueba técnica por @Midudev",
     tegnologies: ["Angular 17", "TypeScript", "RxJs", "HTML", "Sass"],
@@ -22,7 +23,27 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/reading-list-angular",
   },
   {
-    id: "2",
+    id: uuidv4(),
+    img: "/proyects/chat-openAi.webp",
+    title: "Asistente con OpenAi FRONT-END",
+    tegnologies: ["Angular 17", "TypeScript", "HTML", "Tailwind ", "NestJS"],
+    description:
+      "¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
+    demo: "https://angular-gpt-gilt.vercel.app/orthography",
+    repo: "https://github.com/JoseIu/angular-gpt",
+  },
+  {
+    id: uuidv4(),
+    img: "/proyects/chat-openAi-back.webp",
+    title: "Asistente con OpenAi BACKEND",
+    tegnologies: ["NestJS", "OpenAi", "Multer"],
+    description:
+      "¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
+    demo: "https://angular-gpt-gilt.vercel.app/orthography",
+    repo: "https://github.com/JoseIu/nest-gpt",
+  },
+  {
+    id: uuidv4(),
     img: "/proyects/pomodoro.webp",
     title: "PomoDoro con tareas",
     tegnologies: ["Angular 17", "TypeScript", "HTML", "Sass"],
@@ -32,7 +53,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/pomodoro",
   },
   {
-    id: "3",
+    id: uuidv4(),
     img: "/proyects/al-andalus.webp",
     title: "Al-Andalus Doner Kebab",
     tegnologies: ["HTML", "CSS", "JS"],
@@ -42,7 +63,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/al-andalus-kebab.github.io",
   },
   {
-    id: "4",
+    id: uuidv4(),
     img: "/proyects/mab-box2.webp",
     title: "Map-Box",
     tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
@@ -53,7 +74,7 @@ export const PROYECTS = [
   },
 
   {
-    id: "5",
+    id: uuidv4(),
     img: "/proyects/github-profile.webp",
     title: "Buscador perfil GitHub",
     tegnologies: ["Angular 16", "TypeScript", "HTML", "Sass"],
@@ -64,7 +85,7 @@ export const PROYECTS = [
   },
 
   {
-    id: "6",
+    id: uuidv4(),
     img: "/proyects/search-gifs.webp",
     title: "Buscador de gifs",
     tegnologies: ["Angular 16", "TypeScript", "HTML", "SCSS"],
@@ -73,19 +94,8 @@ export const PROYECTS = [
     demo: "https://angular-search-gifs.vercel.app/",
     repo: "https://github.com/JoseIu/Angular-searchGifs",
   },
-
   {
-    id: "7",
-    img: "/proyects/rec-j.webp",
-    title: "Recording web",
-    tegnologies: ["Angular 17", "TypeScript", "HTML", "Sass"],
-    description:
-      "Pequeño proyecto que permite grabar audio y video, utilizando la API de MediaRecorder. En este proyecto se pone en práctica el uso de la API de MediaRecorder.",
-    demo: "https://rec-j.vercel.app/",
-    repo: "https://github.com/JoseIu/rec-j",
-  },
-  {
-    id: "8",
+    id: uuidv4(),
     img: "/proyects/recetas.webp",
     title: "Buscador de recetas",
     tegnologies: ["HTML", "Sass", "JavaScript"],
@@ -95,7 +105,7 @@ export const PROYECTS = [
     repo: "https://github.com/JoseIu/buscador_recetas_API",
   },
   {
-    id: "9",
+    id: uuidv4(),
     img: "/proyects/users-filter.webp",
     title: "Users Filter",
     tegnologies: ["Angular 17", "TypeScript", "HTML", "SCSS"],
