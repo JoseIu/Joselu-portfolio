@@ -54,7 +54,7 @@ export const PROYECTS = [
 	},
 	{
 		id: uuidv4(),
-		img: "/proyects/mab-box2.webp",
+		img: "/proyects/map-box.webp",
 		title: "Map-Box",
 		tegnologies: ["Angular", "TypeScript", "HTML", "SCSS"],
 		description:
@@ -103,33 +103,43 @@ export const PROYECTS_REACT = [
 		title: "Dashboard de imágenes",
 		tegnologies: ["React", "TypeScript", "SASS", "Redux"],
 		description:
-			"¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
+			"Aplicacion que nos permite realizar una busqueda de imagenes, utilizando la API de Unsplash. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y SASS. Se implementa el patron CRUD para la gestión de las imagenes.",
 		demo: "https://dashboard-images.vercel.app/search",
 		repo: "https://github.com/JoseIu/dashboard-images",
 	},
 	{
 		id: uuidv4(),
-		img: "/react/dasboard_miranda.webp",
+		img: "/react/miranda.webp",
 		title: "Hotel Miranda",
 		tegnologies: ["HTML", "CSS", "SASS", "JS "],
 		description:
-			"¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
+			"Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.",
 		demo: "https://hotel-miranda-dash-board.vercel.app/",
 		repo: "https://github.com/JoseIu/hotel-miranda-dashBoard",
 	},
 	{
 		id: uuidv4(),
-		img: "/react/miranda.webp",
+		img: "/react/dasboard_miranda.webp",
 		title: "Dashboard de Hotel Miranda",
 		tegnologies: ["REACT 17", "TypeScript", "Redux", "Styled Modules"],
 		description:
-			"¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
+			"Proyecto de Dashboard para el Hotel Miranda. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y Styled Modules. El Dashboard esta conectado a la API del Hotel Miranda, permitiendo la gestión de los datos de los usuarios y las habitaciones del hotel.",
 		demo: "https://hotel-miranda-nu.vercel.app/",
 		repo: "https://github.com/JoseIu/hotel-miranda",
 	},
 	{
 		id: uuidv4(),
-		img: "/proyects/al-andalus.webp",
+		img: "/react/miranda_api.webp",
+		title: "Hotel Miranda API",
+		tegnologies: ["NODE.JS", "Express", "TypeScript", "MongoDB", "JWT"],
+		description:
+			"Proyecto de API RESTful para el Hotel Miranda. En este proyecto se pone en práctica el uso de Node.js, Express, TypeScript, MongoDB y JWT. La API gestiona la utenticación gracias a JWT y realizar operaciones CRUD sobre los datos de los usuarios y las habitaciones del hotel.",
+		demo: "https://hotel-miranda-nu.vercel.app/",
+		repo: "https://github.com/JoseIu/hotel-miranda",
+	},
+	{
+		id: uuidv4(),
+		img: "/react/al-andalus.webp",
 		title: "Al-Andalus Doner Kebab",
 		tegnologies: ["HTML", "CSS", "JS"],
 		description:
