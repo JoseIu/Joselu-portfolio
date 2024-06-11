@@ -2,7 +2,7 @@
 import "@fontsource-variable/onest";
 import { ViewTransitions } from "astro:transitions";
 interface Props {
-  title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -10,124 +10,124 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/code.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <slot />
-    <style is:global>
-      .wrapper {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      :root {
-        --color-text: #fff;
-        --bg-color: #222;
-      }
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        background: #13151a;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/code.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			.wrapper {
+				max-width: 1400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			:root {
+				--color-text: #fff;
+				--bg-color: #222;
+			}
+			html {
+				font-family: "Onest Variable", system-ui, sans-serif;
+				background: #13151a;
 
-        scroll-behavior: smooth;
-      }
-      @charset "UTF-8";
+				scroll-behavior: smooth;
+			}
+			@charset "UTF-8";
 
-      * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        vertical-align: baseline;
-      }
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				vertical-align: baseline;
+			}
 
-      img,
-      picture,
-      video,
-      iframe,
-      figure {
-        max-width: 100%;
-        width: 100%;
-        display: block;
-        /* opcional */
-        -o-object-fit: cover;
-        object-fit: cover;
-        /* opcional */
-        -o-object-position: center center;
-        object-position: center center;
-      }
+			img,
+			picture,
+			video,
+			iframe,
+			figure {
+				max-width: 100%;
+				width: 100%;
+				display: block;
+				/* opcional */
+				-o-object-fit: cover;
+				object-fit: cover;
+				/* opcional */
+				-o-object-position: center center;
+				object-position: center center;
+			}
 
-      a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        font-size: inherit;
-      }
+			a {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+				font-size: inherit;
+			}
 
-      p a {
-        display: inline;
-      }
+			p a {
+				display: inline;
+			}
 
-      li {
-        list-style-type: none;
-      }
+			li {
+				list-style-type: none;
+			}
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      span,
-      a,
-      strong,
-      blockquote,
-      i,
-      b,
-      u,
-      em {
-        font-size: 1em;
-        font-weight: inherit;
-        font-style: inherit;
-        text-decoration: none;
-        color: inherit;
-      }
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			span,
+			a,
+			strong,
+			blockquote,
+			i,
+			b,
+			u,
+			em {
+				font-size: 1em;
+				font-weight: inherit;
+				font-style: inherit;
+				text-decoration: none;
+				color: inherit;
+			}
 
-      form,
-      input,
-      textarea,
-      select,
-      button,
-      label {
-        font-family: inherit;
-        font-size: inherit;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        background-color: transparent;
-        color: inherit;
-        display: block;
-        /* opcional */
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
+			form,
+			input,
+			textarea,
+			select,
+			button,
+			label {
+				font-family: inherit;
+				font-size: inherit;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+				background-color: transparent;
+				color: inherit;
+				display: block;
+				/* opcional */
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
 
-      body {
-        color: var(--color-text);
-        min-height: 100vh;
-        font-size: 100%;
+			body {
+				color: var(--color-text);
+				min-height: 100vh;
+				font-size: 100%;
 
-        line-height: 1.4em;
-      }
-    </style>
-  </body>
+				line-height: 1.4em;
+			}
+		</style>
+	</body>
 </html>
