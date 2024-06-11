@@ -1,0 +1,121 @@
+---
+import Chips from "../Chips/Chips.astro";
+import ArrowRightIcon from "../icons/ArrowRight.astro";
+
+interface Props {
+	id: string;
+	img: string;
+	title: string;
+	tegnologies: string[];
+	demo: string;
+	repo: string;
+}
+const { id, img, title, tegnologies, demo, repo } = Astro.props;
+---
+
+<article class="proyect">
+	<img
+		class="proyect__img"
+		src={img}
+		alt={title}
+		transition:name=`img${id}`
+		view-transition-name=`img-${id}`
+	/>
+	<div class="proyect__content">
+		<h3 class="proyect__title">
+			{title}
+			<a
+				class="proyect__more"
+				aria-label="Ver más sobre el proyecto"
+				href={`/info-proyects/${id}`}
+				transition:name=`arrow${id}`
+				view-transition-name=`arrow-${id}`
+			>
+				<ArrowRightIcon class="proyect__more-icon" />
+			</a>
+		</h3>
+
+		<Chips tegnologies={tegnologies} />
+
+		<div class="proyect__buttons">
+			<a
+				class="proyect__button"
+				href={demo}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Demo
+			</a>
+			<a
+				class="proyect__button"
+				href={repo}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Repositorio
+			</a>
+		</div>
+	</div>
+</article>
+
+<style>
+	.proyect {
+		border-radius: 0.4em;
+		overflow: hidden;
+		background-color: #2222228a;
+	}
+	@media screen and (min-width: 1000px) {
+		.proyect {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	.proyect__img {
+	}
+	.proyect__content {
+		padding: 1em;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1em;
+	}
+	.proyect__title {
+		font-size: 1.3rem;
+		font-weight: 700;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.proyect__more {
+		width: 2.3em;
+		font-size: 0.9rem;
+		padding: 0.3em;
+		border-radius: 0.3em;
+
+		display: flex;
+		transition: all 0.2s ease;
+	}
+
+	.proyect__more:hover {
+		transform: scale(1.3);
+	}
+
+	.proyect__icon {
+		width: 1.4em;
+	}
+	.proyect__buttons {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.proyect__button {
+		color: #fffc;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease;
+	}
+	.proyect__button:hover {
+		border-bottom: 1px solid rgb(12, 128, 56);
+	}
+</style>
