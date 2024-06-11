@@ -4,186 +4,190 @@ import ArrowBackIcon from "../../components/icons/ArrowBack.astro";
 
 import type { GetStaticPaths } from "astro";
 import { PROYECTS } from "../../db/proyectsDB.js";
+import { PROYECTS_REACT } from "../../db/proyectsDB.js";
 
 const { id } = Astro.params;
 
-const proyectSelected = PROYECTS.find((proyet) => proyet.id === id);
+const proyectes = [...PROYECTS, ...PROYECTS_REACT];
+const proyectSelected = proyectes.find((proyet) => proyet.id === id);
 
 export const getStaticPaths = (() => {
-  const proyectsID = structuredClone(PROYECTS);
-  return proyectsID.map((proyect) => ({ params: { id: proyect.id } }));
+	const proyectes = [...PROYECTS, ...PROYECTS_REACT];
+
+	const proyectsID = structuredClone(proyectes);
+	return proyectsID.map((proyect) => ({ params: { id: proyect.id } }));
 }) satisfies GetStaticPaths;
 ---
 
 <Layout title={proyectSelected.title}>
-  <main class="proyect-info wrapper">
-    <header class="proyect-info__header">
-      <a
-        href="/#proyects"
-        transition:name=`arrow${proyectSelected.id}`
-        view-transition-name=`arrow-${proyectSelected.id}`
-      >
-        <ArrowBackIcon class="proyect-info__arrow" /></a
-      >
-      <h1 class="proyect-info__title">{proyectSelected.title}</h1>
-    </header>
-    <div class="proyect-info__card">
-      <article class="proyect">
-        <img
-          class="proyect__img"
-          src={proyectSelected.img}
-          alt={proyectSelected.title}
-          width="200"
-          height="400"
-          transition:name=`img${proyectSelected.id}`
-          view-transition-name=`img-${proyectSelected.id}`
-        />
-        <div class="proyect__content">
-          <h2 class="proyect__title">
-            {proyectSelected.title}
-            <div class="proyect__butons">
-              <a class="proyect__buton" href={proyectSelected.demo}>Demo</a>
-              <a class="proyect__buton" href={proyectSelected.repo}
-                >Repositorio</a
-              >
-            </div>
-          </h2>
-          <p class="proyect__description">{proyectSelected.description}</p>
+	<main class="proyect-info wrapper">
+		<header class="proyect-info__header">
+			<a
+				href="/#proyects"
+				transition:name=`arrow${proyectSelected.id}`
+				view-transition-name=`arrow-${proyectSelected.id}`
+			>
+				<ArrowBackIcon class="proyect-info__arrow" /></a
+			>
+			<h1 class="proyect-info__title">{proyectSelected.title}</h1>
+		</header>
+		<div class="proyect-info__card">
+			<article class="proyect">
+				<img
+					class="proyect__img"
+					src={proyectSelected.img}
+					alt={proyectSelected.title}
+					width="200"
+					height="400"
+					transition:name=`img${proyectSelected.id}`
+					view-transition-name=`img-${proyectSelected.id}`
+				/>
+				<div class="proyect__content">
+					<h2 class="proyect__title">
+						{proyectSelected.title}
+						<div class="proyect__butons">
+							<a class="proyect__buton" href={proyectSelected.demo}>Demo</a>
+							<a class="proyect__buton" href={proyectSelected.repo}
+								>Repositorio</a
+							>
+						</div>
+					</h2>
+					<p class="proyect__description">{proyectSelected.description}</p>
 
-          <ul class="proyect__langs">
-            {
-              proyectSelected.tegnologies.map((teg) => (
-                <li class="proyect__lang">{teg}</li>
-              ))
-            }
-          </ul>
-        </div>
-      </article>
-    </div>
-    {
-      proyectSelected.features?.length > 0 && (
-        <div class="features">
-          <h3 class="features__title">Funcionalidades</h3>
-          <ul>
-            {proyectSelected.features?.map((feature) => (
-              <li class="features__li"> ✔ {feature}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-  </main>
+					<ul class="proyect__langs">
+						{
+							proyectSelected.tegnologies.map((teg) => (
+								<li class="proyect__lang">{teg}</li>
+							))
+						}
+					</ul>
+				</div>
+			</article>
+		</div>
+		{
+			proyectSelected.features?.length > 0 && (
+				<div class="features">
+					<h3 class="features__title">Funcionalidades</h3>
+					<ul>
+						{proyectSelected.features?.map((feature) => (
+							<li class="features__li"> ✔ {feature}</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
+	</main>
 
-  <style>
-    .proyect-info {
-      padding: 1em;
-      height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      row-gap: 3em;
-    }
-    .proyect-info__header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      column-gap: 2em;
-    }
-    .proyect-info__arrow {
-      align-self: self-end;
-      width: 2em;
-      transition: all 0.2s ease;
-    }
-    .proyect-info__arrow:hover {
-      transform: scale(1.2);
-    }
-    .proyect-info__title {
-      /* font-size: 2.5rem; */
-      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+	<style>
+		.proyect-info {
+			padding: 1em;
+			height: 100dvh;
+			display: flex;
+			flex-direction: column;
+			row-gap: 3em;
+		}
+		.proyect-info__header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			column-gap: 2em;
+		}
+		.proyect-info__arrow {
+			align-self: self-end;
+			width: 2em;
+			transition: all 0.2s ease;
+		}
+		.proyect-info__arrow:hover {
+			transform: scale(1.2);
+		}
+		.proyect-info__title {
+			/* font-size: 2.5rem; */
+			font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
-      font-weight: 600;
-    }
-    .proyect-info__card {
-      display: grid;
+			font-weight: 600;
+		}
+		.proyect-info__card {
+			display: grid;
 
-      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-    }
-    .proyect {
-      width: 100%;
+			grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+		}
+		.proyect {
+			width: 100%;
 
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-    @media screen and (min-width: 960px) {
-      .proyect {
-        flex-direction: row;
-      }
-    }
-    .proyect__img {
-      object-fit: cover;
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+		}
+		@media screen and (min-width: 960px) {
+			.proyect {
+				flex-direction: row;
+			}
+		}
+		.proyect__img {
+			object-fit: cover;
 
-      border-radius: 0.4em;
-    }
-    .proyect__content {
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-    .proyect__description {
-      text-wrap: pretty;
-    }
-    .proyect__title {
-      font-size: clamp(1rem, 1.5vw, 1.5rem);
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .proyect__butons {
-      font-weight: 400;
-      display: flex;
-      justify-items: center;
-      gap: 2em;
-    }
-    .proyect__buton {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.377);
-      padding: 0.2em 0.2em 0 0.2em;
-      border-bottom: 1px solid transparent;
-      transition: all 0.3s ease;
-    }
-    .proyect__buton:hover {
-      color: #fffc;
-      border-color: rgba(12, 128, 57, 0.801);
-    }
-    .proyect__langs {
-      display: flex;
-      justify-content: center;
-      gap: 0.6em;
-      flex-wrap: wrap;
-    }
-    .proyect__lang {
-      font-weight: 500;
-      color: #fffc;
-      text-transform: uppercase;
+			border-radius: 0.4em;
+		}
+		.proyect__content {
+			padding: 1em;
+			display: flex;
+			flex-direction: column;
+			gap: 2em;
+		}
+		.proyect__description {
+			text-wrap: pretty;
+		}
+		.proyect__title {
+			font-size: clamp(1rem, 1.5vw, 1.5rem);
+			font-weight: 600;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.proyect__butons {
+			font-weight: 400;
+			display: flex;
+			justify-items: center;
+			gap: 2em;
+		}
+		.proyect__buton {
+			font-size: 0.9rem;
+			color: rgba(255, 255, 255, 0.377);
+			padding: 0.2em 0.2em 0 0.2em;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+		}
+		.proyect__buton:hover {
+			color: #fffc;
+			border-color: rgba(12, 128, 57, 0.801);
+		}
+		.proyect__langs {
+			display: flex;
+			justify-content: center;
+			gap: 0.6em;
+			flex-wrap: wrap;
+		}
+		.proyect__lang {
+			font-weight: 500;
+			color: #fffc;
+			text-transform: uppercase;
 
-      display: flex;
-      gap: 0.2em;
-      flex-wrap: wrap;
-      align-items: center;
-      font-size: 0.8rem;
-    }
-    .features__title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1em;
-      color: rgba(12, 128, 57, 0.801);
-    }
-    .features__li {
-      margin-bottom: 0.5em;
-      line-height: 1.5em;
-      text-wrap: pretty;
-    }
-  </style>
+			display: flex;
+			gap: 0.2em;
+			flex-wrap: wrap;
+			align-items: center;
+			font-size: 0.8rem;
+		}
+		.features__title {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-bottom: 1em;
+			color: rgba(12, 128, 57, 0.801);
+		}
+		.features__li {
+			margin-bottom: 0.5em;
+			line-height: 1.5em;
+			text-wrap: pretty;
+		}
+	</style>
 </Layout>
