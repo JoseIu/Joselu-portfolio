@@ -1,0 +1,29 @@
+---
+interface Props {
+	tegnologies: string[];
+}
+const { tegnologies } = Astro.props;
+---
+
+<ul class="chips">
+	{tegnologies.map((teg) => <li class="chip">{teg}</li>)}
+</ul>
+
+<style>
+	.chips {
+		display: flex;
+		gap: 0.6em;
+		flex-wrap: wrap;
+	}
+	.chip {
+		font-weight: 500;
+		color: #fffc;
+		text-transform: uppercase;
+
+		display: flex;
+		gap: 0.2em;
+		flex-wrap: wrap;
+		align-items: center;
+		font-size: 0.8rem;
+	}
+</style>
