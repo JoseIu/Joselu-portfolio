@@ -1,19 +1,20 @@
 ---
-import AstroIcon from "./icons/AstroIcon.astro";
+import AstroIcon from "./icons/dev/AstroIcon.astro";
 import ProfileIcon from "./icons/Profile.astro";
-import AngularIcon from "./icons/AngularIcon.astro";
-import SassIcon from "./icons/SassIcon.astro";
-import TsIcon from "./icons/TsIcon.astro";
+import SassIcon from "./icons/dev/SassIcon.astro";
+import TsIcon from "./icons/dev/TsIcon.astro";
+import ReactIcon from "./icons/dev/ReactIcon.astro";
+import JavaScriptIcon from "./icons/dev/JavaScriptIcon.astro";
 ---
 
 <section class="about wrapper" id="about">
-  <h2 class="about__title">
-    <ProfileIcon class="about__img" />
-    Sobre mí
-  </h2>
+	<h2 class="about__title">
+		<ProfileIcon class="about__img" />
+		Sobre mí
+	</h2>
 
-  <div class="about__conent">
-    <!-- <img
+	<div class="about__conent">
+		<!-- <img
       class="about__profile-img"
       src="/me.webp"
       alt="joselu"
@@ -22,90 +23,92 @@ import TsIcon from "./icons/TsIcon.astro";
     400"
     /> -->
 
-    <div class="about__descp">
-      <p>
-        Desarrollador web enfocado en el Front-end, apasionado por las nuevas
-        tecnologías y amante de las motos. En búsqueda de una oportunidad para
-        crecer y aprender en este fascinante mundo del desarrollo, donde la
-        velocidad de la innovación se fusiona con mi pasión por las dos ruedas.
-      </p>
-      <h3 class="about__skills">Mejores skills</h3>
-      <ul class="about__langs">
-        <li class="about__item">
-          <AngularIcon class="about__icon" />
-        </li>
-        <li>
-          <TsIcon class="about__icon" />
-        </li>
-        <li>
-          <SassIcon class="about__icon" />
-        </li>
-        <li>
-          <AstroIcon class="about__icon" />
-        </li>
-      </ul>
-    </div>
-  </div>
+		<div class="about__descp">
+			<p>
+				Desarrollador web enfocado en el Front-end, apasionado por las nuevas
+				tecnologías y amante de las motos. En búsqueda de una oportunidad para
+				crecer y aprender en este fascinante mundo del desarrollo, donde la
+				velocidad de la innovación se fusiona con mi pasión por las dos ruedas.
+			</p>
+			<h3 class="about__skills">Mejores skills</h3>
+			<ul class="about__langs">
+				<li class="about__item">
+					<JavaScriptIcon class="about__icon" />
+				</li>
+				<li>
+					<TsIcon class="about__icon" />
+				</li>
+				<ReactIcon class="about__icon" />
+				<li>
+					<SassIcon class="about__icon" />
+				</li>
+				<li>
+					<AstroIcon class="about__icon" />
+				</li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
 </section>
 
 <style>
-  .about {
-    margin-bottom: 4em;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2em;
-  }
-  .about__conent {
-    display: flex;
-    gap: 1em;
-  }
-  .about__img {
-    width: 1em;
-  }
-  .about__title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #fffc;
+	.about {
+		margin-bottom: 4em;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2em;
+	}
+	.about__conent {
+		display: flex;
+		gap: 1em;
+	}
+	.about__img {
+		width: 1em;
+	}
+	.about__title {
+		font-size: 1.875rem;
+		font-weight: 700;
+		color: #fffc;
 
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
-  .about__descp {
-    padding: 1em;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
-  }
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+	.about__descp {
+		padding: 1em;
+		max-width: 700px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1em;
+	}
 
-  .about__profile-img {
-    max-width: 25em;
-    border-radius: 0.5em;
-  }
-  @media screen and (max-width: 650px) {
-    .about__conent {
-      flex-direction: column;
-    }
-    .about__profile-img {
-      max-width: 100%;
-    }
-  }
-  .about__skills {
-    font-weight: 700;
-  }
-  .about__langs {
-    display: flex;
-    align-items: center;
+	.about__profile-img {
+		max-width: 25em;
+		border-radius: 0.5em;
+	}
+	@media screen and (max-width: 650px) {
+		.about__conent {
+			flex-direction: column;
+		}
+		.about__profile-img {
+			max-width: 100%;
+		}
+	}
+	.about__skills {
+		font-weight: 700;
+	}
+	.about__langs {
+		display: flex;
+		align-items: center;
 
-    gap: 1.3em;
-  }
-  .about__item {
-    display: flex;
-  }
+		gap: 1.3em;
+	}
+	.about__item {
+		display: flex;
+	}
 
-  .about__icon {
-    width: 2.5em;
-  }
+	.about__icon {
+		width: 2.5em;
+	}
 </style>
