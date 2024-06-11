@@ -22,8 +22,10 @@ const { id, img, title, tegnologies, demo, repo } = Astro.props;
 		view-transition-name=`img-${id}`
 	/>
 	<div class="proyect__content">
-		<h3 class="proyect__title">
-			{title}
+		<div class="proyect__title-container">
+			<h3 class="proyect__title">
+				{title}
+			</h3>
 			<a
 				class="proyect__more"
 				aria-label="Ver más sobre el proyecto"
@@ -33,7 +35,7 @@ const { id, img, title, tegnologies, demo, repo } = Astro.props;
 			>
 				<ArrowRightIcon class="proyect__more-icon" />
 			</a>
-		</h3>
+		</div>
 
 		<Chips tegnologies={tegnologies} />
 
@@ -81,20 +83,20 @@ const { id, img, title, tegnologies, demo, repo } = Astro.props;
 		justify-content: space-between;
 		gap: 1em;
 	}
+	.proyect__title-container {
+		display: grid;
+		grid-template-columns: 80% auto;
+	}
 	.proyect__title {
-		font-size: 1.3rem;
+		font-size: clamp(1rem, 2vw, 1.3rem);
 		font-weight: 700;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
 	.proyect__more {
 		width: 2.3em;
 		font-size: 0.9rem;
 		padding: 0.3em;
 		border-radius: 0.3em;
-
-		display: flex;
+		margin-left: auto;
 		transition: all 0.2s ease;
 	}
 
