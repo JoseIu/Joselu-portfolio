@@ -5,6 +5,7 @@ import ArrowBackIcon from "../../components/icons/ArrowBack.astro";
 import type { GetStaticPaths } from "astro";
 import { PROYECTS } from "../../db/proyectsDB.js";
 import { PROYECTS_REACT } from "../../db/proyectsDB.js";
+import Chips from "../../components/Chips/Chips.astro";
 
 const { id } = Astro.params;
 
@@ -54,13 +55,7 @@ export const getStaticPaths = (() => {
 					</h2>
 					<p class="proyect__description">{proyectSelected.description}</p>
 
-					<ul class="proyect__langs">
-						{
-							proyectSelected.tegnologies.map((teg) => (
-								<li class="proyect__lang">{teg}</li>
-							))
-						}
-					</ul>
+					<Chips tegnologies={proyectSelected.tegnologies} />
 				</div>
 			</article>
 		</div>
