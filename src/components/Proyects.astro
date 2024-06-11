@@ -1,164 +1,97 @@
 ---
 import CodeIcon from "./icons/Code.astro";
-import { PROYECTS } from "../db/proyectsDB.js";
-import ArrowRightIcon from "./icons/ArrowRight.astro";
+import { PROYECTS, PROYECTS_REACT } from "../db/proyectsDB.js";
+import ProyectCard from "./ProyectCard/ProyectCard.astro";
 
-const proyects = structuredClone(PROYECTS);
+const proyectsAngular = structuredClone(PROYECTS);
+const proyectsReact = structuredClone(PROYECTS_REACT);
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-  <h2 class="proyects__title">
-    <CodeIcon class="proyects__icon" />
-    Proyectos
-  </h2>
+	<h2 class="proyects__title">
+		<CodeIcon class="proyects__icon" />
+		Proyectos
+	</h2>
 
-  <div class="proyects__list">
-    {
-      proyects.map((proyect) => (
-        <article class="proyect">
-          <img
-            class="proyect__img"
-            src={proyect.img}
-            alt={proyect.title}
-            width="200"
-            height="400"
-            transition:name=`img${proyect.id}`
-            view-transition-name=`img-${proyect.id}`
-          />
-          <div class="proyect__content">
-            <h3 class="proyect__title">
-              {proyect.title}
-              <a class="proyect__more" href={`/info-proyects/${proyect.id}`} transition:name=`arrow${proyect.id}`
-            view-transition-name=`arrow-${proyect.id}`>
-                 <ArrowRightIcon clas="proyect__more-icon"/>
-              </a>
-            </h3>
-            <ul class="proyect__langs">
-              {proyect.tegnologies.map((teg) => (
-                <li class="proyect__lang">{teg}</li>
-              ))}
-            </ul>
+	<div class="proyects__container">
+		<h2 class="proyects__subtitle">Proyectos en React</h2>
 
-            <div class="proyect__buttons">
-              <a
-                class="proyect__button"
-                href={proyect.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Demo
-              </a>
-              <a
-                class="proyect__button"
-                href={proyect.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Repositorio
-              </a>
-            </div>
-          </div>
-        </article>
-      ))
-    }
-  </div>
+		<div class="proyects__list active">
+			{
+				proyectsReact.map((proyect) => (
+					<ProyectCard
+						id={proyect.id}
+						img={proyect.img}
+						title={proyect.title}
+						demo={proyect.demo}
+						repo={proyect.repo}
+						tegnologies={proyect.tegnologies}
+					/>
+				))
+			}
+		</div>
+		<h2 class="proyects__subtitle">Proyectos en Angular</h2>
+		<div class="proyects__list">
+			{
+				proyectsAngular.map((proyect) => (
+					<ProyectCard
+						id={proyect.id}
+						img={proyect.img}
+						title={proyect.title}
+						demo={proyect.demo}
+						repo={proyect.repo}
+						tegnologies={proyect.tegnologies}
+					/>
+				))
+			}
+		</div>
+	</div>
 </section>
 
 <style>
-  .proyects {
-    padding: 1em;
-    margin-bottom: 3em;
+	.proyects {
+		padding: 1em;
+		margin-bottom: 3em;
+		transition: all 0.5s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 2em;
-  }
-  .proyects__title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #fffc;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
-  .proyects__icon {
-    width: 1em;
-  }
-  .proyects__list {
-    display: grid;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2em;
+	}
+	.proyects__title {
+		font-size: 1.875rem;
+		font-weight: 700;
+		color: #fffc;
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+	.proyects__subtitle {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: yellow;
+	}
+	.proyects__icon {
+		width: 1em;
+	}
 
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    gap: 2em;
-  }
+	.proyects__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+	.proyects__list {
+		width: 100%;
 
-  .proyect {
-    border-radius: 0.4em;
-    overflow: hidden;
-    background-color: #2222228a;
-  }
-  .proyect__content {
-    padding: 1em;
-    width: 100%;
+		transition: all 0.2s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
-  }
-  .proyect__title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .proyect__more {
-    width: 2.3em;
-    font-size: 0.9rem;
-    padding: 0.3em;
-    border-radius: 0.3em;
-  
-
-    display: flex;
-    transition: all .2s ease;
-    
-  }
-  
-  .proyect__more:hover{
-    transform: scale(1.3);
- 
-  }
-
-  .proyect__langs {
-    display: flex;
-    gap: 0.6em;
-    flex-wrap: wrap;
-  }
-  .proyect__lang {
-    font-weight: 500;
-    color: #fffc;
-    text-transform: uppercase;
-
-    display: flex;
-    gap: 0.2em;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 0.8rem;
-  }
-  .proyect__icon {
-    width: 1.4em;
-  }
-  .proyect__buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .proyect__button {
-    color: #fffc;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-  }
-  .proyect__button:hover {
-    border-bottom: 1px solid rgb(12, 128, 56);
-  }
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+		gap: 2em;
+	}
+	@media screen and (min-width: 750px) {
+		.proyects__list {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 </style>
