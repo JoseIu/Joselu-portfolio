@@ -4,57 +4,59 @@ import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
 <footer class="footer wrapper">
-  <span class="footer__logo">J</span>
+	<span class="footer__logo">J</span>
 
-  <ul class="footer__socials">
-    <li class="footer__item">
-      <a
-        class="footer__link"
-        href="https://github.com/JoseIu"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <GitHubIcon class="footer__icon" />
-      </a>
-    </li>
-    <li class="footer__item">
-      <a
-        class="footer__link"
-        href="https://www.linkedin.com/in/j0selu/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LinkedInIcon class="footer__icon" />
-      </a>
-    </li>
-  </ul>
+	<ul class="footer__socials">
+		<li class="footer__item">
+			<a
+				class="footer__link"
+				href="https://github.com/JoseIu"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="link to my GitHub profile"
+			>
+				<GitHubIcon class="footer__icon" />
+			</a>
+		</li>
+		<li class="footer__item">
+			<a
+				class="footer__link"
+				href="https://www.linkedin.com/in/j0selu/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="link to my LinkedIn profile"
+			>
+				<LinkedInIcon class="footer__icon" />
+			</a>
+		</li>
+	</ul>
 </footer>
 
 <style>
-  .footer {
-    width: 95%;
-    padding: 1em;
-    border-radius: 1em;
-    background-color: #ffffff0d;
-    margin-bottom: 1em;
+	.footer {
+		width: 95%;
+		padding: 1em;
+		border-radius: 1em;
+		background-color: #ffffff0d;
+		margin-bottom: 1em;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer__logo {
-    font-size: 1.2em;
-  }
-  .footer__socials {
-    width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.footer__logo {
+		font-size: 1.2em;
+	}
+	.footer__socials {
+		width: 100%;
 
-    gap: 1em;
-    display: flex;
-    gap: 1.5em;
-    align-items: center;
-    justify-content: end;
-  }
-  .footer__icon {
-    width: 1.5em;
-  }
+		gap: 1em;
+		display: flex;
+		gap: 1.5em;
+		align-items: center;
+		justify-content: end;
+	}
+	.footer__icon {
+		width: 1.5em;
+	}
 </style>
