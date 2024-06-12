@@ -114,8 +114,8 @@ export const PROYECTS_REACT = [
 		tegnologies: ["HTML", "CSS", "SASS", "JS "],
 		description:
 			"Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.",
-		demo: "https://hotel-miranda-dash-board.vercel.app/",
-		repo: "https://github.com/JoseIu/hotel-miranda-dashBoard",
+		demo: "https://hotel-miranda-nu.vercel.app/",
+		repo: "https://github.com/JoseIu/hotel-miranda",
 	},
 	{
 		id: uuidv4(),
@@ -124,8 +124,8 @@ export const PROYECTS_REACT = [
 		tegnologies: ["REACT 17", "TypeScript", "Redux", "Styled Modules"],
 		description:
 			"Proyecto de Dashboard para el Hotel Miranda. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y Styled Modules. El Dashboard esta conectado a la API del Hotel Miranda, permitiendo la gestión de los datos de los usuarios y las habitaciones del hotel.",
-		demo: "https://hotel-miranda-nu.vercel.app/",
-		repo: "https://github.com/JoseIu/hotel-miranda",
+		demo: "https://hotel-miranda-dash-board.vercel.app/",
+		repo: "https://github.com/JoseIu/hotel-miranda-dashBoard",
 	},
 	{
 		id: uuidv4(),
@@ -134,8 +134,8 @@ export const PROYECTS_REACT = [
 		tegnologies: ["NODE.JS", "Express", "TypeScript", "MongoDB", "JWT"],
 		description:
 			"Proyecto de API RESTful para el Hotel Miranda. En este proyecto se pone en práctica el uso de Node.js, Express, TypeScript, MongoDB y JWT. La API gestiona la utenticación gracias a JWT y realizar operaciones CRUD sobre los datos de los usuarios y las habitaciones del hotel.",
-		demo: "https://hotel-miranda-nu.vercel.app/",
-		repo: "https://github.com/JoseIu/hotel-miranda",
+		demo: "https://github.com/JoseIu/dashboard_api",
+		repo: "https://github.com/JoseIu/dashboard_api",
 	},
 	{
 		id: uuidv4(),
