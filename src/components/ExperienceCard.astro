@@ -1,55 +1,55 @@
 ---
 interface Props {
-  time: string;
-  role: string;
-  description: string;
-  description2?: string;
+	time: string;
+	role: string;
+	description: string;
+	description2?: string;
 }
 
 const { time, role, description, description2 } = Astro.props;
 ---
 
 <li class="experience__item">
-  <div class="circle"></div>
-  <span class="experience__time">{time}</span>
-  <h3 class="experience__role">{role}</h3>
-  <p class="experience__description">
-    {description}
-  </p>
-  <p class="experience__description">
-    {description2}
-  </p>
+	<div class="circle"></div>
+	<span class="experience__time">{time}</span>
+	<h3 class="experience__role">{role}</h3>
+	<p class="experience__description">
+		{description}
+	</p>
+	<p class="experience__description">
+		{description2}
+	</p>
 </li>
 <style>
-  .circle {
-    position: absolute;
-    top: 0.35em;
-    left: -0.38em;
-    width: 0.75em;
-    height: 0.75em;
-    border-radius: 50%;
-    background-color: rgb(12, 128, 56);
-  }
-  .experience__item {
-    max-width: 50em;
-    position: relative;
-    padding: 0 0 0 1em;
+	.circle {
+		position: absolute;
+		top: 0.35em;
+		left: -0.38em;
+		width: 0.75em;
+		height: 0.75em;
+		border-radius: 50%;
+		background-color: rgb(12, 128, 56);
+	}
+	.experience__item {
+		max-width: 50em;
+		position: relative;
+		padding: 0 0 0 1em;
 
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.8em;
-  }
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.8em;
+	}
 
-  .experience__time {
-    font-size: 0.875rem;
-    color: rgb(12, 128, 56);
-  }
-  .experience__role {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: yellow;
-  }
-  .experience__description {
-    font-weight: 400;
-  }
+	.experience__time {
+		font-size: 0.875rem;
+		color: rgb(0, 255, 98);
+	}
+	.experience__role {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: yellow;
+	}
+	.experience__description {
+		font-weight: 400;
+	}
 </style>
