@@ -30,7 +30,17 @@ export const PROYECTS = [
 		description:
 			"¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!",
 		demo: "https://angular-gpt-gilt.vercel.app/orthography",
-		repo: "https://github.com/JoseIu/angular-gpt",
+		repo: " https://github.com/JoseIu/angular-gpt",
+	},
+	{
+		id: uuidv4(),
+		img: "/proyects/space.webp",
+		title: "Space tourism multi-page ",
+		tegnologies: ["Angular 17", "TypeScript", "HTML", "SASS "],
+		description:
+			"Un proyecto de FRONTENDMENTOR en colaboraciçon between us, Scrimba, and Kevin Powell.",
+		demo: "https://space-turism-web-sigma.vercel.app/home",
+		repo: "https://github.com/JoseIu/space-turism-web",
 	},
 	{
 		id: uuidv4(),
