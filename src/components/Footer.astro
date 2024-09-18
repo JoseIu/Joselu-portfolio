@@ -1,62 +1,73 @@
 ---
-import GitHubIcon from "./icons/GitHub.astro";
-import LinkedInIcon from "./icons/LinkedIn.astro";
+
 ---
 
-<footer class="footer wrapper">
-	<span class="footer__logo">J</span>
-
-	<ul class="footer__socials">
-		<li class="footer__item">
-			<a
-				class="footer__link"
-				href="https://github.com/JoseIu"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="link to my GitHub profile"
-			>
-				<GitHubIcon class="footer__icon" />
-			</a>
-		</li>
-		<li class="footer__item">
-			<a
-				class="footer__link"
-				href="https://www.linkedin.com/in/j0selu/"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="link to my LinkedIn profile"
-			>
-				<LinkedInIcon class="footer__icon" />
-			</a>
-		</li>
-	</ul>
+<footer class="footer">
+  <nav class="nav wrapper">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#home" aria-label="link para ir a Sobre mí">Inicio</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#proyects" aria-label="link para ir a Proyectos">Proyectos</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#skills" aria-label="link para ir a Habilidades">Habilidades</a>
+      </li>
+    </ul>
+  </nav>
 </footer>
 
 <style>
-	.footer {
-		width: 95%;
-		padding: 1em;
-		border-radius: 1em;
-		background-color: #ffffff0d;
-		margin-bottom: 1em;
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: rgba(var(--color), 1);
 
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.footer__logo {
-		font-size: 1.2em;
-	}
-	.footer__socials {
-		width: 100%;
+    view-timeline-name: --footer;
+    view-timeline-axis: block;
 
-		gap: 1em;
-		display: flex;
-		gap: 1.5em;
-		align-items: center;
-		justify-content: end;
-	}
-	.footer__icon {
-		width: 1.5em;
-	}
+    animation-timeline: --footer;
+    animation-name: show-footer;
+    animation-range: entry 15% cover 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .nav__item {
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav__item:hover {
+    transform: scale(1.2);
+  }
+
+  @keyframes show-footer {
+    from {
+      opacity: -1;
+      scale: 0%;
+      pointer-events: none;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+      pointer-events: all;
+    }
+  }
 </style>

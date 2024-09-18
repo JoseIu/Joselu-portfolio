@@ -1,32 +1,70 @@
 ---
+import AngularIcon from '../icons/dev/AngularIcon.astro';
+import AstroIcon from '../icons/dev/AstroIcon.astro';
+import CssIcon from '../icons/dev/CssIcon.astro';
+import HtmlIcon from '../icons/dev/HtmlIcon.astro';
+import JavaScriptIcon from '../icons/dev/JavaScriptIcon.astro';
+import MongoIcon from '../icons/dev/MongoIcon.astro';
+import NodeIcon from '../icons/dev/NodeIcon.astro';
+import ReactIcon from '../icons/dev/ReactIcon.astro';
+import ReduxIcon from '../icons/dev/ReduxIcon.astro';
+import SassIcon from '../icons/dev/SassIcon.astro';
+import TsIcon from '../icons/dev/TsIcon.astro';
+
 interface Props {
-	tegnologies: string[];
+  tegnologies: string[];
 }
 const { tegnologies } = Astro.props;
+
+const iconShip = {
+  React: ReactIcon,
+  CSS: CssIcon,
+  SASS: SassIcon,
+  HTML: HtmlIcon,
+  JavaScript: JavaScriptIcon,
+  TypeScript: TsIcon,
+  'Node.JS': NodeIcon,
+  Astro: AstroIcon,
+  Angular: AngularIcon,
+  Redux: ReduxIcon,
+  MongoDB: MongoIcon
+};
 ---
 
 <ul class="chips">
-	{tegnologies.map((teg) => <li class="chip">{teg}</li>)}
+  {
+    tegnologies.map(teg => {
+      const IconComponent = iconShip[teg];
+      return (
+        <li class="chip">
+          {IconComponent && <IconComponent class="ship__icon" />} {teg}
+        </li>
+      );
+    })
+  }
 </ul>
 
 <style>
-	.chips {
-		display: flex;
-		gap: 0.6em;
-		flex-wrap: wrap;
-	}
-	.chip {
-		padding: 0.2rem 0.3rem;
-		border-radius: 0.4rem;
-		background-color: rgba(12, 128, 56, 0.685);
-		font-weight: 500;
-		color: #fffc;
-		text-transform: uppercase;
+  .chips {
+    display: flex;
+    gap: 0.6em;
+    flex-wrap: wrap;
+  }
+  .chip {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    /* color: #ffd400; */
+    background-color: rgba(var(--color-button-accent), 0.2);
+    border: 1px solid rgba(var(--color), 0.2);
 
-		display: flex;
-		gap: 0.2em;
-		flex-wrap: wrap;
-		align-items: center;
-		font-size: 0.8rem;
-	}
+    display: flex;
+    gap: 0.2em;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  .ship__icon {
+    width: 1.1rem;
+    color: rgba(var(--color), 1);
+  }
 </style>

@@ -1,97 +1,88 @@
 ---
-import CodeIcon from "./icons/Code.astro";
-import { PROYECTS, PROYECTS_REACT } from "../db/proyectsDB.js";
-import ProyectCard from "./ProyectCard/ProyectCard.astro";
+import { PROYECTS, PROYECTS_REACT } from '../db/proyectsDB.js';
+import CodeIcon from './icons/Code.astro';
+import ProyectCard from './ProyectCard/ProyectCard.astro';
 
 const proyectsAngular = structuredClone(PROYECTS);
 const proyectsReact = structuredClone(PROYECTS_REACT);
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-	<h2 class="proyects__title">
-		<CodeIcon class="proyects__icon" />
-		Proyectos
-	</h2>
+  <h2 class="proyects__title">
+    <CodeIcon class="proyects__icon" />
+    Proyectos
+  </h2>
 
-	<div class="proyects__container">
-		<h2 class="proyects__subtitle">Proyectos en React</h2>
-
-		<div class="proyects__list active">
-			{
-				proyectsReact.map((proyect) => (
-					<ProyectCard
-						id={proyect.id}
-						img={proyect.img}
-						title={proyect.title}
-						demo={proyect.demo}
-						repo={proyect.repo}
-						tegnologies={proyect.tegnologies}
-					/>
-				))
-			}
-		</div>
-		<h2 class="proyects__subtitle">Proyectos en Angular</h2>
-		<div class="proyects__list">
-			{
-				proyectsAngular.map((proyect) => (
-					<ProyectCard
-						id={proyect.id}
-						img={proyect.img}
-						title={proyect.title}
-						demo={proyect.demo}
-						repo={proyect.repo}
-						tegnologies={proyect.tegnologies}
-					/>
-				))
-			}
-		</div>
-	</div>
+  <div class="proyects__container">
+    <div class="proyects__list active">
+      {
+        proyectsReact.map(proyect => (
+          <ProyectCard
+            id={proyect.id}
+            title={proyect.title}
+            demo={proyect.demo}
+            repo={proyect.repo}
+            descriptionList={proyect.descriptionList}
+          />
+        ))
+      }
+    </div>
+    <div class="proyects__list">
+      {
+        proyectsAngular.map(proyect => (
+          <ProyectCard
+            id={proyect.id}
+            title={proyect.title}
+            demo={proyect.demo}
+            repo={proyect.repo}
+            descriptionList={proyect.descriptionList}
+          />
+        ))
+      }
+    </div>
+  </div>
 </section>
 
 <style>
-	.proyects {
-		padding: 1em;
-		margin-bottom: 3em;
-		transition: all 0.5s ease-in-out;
+  .proyects {
+    padding: 1em;
+    margin-bottom: 3em;
+    transition: all 0.5s ease-in-out;
 
-		display: flex;
-		flex-direction: column;
-		row-gap: 2em;
-	}
-	.proyects__title {
-		font-size: 1.875rem;
-		font-weight: 700;
-		color: #fffc;
-		display: flex;
-		align-items: center;
-		gap: 0.5em;
-	}
-	.proyects__subtitle {
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: yellow;
-	}
-	.proyects__icon {
-		width: 1em;
-	}
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .proyects__title {
+    font-size: 1.875rem;
+    font-weight: 700;
 
-	.proyects__container {
-		display: flex;
-		flex-direction: column;
-		row-gap: 1rem;
-	}
-	.proyects__list {
-		width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .proyects__subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: yellow;
+  }
+  .proyects__icon {
+    width: 1em;
+    color: rgba(var(--color), 1);
+  }
 
-		transition: all 0.2s ease-in-out;
+  .proyects__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .proyects__list {
+    width: 100%;
 
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-		gap: 2em;
-	}
-	@media screen and (min-width: 750px) {
-		.proyects__list {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+    transition: all 0.2s ease-in-out;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2em;
+  }
 </style>

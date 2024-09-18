@@ -1,79 +1,59 @@
 ---
-import ExperienceCard from "./ExperienceCard.astro";
-import ExperienceIcon from "./icons/Experience.astro";
-
-const experiences = [
-	{
-		id: 0,
-		time: "15/03/2024 - Actualidad",
-		role: "Full-stack Developer OXYGEN Workspace",
-		description:
-			"Desarrollé un proyecto Full Stack para el Hotel Miranda, creando una página web utilizando HTML, CSS y JavaScript, aplicando la metodología BEM y un enfoque Mobile First. También implementé un Dashboard para los empleados del hotel, permitiendo la gestión de reservas, habitaciones disponibles y empleados",
-		description2:
-			"Este proyecto fue desarrollado con React, TypeScript y StyledComponents, y está conectado a una API construida con Node.js, Express, TypeScript, MongoDB y JWT para la autenticación.",
-	},
-	{
-		id: 1,
-		time: "25/09/2023 - 01/12/2023",
-		role: "Frontend developer Xerintel Internet Technologies",
-		description:
-			"Durante mis prácticas en la empresa Xerintel en el puesto de Front-end Developer, tuve la oportunidad de ser el responsable de maquetación de la aplicación Gcars, recurso web destinado a la compra venta de vehículos de segunda mano, usando lenguajes de programación como Angular o Ionic.",
-		description2:
-			"Como Front-end Developer también pude participar en el desarrollo de funcionalidades clave, tales como la implementación de los procesos de registro, login y edición de información de usuario.",
-	},
-];
+import { experiences } from '../db/experience';
+import ExperienceCard from './ExperienceCard.astro';
+import ExperienceIcon from './icons/Experience.astro';
 ---
 
-<section class="experience wrapper" id="experience">
-	<h2 class="experience__title">
-		<ExperienceIcon class="experience__icon" />
-		Experiencia laboral
-	</h2>
-	<ol class="experience__list">
-		{
-			experiences.map((experience) => (
-				<ExperienceCard
-					time={experience.time}
-					role={experience.role}
-					description={experience.description}
-					description2={experience.description2}
-				/>
-			))
-		}
-	</ol>
+<section class="experience">
+  <h2 class="experience__title">
+    <ExperienceIcon class="experience__icon" />
+    Experiencia laboral
+  </h2>
+  <ol class="experience__list">
+    {
+      experiences.map(experience => (
+        <ExperienceCard
+          time={experience.time}
+          role={experience.role}
+          company={experience.company}
+          location={experience.location}
+          link={experience.link}
+          description={experience.description}
+          description2={experience.description2}
+        />
+      ))
+    }
+  </ol>
 </section>
 
 <style>
-	.experience {
-		padding: 1em;
-		display: flex;
-		flex-direction: column;
-		row-gap: 2em;
+  .experience {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+  }
+  .experience__title {
+    font-size: 1.875em;
+    font-weight: 600;
+    line-height: 2.25rem;
 
-		margin-bottom: 3em;
-	}
-	.experience__title {
-		font-size: 1.875rem;
-		font-weight: 700;
-		color: #fffc;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .experience__icon {
+    width: 1em;
+    color: rgba(var(--color), 1);
+  }
 
-		display: flex;
-		align-items: center;
-		gap: 0.5em;
-	}
-	.experience__icon {
-		width: 1em;
-	}
-
-	.experience__list {
-		margin-left: 0.8em;
-		padding: 0.3em 0 0 0;
-		border-color: red;
-		border-left: solid #fff;
-		border-inline-start-width: 1px;
-
-		display: flex;
-		flex-direction: column;
-		row-gap: 2em;
-	}
+  .experience__list {
+    margin-left: 0.8em;
+    padding: 0.3em 0 0 0;
+    border-left: solid #fff;
+    border-inline-start-width: 1px;
+    border-color: rgba(var(--muted), 1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
 </style>

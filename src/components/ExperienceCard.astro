@@ -1,55 +1,83 @@
 ---
+import Arrow from './icons/Arrow.astro';
+
 interface Props {
-	time: string;
-	role: string;
-	description: string;
-	description2?: string;
+  time: string;
+  role: string;
+  company: string;
+  location: string;
+  link: string;
+  description: string;
+  description2?: string;
 }
 
-const { time, role, description, description2 } = Astro.props;
+const { time, role, description, company, location, link, description2 } = Astro.props;
 ---
 
 <li class="experience__item">
-	<div class="circle"></div>
-	<span class="experience__time">{time}</span>
-	<h3 class="experience__role">{role}</h3>
-	<p class="experience__description">
-		{description}
-	</p>
-	<p class="experience__description">
-		{description2}
-	</p>
+  <div class="circle"></div>
+  <span class="experience__time">{time}</span>
+  <div>
+    <h3 class="experience__role">
+      {role}
+      <a class="experience__link" href={link} target="_blank"
+        >@ {company} <Arrow class="experience__icon" />
+      </a>
+    </h3>
+    <span class="experience__location smoke">{location}</span>
+  </div>
+  <p class="experience__description smoke">
+    {description}
+  </p>
+  <p class="experience__description smoke">
+    {description2}
+  </p>
 </li>
 <style>
-	.circle {
-		position: absolute;
-		top: 0.35em;
-		left: -0.38em;
-		width: 0.75em;
-		height: 0.75em;
-		border-radius: 50%;
-		background-color: rgb(12, 128, 56);
-	}
-	.experience__item {
-		max-width: 50em;
-		position: relative;
-		padding: 0 0 0 1em;
+  .circle {
+    position: absolute;
+    top: 0.4em;
+    left: -0.26em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: rgba(var(--muted), 1);
 
-		display: flex;
-		flex-direction: column;
-		row-gap: 0.8em;
-	}
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow);
+  }
+  .experience__item {
+    max-width: 50em;
+    position: relative;
+    padding: 0 0 0 1em;
 
-	.experience__time {
-		font-size: 0.875rem;
-		color: rgb(0, 255, 98);
-	}
-	.experience__role {
-		font-size: 1.125rem;
-		font-weight: 600;
-		color: yellow;
-	}
-	.experience__description {
-		font-weight: 400;
-	}
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8em;
+  }
+
+  .experience__time {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+  .experience__role {
+    font-size: 1.125rem;
+  }
+  .experience__link {
+    color: rgb(var(--color));
+  }
+  .experience__link:hover .experience__icon {
+    transform: translateY(-0.23em);
+  }
+  .experience__icon {
+    width: 1rem;
+    transition: transform 0.3s ease;
+  }
+  .experience__location {
+    font-size: 0.75em;
+  }
+  .experience__description {
+    font-size: 0.875em;
+    font-weight: 400;
+    text-wrap: pretty;
+  }
 </style>

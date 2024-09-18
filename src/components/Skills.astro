@@ -1,0 +1,91 @@
+---
+import AstroIcon from './icons/dev/AstroIcon.astro';
+import CssIcon from './icons/dev/CssIcon.astro';
+import HtmlIcon from './icons/dev/HtmlIcon.astro';
+import JavaScriptIcon from './icons/dev/JavaScriptIcon.astro';
+import NodeIcon from './icons/dev/NodeIcon.astro';
+import ReactIcon from './icons/dev/ReactIcon.astro';
+import SassIcon from './icons/dev/SassIcon.astro';
+import TsIcon from './icons/dev/TsIcon.astro';
+import SkillsIcon from './icons/SkillsIcon.astro';
+---
+
+<section class="skills wrapper" id="skills">
+  <h2 class="skills__title">
+    <SkillsIcon class="skills__img" />
+    Habilidades Técnicas
+  </h2>
+  <ul class="skills__ul">
+    <li class="skills__li smoke">
+      <HtmlIcon class="skills__icon" />
+      HTML
+    </li>
+    <li class="skills__li smoke">
+      <CssIcon class="skills__icon" />
+      CSS
+    </li>
+    <li class="skills__li smoke">
+      <SassIcon class="skills__icon" />
+      SASS
+    </li>
+    <li class="skills__li smoke">
+      <ReactIcon class="skills__icon" />
+      React
+    </li>
+    <li class="skills__li smoke">
+      <JavaScriptIcon class="skills__icon" />
+      JavaScript
+    </li>
+    <li class="skills__li smoke">
+      <TsIcon class="skills__icon" />
+      TypeScript
+    </li>
+    <li class="skills__li smoke">
+      <NodeIcon class="skills__icon" />
+      Node.js
+    </li>
+    <li class="skills__li smoke">
+      <AstroIcon class="skills__icon" />
+      Astro
+    </li>
+  </ul>
+</section>
+
+<style>
+  .skills {
+    margin-bottom: 4em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .skills__img {
+    width: 1em;
+    color: rgba(var(--color), 1);
+  }
+  .skills__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .skills__ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+  .skills__li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875em;
+  }
+
+  .skills__icon {
+    width: 1.25rem;
+    color: rgba(var(--color), 1);
+  }
+</style>
