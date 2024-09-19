@@ -25,26 +25,6 @@ import WorldMap from './icons/WorldMap.astro';
     }
   }
 
-  //Increment
-  function incrementCounter(
-    selector: string,
-    current: number,
-    target: number,
-    duration: number,
-    letter: string = ''
-  ) {
-    let counter = document.getElementById(selector);
-    let stepTime = Math.abs(Math.floor(duration / target));
-    if (current < target && counter) {
-      current++;
-      counter.innerText = current.toString() + letter;
-      setTimeout(() => incrementCounter(selector, current, target, duration, letter), stepTime);
-    }
-  }
-  incrementCounter('art-counter', 0, 85, 1000);
-  incrementCounter('youtube-counter', 0, 328, 1000, 'k');
-  incrementCounter('reviews-counter', 0, 250, 1000);
-
   // Update the path when the page loads
   window.addEventListener('DOMContentLoaded', updatePath);
   // Update the path when the window is resized
