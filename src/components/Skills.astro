@@ -1,12 +1,16 @@
 ---
 import AstroIcon from './icons/dev/AstroIcon.astro';
 import CssIcon from './icons/dev/CssIcon.astro';
+import DockerIcon from './icons/dev/DockerIcon.astro';
+import FigmaIcon from './icons/dev/FigmaIcon.astro';
+import GitIcon from './icons/dev/GitIcon.astro';
 import HtmlIcon from './icons/dev/HtmlIcon.astro';
 import JavaScriptIcon from './icons/dev/JavaScriptIcon.astro';
 import NodeIcon from './icons/dev/NodeIcon.astro';
 import ReactIcon from './icons/dev/ReactIcon.astro';
 import SassIcon from './icons/dev/SassIcon.astro';
 import TsIcon from './icons/dev/TsIcon.astro';
+import GitHub from './icons/GitHub.astro';
 import SkillsIcon from './icons/SkillsIcon.astro';
 ---
 
@@ -15,49 +19,73 @@ import SkillsIcon from './icons/SkillsIcon.astro';
     <SkillsIcon class="skills__img" />
     Habilidades Técnicas
   </h2>
-  <ul class="skills__ul">
-    <li class="skills__li smoke">
-      <HtmlIcon class="skills__icon" />
-      HTML
-    </li>
-    <li class="skills__li smoke">
-      <CssIcon class="skills__icon" />
-      CSS
-    </li>
-    <li class="skills__li smoke">
-      <SassIcon class="skills__icon" />
-      SASS
-    </li>
-    <li class="skills__li smoke">
-      <ReactIcon class="skills__icon" />
-      React
-    </li>
-    <li class="skills__li smoke">
-      <JavaScriptIcon class="skills__icon" />
-      JavaScript
-    </li>
-    <li class="skills__li smoke">
-      <TsIcon class="skills__icon" />
-      TypeScript
-    </li>
-    <li class="skills__li smoke">
-      <NodeIcon class="skills__icon" />
-      Node.js
-    </li>
-    <li class="skills__li smoke">
-      <AstroIcon class="skills__icon" />
-      Astro
-    </li>
-  </ul>
+  <div class="skills__content">
+    <h3 class="skills__subtitle smoke">Técnoligas</h3>
+    <ul class="skills__ul">
+      <li class="skills__li">
+        <HtmlIcon class="skills__icon" />
+        HTML
+      </li>
+      <li class="skills__li">
+        <CssIcon class="skills__icon" />
+        CSS
+      </li>
+      <li class="skills__li">
+        <SassIcon class="skills__icon" />
+        SASS
+      </li>
+      <li class="skills__li">
+        <ReactIcon class="skills__icon" />
+        React
+      </li>
+      <li class="skills__li">
+        <JavaScriptIcon class="skills__icon" />
+        JavaScript
+      </li>
+      <li class="skills__li smoke">
+        <TsIcon class="skills__icon" />
+        TypeScript
+      </li>
+      <li class="skills__li">
+        <NodeIcon class="skills__icon" />
+        Node.js
+      </li>
+      <li class="skills__li">
+        <AstroIcon class="skills__icon" />
+        Astro
+      </li>
+    </ul>
+
+    <h3 class="skills__subtitle smoke">Herramientas</h3>
+    <ul class="skills__ul">
+      <li class="skills__li">
+        <GitIcon class="skills__icon" />
+        Git
+      </li>
+      <li class="skills__li">
+        <GitHub class="skills__icon" />
+        GitHub
+      </li>
+      <li class="skills__li">
+        <DockerIcon class="skills__icon" />
+        Docker
+      </li>
+      <li class="skills__li">
+        <FigmaIcon class="skills__icon" />
+        Figma
+      </li>
+    </ul>
+  </div>
 </section>
 
 <style>
   .skills {
-    margin-bottom: 5em;
     padding: 1em;
+    margin-bottom: 3rem;
+
     display: flex;
     flex-direction: column;
-    row-gap: 2em;
+    row-gap: 1em;
   }
   .skills__img {
     width: 1em;
@@ -70,6 +98,18 @@ import SkillsIcon from './icons/SkillsIcon.astro';
     display: flex;
     align-items: center;
     gap: 0.5em;
+  }
+  .skills__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .skills__subtitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(var(--color), 1);
+    width: fit-content;
   }
   .skills__ul {
     display: flex;
