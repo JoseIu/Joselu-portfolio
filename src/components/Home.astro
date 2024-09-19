@@ -16,7 +16,7 @@ import WorldMap from './icons/WorldMap.astro';
     if (textMain && path) {
       path.setAttribute(
         'd',
-        `M0,0 V${textMain.offsetHeight + 13} H${textMain.offsetWidth} v${textMain.offsetHeight - 50}`
+        `M0,0 V${textMain.offsetHeight + 13} H${textMain.offsetWidth} v${textMain.offsetHeight}`
       );
       const pathLength = path.getTotalLength();
 
@@ -29,6 +29,9 @@ import WorldMap from './icons/WorldMap.astro';
   window.addEventListener('DOMContentLoaded', updatePath);
   // Update the path when the window is resized
   window.addEventListener('resize', updatePath);
+
+  // Update the path when the window is resized (for astro)
+  document.addEventListener('astro:after-swap', updatePath);
 </script>
 
 <section class="home wrapper" id="home">
@@ -117,9 +120,10 @@ import WorldMap from './icons/WorldMap.astro';
     <section class="about">
       <h3 class="about__title">Sobre mí</h3>
       <p class="about__description smoke">
-        Desarrollador web. Apasionado por las nuevas tecnologías. En búsqueda de una oportunidad para crecer y
-        aprender en este fascinante mundo del desarrollo.
+        Desarrollador full stack con experiencia en metodologías ágiles. Perfil analítico, resolutivo y
+        proactivo, con habilidades para el trabajo en equipo y adaptabilidad a nuevas tecnologías.
       </p>
+      <p class="about__description smoke">Motivado por enfrentar desafíos y aprender continuamente.</p>
     </section>
   </div>
 
@@ -288,10 +292,10 @@ import WorldMap from './icons/WorldMap.astro';
       font-size: 1.875em;
     }
     .about__description {
-      max-width: 20rem;
       font-size: 0.875em;
       line-height: 1.5;
       text-wrap: pretty;
+      padding: 0 1rem 0 0;
     }
   }
   #border-path {
