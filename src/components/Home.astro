@@ -8,6 +8,49 @@ import Phone from './icons/Phone.astro';
 import WorldMap from './icons/WorldMap.astro';
 ---
 
+<script>
+  function updatePath() {
+    const textMain = document.querySelector('#anim-p') as HTMLElement;
+    const path = document.querySelector('#border-path') as SVGPathElement;
+
+    if (textMain && path) {
+      path.setAttribute(
+        'd',
+        `M0,0 V${textMain.offsetHeight + 13} H${textMain.offsetWidth} v${textMain.offsetHeight - 50}`
+      );
+      const pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = pathLength.toString();
+      path.style.strokeDashoffset = pathLength.toString();
+    }
+  }
+
+  //Increment
+  function incrementCounter(
+    selector: string,
+    current: number,
+    target: number,
+    duration: number,
+    letter: string = ''
+  ) {
+    let counter = document.getElementById(selector);
+    let stepTime = Math.abs(Math.floor(duration / target));
+    if (current < target && counter) {
+      current++;
+      counter.innerText = current.toString() + letter;
+      setTimeout(() => incrementCounter(selector, current, target, duration, letter), stepTime);
+    }
+  }
+  incrementCounter('art-counter', 0, 85, 1000);
+  incrementCounter('youtube-counter', 0, 328, 1000, 'k');
+  incrementCounter('reviews-counter', 0, 250, 1000);
+
+  // Update the path when the page loads
+  window.addEventListener('DOMContentLoaded', updatePath);
+  // Update the path when the window is resized
+  window.addEventListener('resize', updatePath);
+</script>
+
 <section class="home wrapper" id="home">
   <div class="right">
     <section class="home__content">
@@ -21,7 +64,7 @@ import WorldMap from './icons/WorldMap.astro';
         </div>
       </figure>
 
-      <div class="profile">
+      <div class="profile" id="anim-p">
         <h1 class="profile__title">Joselu</h1>
         <h2 class="profile__subtitle smoke">Full Stack Developer</h2>
         <div class="profile__location smoke">
@@ -78,6 +121,16 @@ import WorldMap from './icons/WorldMap.astro';
             </a>
           </li>
         </ul>
+
+        <svg class="profile__fancy">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style={{ stopColor: '#DC3A2B', stopOpacity: 1 }}></stop>
+              <stop offset="100%" style={{ stopColor: '#E18510', stopOpacity: 1 }}></stop>
+            </linearGradient>
+          </defs>
+          <path id="border-path" fill="none" stroke="url(#gradient)" stroke-width="1"></path>
+        </svg>
       </div>
     </section>
 
@@ -117,6 +170,7 @@ import WorldMap from './icons/WorldMap.astro';
     }
   }
   .profile {
+    position: relative;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
@@ -138,6 +192,13 @@ import WorldMap from './icons/WorldMap.astro';
     .profile__icon {
       width: 0.9rem;
     }
+  }
+  .profile__fancy {
+    position: absolute;
+    width: 100%;
+    bottom: -3.1rem;
+    left: -0.7rem;
+    overflow: visible;
   }
 
   .figure {
@@ -250,6 +311,15 @@ import WorldMap from './icons/WorldMap.astro';
       font-size: 0.875em;
       line-height: 1.5;
       text-wrap: pretty;
+    }
+  }
+  #border-path {
+    animation: draw 1s forwards 1s ease-out;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
     }
   }
 </style>
