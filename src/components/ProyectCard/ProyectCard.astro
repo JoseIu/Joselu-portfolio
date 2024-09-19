@@ -48,9 +48,9 @@ const { id, title, demo, descriptionList, repo } = Astro.props;
       </a>
     </div>
   </div>
-  <p class="proyect__description">
+  <!-- <p class="proyect__description">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, recusandae!
-  </p>
+  </p> -->
 
   <ul class="proyect__list">
     {descriptionList.map(description => <li class="proyect__li smoke">{description}</li>)}
@@ -88,6 +88,7 @@ const { id, title, demo, descriptionList, repo } = Astro.props;
 
     display: flex;
     align-items: center;
+    line-height: normal;
     gap: 0.3em;
     transition:
       color 0.3s ease-in,
