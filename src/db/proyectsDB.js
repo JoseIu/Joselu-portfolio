@@ -6,12 +6,12 @@ export const PROYECTS = [
     title: 'Prueba técnica por @Midudev',
     tegnologies: ['Angular', 'TypeScript', 'RxJs', 'HTML', 'SASS'],
     description:
-      'Prueba técnica desarrollada por @Midudev, en la que se pone a prueba los conocimientos de Angular, TypeScript, RxJs, HTML y Sass. En este proyecto se pone en práctica el uso de la librería RxJs para el manejo de los datos',
+      'Prueba técnica propuesta por @Midudev, en la que se pone a prueba los conocimientos de Angular, TypeScript, RxJs, HTML y Sass. En este proyecto se pone en práctica el uso de la librería RxJs para el manejo de los datos',
 
     descriptionList: [
-      'Desarrollado con Angular y RxJs. Lista de libros y filtros.',
-      'Incluye filtros por género y páginas. Sincronización de estado',
-      'Diseño responsive con persistencia de datos y funcionalidad de búsqueda'
+      'Lista de libros y filtros, desarrollado con Angular y RxJs.',
+      'Incluye filtros y Sincronización de estado',
+      'Diseño responsive con persistencia de datos'
     ],
     features: [
       'Creación de Lista de Lectura: El usuario debe ser capaz de crear una lista de lectura a partir de los libros disponibles. En la UI debe quedar claro qué libros están en la lista de lectura y cuáles no. También debe ser posible mover un libro de la lista de lectura a la lista de disponibles.',
@@ -31,15 +31,15 @@ export const PROYECTS = [
   {
     id: uuidv4(),
     img: '/proyects/chat-openAi.webp',
-    title: 'Asistente con OpenAi FRONT-END',
+    title: 'Asistente virtual con OpenAi ',
     tegnologies: ['Angular', 'TypeScript', 'HTML', 'Tailwind ', 'NestJS'],
     description:
       '¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!',
 
     descriptionList: [
-      'Desarrollado con Angular, NestJS y Tailwind. Asistente virtual informativo.',
-      'Manejo de archivos con Multer. Interfaz funcional y atractiva.',
-      'Frontend con Tailwind y Backend con NestJS.'
+      'Asistente virtual desarrollado con Angular y Tailwind.',
+      'Manejo de archivos. Interfaz funcional y atractiva.',
+      'Api Backend con NestJS.'
     ],
     demo: 'https://angular-gpt-gilt.vercel.app/orthography',
     repo: ' https://github.com/JoseIu/angular-gpt'
@@ -52,7 +52,7 @@ export const PROYECTS = [
     description: 'Un proyecto de FRONTENDMENTOR en colaboraciçon between us, Scrimba, and Kevin Powell.',
     descriptionList: [
       'Desarrollado con Angular, TypeScript y SASS',
-      'Interfaz creada con SASS y Angular. Desafío de Frontendmentor.',
+      'Desafío de Frontendmentor.',
       'Colaboración con Scrimba y Kevin Powell. Proyecto frontend completo.'
     ],
     demo: 'https://space-turism-web-sigma.vercel.app/home',
@@ -61,12 +61,12 @@ export const PROYECTS = [
   {
     id: uuidv4(),
     img: '/proyects/chat-openAi-back.webp',
-    title: 'Asistente con OpenAi BACKEND',
+    title: 'Asistente virtual API',
     tegnologies: ['NestJS', 'OpenAi', 'Multer'],
     description:
       '¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!',
     descriptionList: [
-      'Desarrollado con NestJS y OpenAI. Asistente virtual informativo.',
+      'Desarrollado con NestJS y OpenAI.',
       'Manejo de archivos con Multer.',
       'Asistente virtual con OpenAI. Lógica y archivos gestionados en backend.'
     ],
@@ -76,12 +76,12 @@ export const PROYECTS = [
   {
     id: uuidv4(),
     img: '/proyects/pomodoro.webp',
-    title: 'PomoDoro con tareas',
+    title: 'Pomodoro',
     tegnologies: ['Angular', 'TypeScript', 'HTML', 'SASS'],
     description:
       'PomoDoro con tareas es una aplicación que permite al usuario organizar su tiempo de trabajo y descanso. El usuario puede añadir tareas. La aplicación cuenta con un temporizador que avisa al usuario cuando el tiempo de trabajo o descanso ha terminado. Además, la aplicación cuenta con acciones sobre cada tareas como el de terminar la tarea, editar y eliminar.',
     descriptionList: [
-      'Desarrollado con Angular y TypeScript. Aplicación de gestión de tiempo.',
+      'Desarrollado con Angular y TypeScript.',
       'Incluye temporizador Pomodoro para trabajo y descanso.',
       'Acciones sobre tareas: añadir, editar, eliminar y marcar como completadas.'
     ],
@@ -96,7 +96,7 @@ export const PROYECTS = [
     description:
       'Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular 16, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.',
     descriptionList: [
-      'Desarrollado con Angular 17 y TypeScript. Demo de Map-box.',
+      'Desarrollado con Angular y TypeScript.',
       'Implementación de marcadores en el mapa con funcionalidad de desplazamiento.',
       'Uso de standalone components, signals y persistencia de datos.'
     ],
@@ -113,7 +113,7 @@ export const PROYECTS = [
     description:
       'Applicacion que permite buscar perfiles de GitHub, utilizando la API de GitHub. En este proyecto se pone en práctica el uso HttpClient para el manejo de los datos y debouncer para la busqueda.',
     descriptionList: [
-      'Desarrollado con Angular 16 y TypeScript. Búsqueda de perfiles de GitHub.',
+      'Desarrollado con Angular y TypeScript.',
       'Uso de la API de GitHub y HttpClient para manejo de datos.',
       'Funcionalidad de búsqueda con debouncer para mejorar la experiencia.'
     ],
@@ -131,7 +131,7 @@ export const PROYECTS = [
       "En la creación de este proyecto, utilicé Angular 16, HTML, SASS y TypeScript, empleando específicamente Angular's HttpClient para consumir eficientemente la API de Giphy a través de peticiones HTTP. Destaco tambien la implementación de un historial de búsquedas, permitiendo a los usuarios repetir búsquedas anteriores con un clic. Aseguré la eficiencia del historial al evitar duplicación de nombres. Este proyecto resalta mi capacidad para desarrollar aplicaciones interactivas y mi habilidad en el uso de herramientas avanzadas como Angular's HttpClient para optimizar la comunicación con la API.",
 
     descriptionList: [
-      'Desarrollado con Angular 16, TypeScript y SCSS. Consumo de API de Giphy.',
+      'Desarrollado con Angular, TypeScript y SCSS.',
       'Historial de búsquedas implementado con control de duplicados.',
       'Uso de HttpClient para optimizar la comunicación con la API.'
     ],
@@ -147,7 +147,7 @@ export const PROYECTS = [
     description:
       'Desarrollé una aplicación para buscar recetas que incorpora un modal para visualizar los ingredientes. Además, los usuarios tienen la capacidad de añadir recetas a la lista de favoritos, proporcionando una experiencia interactiva y funcional. Este proyecto destaca mi habilidad para trabajar con tecnologías web clave y crear aplicaciones prácticas y atractivas.',
     descriptionList: [
-      'Desarrollado con HTML, Sass y JavaScript. Búsqueda de recetas.',
+      'Desarrollado con HTML, Sass y JavaScript.',
       'Funcionalidad de favoritos y visualización de ingredientes en modal.',
       'Aplicación interactiva y práctica con tecnologías web clave.'
     ],
@@ -166,7 +166,7 @@ export const PROYECTS_REACT = [
     description:
       'Aplicacion que nos permite realizar una busqueda de imagenes, utilizando la API de Unsplash. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y SASS. Se implementa el patron CRUD para la gestión de las imagenes.',
     descriptionList: [
-      'Desarrollado con React, TypeScript y SASS. Búsqueda de imágenes.',
+      'Desarrollado con React, TypeScript y SASS.',
       'Uso de la API de Unsplash y gestión de imágenes con CRUD.',
       'Implementación de Redux para manejo de estado en la aplicación.'
     ],
@@ -182,9 +182,9 @@ export const PROYECTS_REACT = [
     description:
       'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
     descriptionList: [
-      'Desarrollado con HTML, CSS, SASS y JavaScript. Página web de hotel.',
+      'Desarrollado con HTML, CSS, SASS y JavaScript.',
       'Diseño responsivo y accesible en diferentes dispositivos.',
-      'Uso de metodología BEM para un código eficiente y mantenible.'
+      'Uso de metodología BEM para un código CSS eficiente y mantenible.'
     ],
 
     demo: 'https://hotel-miranda-nu.vercel.app/',
@@ -199,7 +199,7 @@ export const PROYECTS_REACT = [
       'Proyecto de Dashboard para el Hotel Miranda. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y Styled Modules. El Dashboard esta conectado a la API del Hotel Miranda, permitiendo la gestión de los datos de los usuarios y las habitaciones del hotel.',
 
     descriptionList: [
-      'Desarrollado con React , TypeScript y Redux. Dashboard para hotel.',
+      'Desarrollado con React , TypeScript y Redux.',
       'Uso de Styled Modules para un diseño modular.',
       'Conexión a la API del Hotel Miranda para gestión de datos.'
     ],
@@ -230,7 +230,7 @@ export const PROYECTS_REACT = [
     description:
       'Página web para Oxygen Shop, una tienda de ropa. En este proyecto, utilicé HTML, CSS y JavaScript para desarrollar una interfaz de usuario atractiva y funcional. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además, utilicé SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
     descriptionList: [
-      'Desarrollado con HTML, CSS, SASS y JavaScript. Tienda de ropa.',
+      'Desarrollado con HTML, CSS, SASS y JavaScript.',
       'Diseño responsivo y accesible en diferentes dispositivos.',
       'Uso de metodología BEM para un código limpio y mantenible.'
     ],
@@ -246,7 +246,7 @@ export const PROYECTS_REACT = [
       "Durante la ejecución del proyecto Al-Andalus Doner Kebab Demo, empleé HTML, JavaScript y Sass para desarrollar una página web con un enfoque 'Mobile First', asegurando así su adaptabilidad a distintos dispositivos. Para estructurar el código de manera eficiente y mantenible, implementé la metodología BEM. Uno de los objetivos clave fue la creación de un menú interactivo que abarcara todas las opciones de la carta, proporcionando a los usuarios una experiencia completa y accesible. Este proyecto representó un compromiso integral con el diseño responsivo y las prácticas de desarrollo que garantizan una interfaz de usuario efectiva y atractiva.",
 
     descriptionList: [
-      'Desarrollado con HTML, CSS y JavaScript. Página web adaptativa.',
+      'Desarrollado con HTML, CSS y JavaScript.',
       'Enfoque "Mobile First" y menú interactivo completo.',
       'Uso de metodología BEM para un código eficiente y mantenible.'
     ],
