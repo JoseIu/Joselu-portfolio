@@ -25,7 +25,7 @@ export const getStaticPaths = (() => {
   <header class="proyect-info__header wrapper">
     <a href="/#proyects" class="proyect-info__back">
       <ArrowBackIcon class="proyect-info__arrow" />
-      Go back
+      Regresar
     </a>
   </header>
   <main class="proyect-info wrapper">
@@ -59,15 +59,15 @@ export const getStaticPaths = (() => {
         </div>
       </div>
       <Chips tegnologies={proyectSelected.tegnologies} />
-      <p class="proyect__description smoke">{proyectSelected.description}</p>
+      <p class="proyect__description">{proyectSelected.description}</p>
     </div>
     {
       proyectSelected.features?.length > 0 && (
         <div class="features">
           <h3 class="features__title">Funcionalidades</h3>
-          <ul>
+          <ul class="features__list">
             {proyectSelected.features?.map(feature => (
-              <li class="features__li"> ✔ {feature}</li>
+              <li class="features__li smoke"> {feature}</li>
             ))}
           </ul>
         </div>
@@ -113,6 +113,7 @@ export const getStaticPaths = (() => {
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
+      margin-bottom: 1.5rem;
     }
     .proyect__header {
       display: flex;
@@ -149,13 +150,21 @@ export const getStaticPaths = (() => {
     .features__title {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 1em;
-      color: rgba(12, 128, 57, 0.801);
+    }
+    .features__list {
+      max-width: 70rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      font-size: 15px;
     }
     .features__li {
-      margin-bottom: 0.5em;
-      line-height: 1.5em;
       text-wrap: pretty;
+      list-style: disc;
+      &::marker {
+        color: rgba(var(--color), 1);
+      }
     }
   </style>
 </Layout>
