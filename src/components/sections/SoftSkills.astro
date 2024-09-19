@@ -1,0 +1,67 @@
+---
+import SoftSkillsIcon from '../icons/SoftSkillsIcon.astro';
+---
+
+<section class="soft wrapper">
+  <h2 class="section-title">
+    <SoftSkillsIcon class="icon-section" />
+    Habilidades Blandas
+  </h2>
+
+  <div class="soft__content">
+    <article class="soft-skill">
+      <h3 class="soft-title">Trabajo en equipo</h3>
+      <p class="soft-text smoke">
+        He cultivado mi habilidad para trabajar en equipo a través de diversas experiencias colaborativas,
+        como hackatones y mi trabajo en Oxygen. Estas oportunidades me han permitido interactuar con personas
+        de diferentes áreas y perspectivas, lo que me ha enseñado la importancia de una comunicación clara, la
+        cooperación y la empatía para alcanzar metas comunes.
+      </p>
+    </article>
+    <article class="soft-skill">
+      <h3 class="soft-title">Adaptabilidad</h3>
+      <p class="soft-text smoke">
+        Mi capacidad de adaptabilidad se ha desarrollado al enfrentarme a entornos y circunstancias diversas y
+        cambiantes. He aprendido a ajustar rápidamente mis enfoques, viendo el cambio como una oportunidad
+        para crecer. En cada hackatón, por ejemplo, he tenido que gestionar el tiempo, y mantenerme flexible
+        ante la toma de decisiones.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .soft {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    margin-bottom: 7rem;
+  }
+  .soft__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+
+  .soft-skill {
+    padding: 3rem 2rem;
+    border-radius: 0.4rem;
+    background-color: rgba(var(--color-button-muted), 0.5);
+
+    --tw-ring-color: rgba(var(--muted), 1);
+    --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
+    box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  .soft-title {
+    font-size: 1.2em;
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+  }
+  .soft-text {
+    font-size: 0.875em;
+    text-wrap: pretty;
+  }
+</style>
