@@ -44,6 +44,11 @@ import SoftSkillsIcon from '../icons/SoftSkillsIcon.astro';
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 2rem;
   }
+  @media screen and (max-width: 768px) {
+    .soft__content {
+      grid-template-columns: 1fr;
+    }
+  }
 
   .soft-skill {
     padding: 3rem 2rem;
