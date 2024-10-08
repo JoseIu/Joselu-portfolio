@@ -2,6 +2,134 @@ import { v4 as uuidv4 } from 'uuid';
 export const PROYECTS = [
   {
     id: uuidv4(),
+    img: '/react/shop_jl.webp',
+    title: 'SHOP JL',
+    tegnologies: ['NEXT.JS', 'TypeScript', 'Tailwind', 'Docker', 'PostgreSQL', 'Zustand'],
+    description:
+      'Este proyecto de eCommerce está construido con Next.js, utilizando React y TypeScript para crear una interfaz dinámica, rápida y con tipado robusto. El diseño de la plataforma es moderno y completamente responsivo, gracias a Tailwind CSS, lo que garantiza una experiencia de usuario fluida en cualquier dispositivo. Para la infraestructura, se emplea Docker para gestionar contenedores y asegurar una implementación eficiente y consistente, mientras que PostgreSQL actúa como base de datos, proporcionando una solución confiable y escalable para manejar grandes volúmenes de datos. Esta combinación de tecnologías crea una plataforma de compra y venta en línea altamente optimizada y lista para escalar.',
+    descriptionList: [
+      'Construido con Next.js, React y TypeScript.',
+      'Diseño moderno y responsive utilizando Tailwind CSS.',
+      'Implementación de Docker para la gestión de contenedores y PostgreSQL como base de datos.'
+    ],
+    isInConstruction: true,
+
+    demo: 'https://github.com/JoseIu/joselu-shop',
+    repo: 'https://github.com/JoseIu/joselu-shop'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/miranda.webp',
+    title: 'Hotel Miranda',
+    tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
+    description:
+      'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
+    descriptionList: [
+      'Desarrollado con HTML, CSS, SASS y JavaScript.',
+      'Diseño responsivo y accesible en diferentes dispositivos.',
+      'Uso de metodología BEM para un código CSS eficiente y mantenible.'
+    ],
+
+    demo: 'https://hotel-miranda-nu.vercel.app/',
+    repo: 'https://github.com/JoseIu/hotel-miranda'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/dasboard_miranda.webp',
+    title: 'Dashboard Hotel Miranda',
+    tegnologies: ['React', 'TypeScript', 'Redux', 'Styled Modules'],
+    description:
+      'Proyecto de Dashboard para el Hotel Miranda. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y Styled Modules. El Dashboard esta conectado a la API del Hotel Miranda, permitiendo la gestión de los datos de los usuarios y las habitaciones del hotel.',
+
+    descriptionList: [
+      'Desarrollado con React , TypeScript y Redux.',
+      'Uso de Styled Modules para un diseño modular.',
+      'Conexión a la API del Hotel Miranda para gestión de datos.'
+    ],
+    demo: 'https://hotel-miranda-dash-board.vercel.app/',
+    repo: 'https://github.com/JoseIu/hotel-miranda-dashBoard'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/dasboard_images.webp',
+    title: 'Dashboard de imágenes',
+    tegnologies: ['React', 'TypeScript', 'SASS', 'Redux'],
+    description:
+      'Aplicacion que nos permite realizar una busqueda de imagenes, utilizando la API de Unsplash. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y SASS. Se implementa el patron CRUD para la gestión de las imagenes.',
+    descriptionList: [
+      'Desarrollado con React, TypeScript y SASS.',
+      'Uso de la API de Unsplash y gestión de imágenes con CRUD.',
+      'Implementación de Redux para manejo de estado en la aplicación.'
+    ],
+
+    demo: 'https://dashboard-images.vercel.app/search',
+    repo: 'https://github.com/JoseIu/dashboard-images'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/miranda_api.webp',
+    title: 'Hotel Miranda API',
+    tegnologies: ['Node.JS', 'Express', 'TypeScript', 'MongoDB', 'JWT'],
+    description:
+      'Proyecto de API RESTful para el Hotel Miranda. En este proyecto se pone en práctica el uso de Node.js, Express, TypeScript, MongoDB y JWT. La API gestiona la utenticación gracias a JWT y realizar operaciones CRUD sobre los datos de los usuarios y las habitaciones del hotel.',
+    descriptionList: [
+      'Desarrollado con Node.js, Express y TypeScript. API RESTful.',
+      'Gestión de autenticación con JWT y operaciones CRUD.',
+      'Conexión a MongoDB para datos de usuarios y habitaciones.'
+    ],
+
+    demo: 'https://github.com/JoseIu/dashboard_api',
+    repo: 'https://github.com/JoseIu/dashboard_api'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/oxygen-shop.webp',
+    title: 'Oxygen Shop',
+    tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
+    description:
+      'Página web para Oxygen Shop, una tienda de ropa. En este proyecto, utilicé HTML, CSS y JavaScript para desarrollar una interfaz de usuario atractiva y funcional. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además, utilicé SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
+    descriptionList: [
+      'Desarrollado con HTML, CSS, SASS y JavaScript.',
+      'Diseño responsivo y accesible en diferentes dispositivos.',
+      'Uso de metodología BEM para un código limpio y mantenible.'
+    ],
+    demo: 'https://joseiu.github.io/Oxygen-shop/',
+    repo: 'https://github.com/JoseIu/Oxygen-shop'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/al-andalus.webp',
+    title: 'Al-Andalus Doner Kebab',
+    tegnologies: ['HTML', 'CSS', 'JavaScript'],
+    description:
+      "Durante la ejecución del proyecto Al-Andalus Doner Kebab Demo, empleé HTML, JavaScript y Sass para desarrollar una página web con un enfoque 'Mobile First', asegurando así su adaptabilidad a distintos dispositivos. Para estructurar el código de manera eficiente y mantenible, implementé la metodología BEM. Uno de los objetivos clave fue la creación de un menú interactivo que abarcara todas las opciones de la carta, proporcionando a los usuarios una experiencia completa y accesible. Este proyecto representó un compromiso integral con el diseño responsivo y las prácticas de desarrollo que garantizan una interfaz de usuario efectiva y atractiva.",
+
+    descriptionList: [
+      'Desarrollado con HTML, CSS y JavaScript.',
+      'Enfoque "Mobile First" y menú interactivo completo.',
+      'Uso de metodología BEM para un código eficiente y mantenible.'
+    ],
+    demo: 'https://al-andalus-doner-kebab.netlify.app/',
+    repo: 'https://github.com/JoseIu/al-andalus-kebab.github.io'
+  },
+  {
+    id: uuidv4(),
+    img: '/react/jabiertzo-web.webp',
+    title: 'Landing Page - Jabiertzo',
+    tegnologies: ['HTML', 'SASS', 'TypeScript', 'Astro'],
+    description:
+      'Esta es una landing page diseñada para el canal de YouTube Jabiertzo, desarrollada con Astro, TypeScript y SASS. La página es completamente responsiva, garantizando una experiencia de usuario óptima en cualquier dispositivo. Los vídeos de YouTube se cargan de manera eficiente, permitiendo que solo se reproduzcan al hacer clic, lo que mejora el rendimiento de la página. Además, se incluye un enlace destacado al canal de Twitch, facilitando a los usuarios la conexión con todo el contenido del creador.',
+
+    descriptionList: [
+      'Desarrollada con Astro, TypeScript y SASS.',
+      'Interfaz totalmente responsiva, optimizada para todos los dispositivos y tamaños de pantalla.',
+      'Carga de vídeos de YouTube bajo demanda, mejorando la velocidad de carga.'
+    ],
+    demo: 'https://jabiertzo-web.vercel.app/',
+    repo: 'https://github.com/JoseIu/jabiertzo-web'
+  },
+  {
+    id: uuidv4(),
     img: '/proyects/reading-list.webp',
     title: 'Prueba técnica por @Midudev',
     tegnologies: ['Angular', 'TypeScript', 'RxJs', 'HTML', 'SASS'],
@@ -58,21 +186,7 @@ export const PROYECTS = [
     demo: 'https://space-turism-web-sigma.vercel.app/home',
     repo: 'https://github.com/JoseIu/space-turism-web'
   },
-  {
-    id: uuidv4(),
-    img: '/proyects/chat-openAi-back.webp',
-    title: 'Asistente virtual API',
-    tegnologies: ['NestJS', 'OpenAi', 'Multer'],
-    description:
-      '¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!',
-    descriptionList: [
-      'Desarrollado con NestJS y OpenAI.',
-      'Manejo de archivos con Multer.',
-      'Asistente virtual con OpenAI. Lógica y archivos gestionados en backend.'
-    ],
-    demo: 'https://angular-gpt-gilt.vercel.app/orthography',
-    repo: 'https://github.com/JoseIu/nest-gpt'
-  },
+
   {
     id: uuidv4(),
     img: '/proyects/pomodoro.webp',
@@ -104,7 +218,6 @@ export const PROYECTS = [
     demo: 'https://mapbox-app-lemon.vercel.app/maps/markers',
     repo: 'https://github.com/JoseIu/mapbox-app'
   },
-
   {
     id: uuidv4(),
     img: '/proyects/github-profile.webp',
@@ -120,24 +233,6 @@ export const PROYECTS = [
 
     demo: 'https://angular-github-profile-one.vercel.app/user-profile',
     repo: 'https://github.com/JoseIu/angular-github-profile'
-  },
-
-  {
-    id: uuidv4(),
-    img: '/proyects/search-gifs.webp',
-    title: 'Buscador de gifs',
-    tegnologies: ['Angular', 'TypeScript', 'HTML', 'SASS'],
-    description:
-      "En la creación de este proyecto, utilicé Angular 16, HTML, SASS y TypeScript, empleando específicamente Angular's HttpClient para consumir eficientemente la API de Giphy a través de peticiones HTTP. Destaco tambien la implementación de un historial de búsquedas, permitiendo a los usuarios repetir búsquedas anteriores con un clic. Aseguré la eficiencia del historial al evitar duplicación de nombres. Este proyecto resalta mi capacidad para desarrollar aplicaciones interactivas y mi habilidad en el uso de herramientas avanzadas como Angular's HttpClient para optimizar la comunicación con la API.",
-
-    descriptionList: [
-      'Desarrollado con Angular, TypeScript y SCSS.',
-      'Historial de búsquedas implementado con control de duplicados.',
-      'Uso de HttpClient para optimizar la comunicación con la API.'
-    ],
-
-    demo: 'https://angular-search-gifs.vercel.app/',
-    repo: 'https://github.com/JoseIu/Angular-searchGifs'
   },
   {
     id: uuidv4(),
@@ -155,102 +250,36 @@ export const PROYECTS = [
     demo: 'https://buscad0r-recetas-api.netlify.app/',
     repo: 'https://github.com/JoseIu/buscador_recetas_API'
   }
-];
+  // {
+  //   id: uuidv4(),
+  //   img: '/proyects/search-gifs.webp',
+  //   title: 'Buscador de gifs',
+  //   tegnologies: ['Angular', 'TypeScript', 'HTML', 'SASS'],
+  //   description:
+  //     "En la creación de este proyecto, utilicé Angular 16, HTML, SASS y TypeScript, empleando específicamente Angular's HttpClient para consumir eficientemente la API de Giphy a través de peticiones HTTP. Destaco tambien la implementación de un historial de búsquedas, permitiendo a los usuarios repetir búsquedas anteriores con un clic. Aseguré la eficiencia del historial al evitar duplicación de nombres. Este proyecto resalta mi capacidad para desarrollar aplicaciones interactivas y mi habilidad en el uso de herramientas avanzadas como Angular's HttpClient para optimizar la comunicación con la API.",
 
-export const PROYECTS_REACT = [
-  {
-    id: uuidv4(),
-    img: '/react/dasboard_images.webp',
-    title: 'Dashboard de imágenes',
-    tegnologies: ['React', 'TypeScript', 'SASS', 'Redux'],
-    description:
-      'Aplicacion que nos permite realizar una busqueda de imagenes, utilizando la API de Unsplash. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y SASS. Se implementa el patron CRUD para la gestión de las imagenes.',
-    descriptionList: [
-      'Desarrollado con React, TypeScript y SASS.',
-      'Uso de la API de Unsplash y gestión de imágenes con CRUD.',
-      'Implementación de Redux para manejo de estado en la aplicación.'
-    ],
+  //   descriptionList: [
+  //     'Desarrollado con Angular, TypeScript y SCSS.',
+  //     'Historial de búsquedas implementado con control de duplicados.',
+  //     'Uso de HttpClient para optimizar la comunicación con la API.'
+  //   ],
 
-    demo: 'https://dashboard-images.vercel.app/search',
-    repo: 'https://github.com/JoseIu/dashboard-images'
-  },
-  {
-    id: uuidv4(),
-    img: '/react/miranda.webp',
-    title: 'Hotel Miranda',
-    tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
-    description:
-      'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
-    descriptionList: [
-      'Desarrollado con HTML, CSS, SASS y JavaScript.',
-      'Diseño responsivo y accesible en diferentes dispositivos.',
-      'Uso de metodología BEM para un código CSS eficiente y mantenible.'
-    ],
-
-    demo: 'https://hotel-miranda-nu.vercel.app/',
-    repo: 'https://github.com/JoseIu/hotel-miranda'
-  },
-  {
-    id: uuidv4(),
-    img: '/react/dasboard_miranda.webp',
-    title: 'Dashboard Hotel Miranda',
-    tegnologies: ['React', 'TypeScript', 'Redux', 'Styled Modules'],
-    description:
-      'Proyecto de Dashboard para el Hotel Miranda. En este proyecto se pone en práctica el uso de React, TypeScript, Redux y Styled Modules. El Dashboard esta conectado a la API del Hotel Miranda, permitiendo la gestión de los datos de los usuarios y las habitaciones del hotel.',
-
-    descriptionList: [
-      'Desarrollado con React , TypeScript y Redux.',
-      'Uso de Styled Modules para un diseño modular.',
-      'Conexión a la API del Hotel Miranda para gestión de datos.'
-    ],
-    demo: 'https://hotel-miranda-dash-board.vercel.app/',
-    repo: 'https://github.com/JoseIu/hotel-miranda-dashBoard'
-  },
-  {
-    id: uuidv4(),
-    img: '/react/miranda_api.webp',
-    title: 'Hotel Miranda API',
-    tegnologies: ['Node.JS', 'Express', 'TypeScript', 'MongoDB', 'JWT'],
-    description:
-      'Proyecto de API RESTful para el Hotel Miranda. En este proyecto se pone en práctica el uso de Node.js, Express, TypeScript, MongoDB y JWT. La API gestiona la utenticación gracias a JWT y realizar operaciones CRUD sobre los datos de los usuarios y las habitaciones del hotel.',
-    descriptionList: [
-      'Desarrollado con Node.js, Express y TypeScript. API RESTful.',
-      'Gestión de autenticación con JWT y operaciones CRUD.',
-      'Conexión a MongoDB para datos de usuarios y habitaciones.'
-    ],
-
-    demo: 'https://github.com/JoseIu/dashboard_api',
-    repo: 'https://github.com/JoseIu/dashboard_api'
-  },
-  {
-    id: uuidv4(),
-    img: '/react/oxygen-shop.webp',
-    title: 'Oxygen Shop',
-    tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
-    description:
-      'Página web para Oxygen Shop, una tienda de ropa. En este proyecto, utilicé HTML, CSS y JavaScript para desarrollar una interfaz de usuario atractiva y funcional. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además, utilicé SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
-    descriptionList: [
-      'Desarrollado con HTML, CSS, SASS y JavaScript.',
-      'Diseño responsivo y accesible en diferentes dispositivos.',
-      'Uso de metodología BEM para un código limpio y mantenible.'
-    ],
-    demo: 'https://joseiu.github.io/Oxygen-shop/',
-    repo: 'https://github.com/JoseIu/Oxygen-shop'
-  },
-  {
-    id: uuidv4(),
-    img: '/react/al-andalus.webp',
-    title: 'Al-Andalus Doner Kebab',
-    tegnologies: ['HTML', 'CSS', 'JavaScript'],
-    description:
-      "Durante la ejecución del proyecto Al-Andalus Doner Kebab Demo, empleé HTML, JavaScript y Sass para desarrollar una página web con un enfoque 'Mobile First', asegurando así su adaptabilidad a distintos dispositivos. Para estructurar el código de manera eficiente y mantenible, implementé la metodología BEM. Uno de los objetivos clave fue la creación de un menú interactivo que abarcara todas las opciones de la carta, proporcionando a los usuarios una experiencia completa y accesible. Este proyecto representó un compromiso integral con el diseño responsivo y las prácticas de desarrollo que garantizan una interfaz de usuario efectiva y atractiva.",
-
-    descriptionList: [
-      'Desarrollado con HTML, CSS y JavaScript.',
-      'Enfoque "Mobile First" y menú interactivo completo.',
-      'Uso de metodología BEM para un código eficiente y mantenible.'
-    ],
-    demo: 'https://al-andalus-doner-kebab.netlify.app/',
-    repo: 'https://github.com/JoseIu/al-andalus-kebab.github.io'
-  }
+  //   demo: 'https://angular-search-gifs.vercel.app/',
+  //   repo: 'https://github.com/JoseIu/Angular-searchGifs'
+  // },
+  // {
+  //   id: uuidv4(),
+  //   img: '/proyects/chat-openAi-back.webp',
+  //   title: 'Asistente virtual API',
+  //   tegnologies: ['NestJS', 'OpenAi', 'Multer'],
+  //   description:
+  //     '¡Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación. ¡Fue genial ver cómo todo se unía para ofrecer respuestas útiles a las consultas de los usuarios!',
+  //   descriptionList: [
+  //     'Desarrollado con NestJS y OpenAI.',
+  //     'Manejo de archivos con Multer.',
+  //     'Asistente virtual con OpenAI. Lógica y archivos gestionados en backend.'
+  //   ],
+  //   demo: 'https://angular-gpt-gilt.vercel.app/orthography',
+  //   repo: 'https://github.com/JoseIu/nest-gpt'
+  // },
 ];
