@@ -1,10 +1,9 @@
 ---
-import { PROYECTS, PROYECTS_REACT } from '../db/proyectsDB.js';
+import { PROYECTS } from '../db/proyectsDB.js';
 import CodeIcon from './icons/Code.astro';
 import ProyectCard from './ProyectCard/ProyectCard.astro';
 
 const proyectsAngular = structuredClone(PROYECTS);
-const proyectsReact = structuredClone(PROYECTS_REACT);
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
@@ -14,19 +13,6 @@ const proyectsReact = structuredClone(PROYECTS_REACT);
   </h2>
 
   <div class="proyects__container">
-    <div class="proyects__list active">
-      {
-        proyectsReact.map(proyect => (
-          <ProyectCard
-            id={proyect.id}
-            title={proyect.title}
-            demo={proyect.demo}
-            repo={proyect.repo}
-            descriptionList={proyect.descriptionList}
-          />
-        ))
-      }
-    </div>
     <div class="proyects__list">
       {
         proyectsAngular.map(proyect => (
@@ -36,6 +22,7 @@ const proyectsReact = structuredClone(PROYECTS_REACT);
             demo={proyect.demo}
             repo={proyect.repo}
             descriptionList={proyect.descriptionList}
+            isInConstruction={proyect.isInConstruction}
           />
         ))
       }
