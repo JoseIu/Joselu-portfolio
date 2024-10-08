@@ -1,4 +1,5 @@
 ---
+import ArrowShortDown from '../icons/ArrowShortDown.astro';
 import Folder from '../icons/Folder.astro';
 import GitHub from '../icons/GitHub.astro';
 import WorldMap from '../icons/WorldMap.astro';
@@ -9,12 +10,13 @@ interface Props {
   descriptionList: string[];
   demo: string;
   repo: string;
+  isInConstruction?: boolean;
 }
-const { id, title, demo, descriptionList, repo } = Astro.props;
+const { id, title, demo, descriptionList, repo, isInConstruction } = Astro.props;
 ---
 
 <article class="proyect">
-  <div class="proyect__header">
+  <header class="proyect__header">
     <a
       href={`/info-proyects/${id}`}
       class="proyect__title"
@@ -23,8 +25,8 @@ const { id, title, demo, descriptionList, repo } = Astro.props;
     >
       <Folder class="proyect__icon" />
       {title}
+      <ArrowShortDown class="proyect__icon proyect__arrow" />
     </a>
-
     <div class="proyect__links">
       <a
         class="proyect__link"
@@ -47,7 +49,8 @@ const { id, title, demo, descriptionList, repo } = Astro.props;
         <span class="visually-hidden">Repo</span>
       </a>
     </div>
-  </div>
+  </header>
+  {isInConstruction && <span class="building">En construcción</span>}
   <ul class="proyect__list">
     {descriptionList.map(description => <li class="proyect__li smoke">{description}</li>)}
   </ul>
@@ -94,30 +97,16 @@ const { id, title, demo, descriptionList, repo } = Astro.props;
       color: rgba(var(--color), 1);
       border-color: rgba(var(--color), 1);
     }
-    &:hover .proyect__icon {
-      animation: move 1s ease-in-out;
-    }
-  }
-  @keyframes move {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-0.4rem);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    75% {
-      transform: translateY(-0.4rem);
-    }
-
-    100% {
-      transform: translateY(0);
+    &:hover .proyect__arrow {
+      transform: translate(0.4rem, -0.3rem);
     }
   }
   .proyect__icon {
     width: 1rem;
+  }
+  .proyect__arrow {
+    color: rgb(var(--color), 1);
+    transition: transform 0.2s ease-in;
   }
   .proyect__description {
     font-size: 0.875em;
