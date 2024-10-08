@@ -6,17 +6,17 @@ import type { GetStaticPaths } from 'astro';
 import Chips from '../../components/Chips/Chips.astro';
 import GitHub from '../../components/icons/GitHub.astro';
 import WorldMap from '../../components/icons/WorldMap.astro';
-import { PROYECTS, PROYECTS_REACT } from '../../db/proyectsDB.js';
+import { PROYECTS } from '../../db/proyectsDB.js';
 
 const { id } = Astro.params;
 
-const proyectes = [...PROYECTS, ...PROYECTS_REACT];
-const proyectSelected = proyectes.find(proyet => proyet.id === id);
+const proyects = [...PROYECTS];
+const proyectSelected = proyects.find(proyet => proyet.id === id);
 
 export const getStaticPaths = (() => {
-  const proyectes = [...PROYECTS, ...PROYECTS_REACT];
+  const proyects = [...PROYECTS];
 
-  const proyectsID = structuredClone(proyectes);
+  const proyectsID = structuredClone(proyects);
   return proyectsID.map(proyect => ({ params: { id: proyect.id } }));
 }) satisfies GetStaticPaths;
 ---
