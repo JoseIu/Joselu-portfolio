@@ -14,7 +14,7 @@ export const experiences = [
   {
     id: 1,
     time: '20/08/2024 - 25/09/2024 ',
-    role: 'Hackaton - Frontend developer',
+    role: 'hackathon - Frontend developer',
     company: 'Programación en Español',
     location: 'Madrid, España',
     link: 'https://programacion-es.dev/devathon-vii-edition/',
