@@ -118,11 +118,11 @@ export const PROYECTS = [
     title: 'Landing Page - Jabiertzo',
     tegnologies: ['HTML', 'SASS', 'TypeScript', 'Astro'],
     description:
-      'Esta es una landing page diseñada para el canal de YouTube Jabiertzo, desarrollada con Astro, TypeScript y SASS. La página es completamente responsiva, garantizando una experiencia de usuario óptima en cualquier dispositivo. Los vídeos de YouTube se cargan de manera eficiente, permitiendo que solo se reproduzcan al hacer clic, lo que mejora el rendimiento de la página. Además, se incluye un enlace destacado al canal de Twitch, facilitando a los usuarios la conexión con todo el contenido del creador.',
+      'Esta es una landing page diseñada para el canal de YouTube Jabiertzo, desarrollada con Astro, TypeScript y SASS. La página es completamente e, garantizando una experiencia de usuario óptima en cualquier dispositivo. Los vídeos de YouTube se cargan de manera eficiente, permitiendo que solo se reproduzcan al hacer clic, lo que mejora el rendimiento de la página. Además, se incluye un enlace destacado al canal de Twitch, facilitando a los usuarios la conexión con todo el contenido del creador.',
 
     descriptionList: [
       'Desarrollada con Astro, TypeScript y SASS.',
-      'Interfaz totalmente responsiva, optimizada para todos los dispositivos y tamaños de pantalla.',
+      'Interfaz totalmente responsive, optimizada para todos los dispositivos y tamaños de pantalla.',
       'Carga de vídeos de YouTube bajo demanda, mejorando la velocidad de carga.'
     ],
     demo: 'https://jabiertzo-web.vercel.app/',
