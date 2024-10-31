@@ -26,7 +26,7 @@ export const PROYECTS = [
       'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsive y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
     descriptionList: [
       'Desarrollado con HTML, CSS, SASS y JavaScript.',
-      'Diseño responsivo y accesible en diferentes dispositivos.',
+      'Diseño responsive y accesible en diferentes dispositivos.',
       'Uso de metodología BEM para un código CSS eficiente y mantenible.'
     ],
 
@@ -87,10 +87,10 @@ export const PROYECTS = [
     title: 'Oxygen Shop',
     tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
     description:
-      'Página web para Oxygen Shop, una tienda de ropa. En este proyecto, utilicé HTML, CSS y JavaScript para desarrollar una interfaz de usuario atractiva y funcional. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además, utilicé SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
+      'Página web para Oxygen Shop, una tienda de ropa. En este proyecto, utilicé HTML, CSS y JavaScript para desarrollar una interfaz de usuario atractiva y funcional. Implementé un diseño responsive y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además, utilicé SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
     descriptionList: [
       'Desarrollado con HTML, CSS, SASS y JavaScript.',
-      'Diseño responsivo y accesible en diferentes dispositivos.',
+      'Diseño responsive y accesible en diferentes dispositivos.',
       'Uso de metodología BEM para un código limpio y mantenible.'
     ],
     demo: 'https://joseiu.github.io/Oxygen-shop/',
@@ -102,7 +102,7 @@ export const PROYECTS = [
     title: 'Al-Andalus Doner Kebab',
     tegnologies: ['HTML', 'CSS', 'JavaScript'],
     description:
-      "Durante la ejecución del proyecto Al-Andalus Doner Kebab Demo, empleé HTML, JavaScript y Sass para desarrollar una página web con un enfoque 'Mobile First', asegurando así su adaptabilidad a distintos dispositivos. Para estructurar el código de manera eficiente y mantenible, implementé la metodología BEM. Uno de los objetivos clave fue la creación de un menú interactivo que abarcara todas las opciones de la carta, proporcionando a los usuarios una experiencia completa y accesible. Este proyecto representó un compromiso integral con el diseño responsivo y las prácticas de desarrollo que garantizan una interfaz de usuario efectiva y atractiva.",
+      "Durante la ejecución del proyecto Al-Andalus Doner Kebab Demo, empleé HTML, JavaScript y Sass para desarrollar una página web con un enfoque 'Mobile First', asegurando así su adaptabilidad a distintos dispositivos. Para estructurar el código de manera eficiente y mantenible, implementé la metodología BEM. Uno de los objetivos clave fue la creación de un menú interactivo que abarcara todas las opciones de la carta, proporcionando a los usuarios una experiencia completa y accesible. Este proyecto representó un compromiso integral con el diseño responsive y las prácticas de desarrollo que garantizan una interfaz de usuario efectiva y atractiva.",
 
     descriptionList: [
       'Desarrollado con HTML, CSS y JavaScript.',
