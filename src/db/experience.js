@@ -7,9 +7,9 @@ export const experiences = [
     location: 'Madrid, España',
     link: 'https://www.linkedin.com/company/oxygen-workspace/',
     description:
-      'Desarrollé un proyecto Full Stack para el Hotel Miranda, creando una página web utilizando HTML, CSS y JavaScript, aplicando la metodología BEM y un enfoque Mobile First. También implementé un Dashboard para los empleados del hotel, permitiendo la gestión de reservas, habitaciones disponibles y empleados',
+      'Un proyecto Full Stack para el Hotel Miranda, creando una página web utilizando HTML, CSS y JavaScript, aplicando la metodología BEM para el css y un enfoque Mobile First. También implementé un Dashboard para los empleados del hotel, permitiendo la gestión de reservas, habitaciones disponibles y empleados',
     description2:
-      'Este proyecto fue desarrollado con React, TypeScript y StyledComponents, y está conectado a una API construida con Node.js, Express, TypeScript, MongoDB y JWT para la autenticación.'
+      'Proyecto desarrollado con React, TypeScript y StyledComponents, conectado a una API construida con Node.js, Express, TypeScript, MongoDB y JWT para la autenticación.'
   },
   {
     id: 1,
