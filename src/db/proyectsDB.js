@@ -6,7 +6,7 @@ export const PROYECTS = [
     title: 'SHOP JL',
     tegnologies: ['NEXT.JS', 'TypeScript', 'Tailwind', 'Docker', 'PostgreSQL', 'Zustand'],
     description:
-      'Este proyecto de eCommerce está construido con Next.js, utilizando React y TypeScript para crear una interfaz dinámica, rápida y con tipado robusto. El diseño de la plataforma es moderno y completamente responsivo, gracias a Tailwind CSS, lo que garantiza una experiencia de usuario fluida en cualquier dispositivo. Para la infraestructura, se emplea Docker para gestionar contenedores y asegurar una implementación eficiente y consistente, mientras que PostgreSQL actúa como base de datos, proporcionando una solución confiable y escalable para manejar grandes volúmenes de datos. Esta combinación de tecnologías crea una plataforma de compra y venta en línea altamente optimizada y lista para escalar.',
+      'Este proyecto de eCommerce está construido con Next.js, utilizando React y TypeScript para una interfaz dinámica, rápida y con tipado robusto. El diseño de la plataforma es moderno y completamente responsive utilizando Tailwind, lo que garantiza una experiencia de usuario fluida en cualquier dispositivo. Para la infraestructura, se emplea Docker para gestionar contenedores y asegurar una implementación eficiente y consistente, mientras que PostgreSQL actúa como base de datos, proporcionando una solución confiable y escalable para manejar grandes volúmenes de datos. Esta combinación de tecnologías crea una plataforma de compra y venta en línea altamente optimizada y lista para escalar.',
     descriptionList: [
       'Construido con Next.js, React y TypeScript.',
       'Diseño moderno y responsive utilizando Tailwind CSS.',
@@ -23,7 +23,7 @@ export const PROYECTS = [
     title: 'Hotel Miranda',
     tegnologies: ['HTML', 'CSS', 'SASS', 'JavaScript'],
     description:
-      'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsivo y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y la metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
+      'Para el proyecto Hotel Miranda, me sumergí en el desarrollo de una página web para un hotel, utilizando HTML, CSS y JavaScript. Implementé un diseño responsive y atractivo, asegurando que la página fuera accesible en distintos dispositivos. Además,utilize SASS y metodología BEM para estructurar el código de manera eficiente y mantenible. Este proyecto me permitió demostrar mi habilidad para crear interfaces de usuario efectivas y atractivas.',
     descriptionList: [
       'Desarrollado con HTML, CSS, SASS y JavaScript.',
       'Diseño responsivo y accesible en diferentes dispositivos.',
@@ -208,7 +208,7 @@ export const PROYECTS = [
     title: 'Map-Box',
     tegnologies: ['Angular', 'TypeScript', 'HTML', 'SASS'],
     description:
-      'Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular 16, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.',
+      'Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.',
     descriptionList: [
       'Desarrollado con Angular y TypeScript.',
       'Implementación de marcadores en el mapa con funcionalidad de desplazamiento.',
