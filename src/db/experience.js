@@ -1,8 +1,8 @@
 export const experiences = [
   {
     id: 0,
-    time: '15/03/2024 - Actualidad',
-    role: 'Full-stack developer',
+    time: '15/03/2024 - 20/06/2024',
+    role: 'Front-end developer',
     company: 'OXYGEN Workspace',
     location: 'Madrid, España',
     link: 'https://www.linkedin.com/company/oxygen-workspace/',
@@ -20,9 +20,9 @@ export const experiences = [
     link: 'https://programacion-es.dev/devathon-vii-edition/',
 
     description:
-      'Como Front-end en la devathon, tuve la oportunidad de trabajar en el desarrollo de una aplicación MVP para la gestión de reservas en un restaurante.',
+      'Como Front-end en la Devathon, tuve la oportunidad de trabajar en el desarrollo de una aplicación MVP para la gestión de reservas en un restaurante.',
     description2:
-      'MVP para gestionar reservas en restaurantes, que incluyó la creación y protección de rutas, un calendario interactivo y un sistema de reservas con visualización de turnos y estados. Además, mejoré mis habilidades blandas en trabajo en equipo, comunicación efectiva y adaptación.'
+      'Que incluyó la creación y protección de rutas, un calendario interactivo y un sistema de reservas con visualización de turnos y estados. Además, mejoré mis habilidades blandas en trabajo en equipo, comunicación efectiva y adaptación.'
   },
   {
     id: 2,
