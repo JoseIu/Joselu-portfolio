@@ -5,9 +5,9 @@ type Props = {
 export const Chips = ({ tegnologies }: Props) => {
   return (
     <ul className="chips">
-      {tegnologies.map(teg => {
+      {tegnologies.map((teg, index) => {
         return (
-          <li key={teg} className="chip">
+          <li key={teg + index} className="chip">
             {teg}
           </li>
         );

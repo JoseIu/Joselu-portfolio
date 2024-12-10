@@ -26,44 +26,46 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
 
 <Layout title={id}>
   <main class="proyect-info wrapper">
-    <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">
-      <ArrowBackIcon class="go-back__arrow" />
-      Volver a proyectos
-    </button>
-    <h1 class="proyect__title" transition:name={`${title}-title`}>
-      {title}
-    </h1>
-    <span class="proyect__subtitle smoke">{summary}</span>
-    <img class="proyect-info__img" src={image.src} alt={title} />
+    <div>
+      <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">
+        <ArrowBackIcon class="go-back__arrow" />
+        Volver a proyectos
+      </button>
+      <h1 class="proyect__title" transition:name={`${title}-title`}>
+        {title}
+      </h1>
+      <span class="proyect__subtitle smoke">{summary}</span>
+      <img class="proyect-info__img" src={image.src} alt={title} />
 
-    <div class="proyect-info__datails">
-      <div class="proyect__links">
-        <a
-          class="proyect__link"
-          href={demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="link para ver demo"
-        >
-          <WorldMap class="proyect__icon" />
-          <span>Ver demo</span>
-        </a>
-        <a
-          class="proyect__link"
-          href={repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="link para ver demo"
-        >
-          <LinkIcon class="proyect__icon" />
-          <span>Ver repositorio</span>
-        </a>
+      <div class="proyect-info__datails">
+        <div class="proyect__links">
+          <a
+            class="proyect__link"
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="link para ver demo"
+          >
+            <WorldMap class="proyect__icon" />
+            <span>Ver demo</span>
+          </a>
+          <a
+            class="proyect__link"
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="link para ver demo"
+          >
+            <LinkIcon class="proyect__icon" />
+            <span>Ver repositorio</span>
+          </a>
+        </div>
+        <Chips tegnologies={tags} withIcon />
       </div>
-      <Chips tegnologies={tags} withIcon />
-    </div>
 
-    <div class="test">
-      <Content />
+      <div class="test">
+        <Content />
+      </div>
     </div>
   </main>
 
@@ -93,6 +95,10 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
     }
     .proyect-info {
       padding: 8rem 1rem 1rem 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .proyect-info__img {
@@ -101,6 +107,7 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
       border-radius: 0.3em;
     }
     .proyect-info__datails {
+      width: 100%;
       padding: 2rem 0;
       display: flex;
       flex-direction: column;

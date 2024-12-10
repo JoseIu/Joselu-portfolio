@@ -1,8 +1,8 @@
 ---
 company: 'AdoptaUnJunior'
 role: 'Front end developer'
-dateStart: 2024-10-01
-dateEnd: 2024-10-31
+dateStart: 2024-10-22
+dateEnd: 2024-10-30
 location: Madrid, España
 companyUrl: https://www.linkedin.com/company/adoptaunjunior/
 ---
