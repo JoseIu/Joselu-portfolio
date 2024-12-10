@@ -8,14 +8,14 @@ const projects = await getProjectsCollection();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-  <SectionTitle title="Proyectos recientes">
+  <SectionTitle title="Proyectos destacados">
     <CodeIcon class="section-icon" />
   </SectionTitle>
 
   <div class="proyects__list">
     {projects.map(proyect => <ProyectCard proyect={proyect} />).slice(0, 4)}
   </div>
-  <a href="/projects">Ver todos los proyectos</a>
+  <a href="/projects" class="smoke">Ver todos los proyectos....</a>
 </section>
 
 <style>
