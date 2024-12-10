@@ -1,5 +1,3 @@
-.experience-card {
-}
 .experience-card__date {
   display: inline-block;
   font-size: 14px;
@@ -48,7 +46,7 @@
   list-style: initial;
 }
 .experience-card__desciption ul {
-  padding-left: 2rem;
+  padding-left: 1.2rem;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;

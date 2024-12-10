@@ -49,9 +49,9 @@ import SocialList from './socials-list/SocialList.astro';
       </svg>
     </div>
     <p class="right__description smoke">
-      Desarrollador front-end especializado en React y Next.js, con un enfoque en UX/UI para crear interfaces
-      intuitivas y atractivas. Me apasiona mantenerme al día con las tendencias tecnológicas y aplicar
-      soluciones modernas.
+      Especializado en React y Next.js, con un enfoque en UX/UI para diseñar interfaces intuitivas y
+      atractivas. Me apasiona seguir las tendencias tecnológicas y aplicar soluciones modernas que potencien
+      la experiencia del usuario.
     </p>
     <SocialList />
   </section>
@@ -93,11 +93,17 @@ import SocialList from './socials-list/SocialList.astro';
     }
   }
   .left {
+    padding-right: 2rem;
     flex-basis: 25rem;
     flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+  }
+  @media screen and (max-width: 796px) {
+    .left {
+      justify-content: center;
+    }
   }
 
   .profile {
@@ -105,11 +111,11 @@ import SocialList from './socials-list/SocialList.astro';
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+
     .profile__role {
       font-size: clamp(3em, 9vw, 5em);
       font-weight: 700;
       line-height: clamp(3rem, 10vw, 5rem);
-      /* text-wrap: pretty; */
     }
     .profile__subtitle,
     .profile__location {
@@ -127,6 +133,7 @@ import SocialList from './socials-list/SocialList.astro';
   }
   .profile__fancy {
     position: absolute;
+
     width: 100%;
     z-index: -1;
     left: -0.7rem;
@@ -197,12 +204,7 @@ import SocialList from './socials-list/SocialList.astro';
       right: -2rem;
     }
   }
-  @media screen and (min-width: 400px) {
-    .home__title {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
+
   .about {
     display: flex;
     flex-direction: column;
