@@ -4,8 +4,8 @@ const links = [
   { href: '/projects', text: 'Proyectos' },
   { href: '/experience', text: 'Experiencia' }
 ];
-
-const currentPage = Astro.url.pathname;
+const normalizePath = (path: string) => path.replace(/\/$/, '') || '/';
+const currentPage = normalizePath(Astro.url.pathname);
 ---
 
 <script>
