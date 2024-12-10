@@ -47,10 +47,10 @@ const currentPage = normalizePath(Astro.url.pathname);
           ))
         }
       </ul>
-      <button class="header__close"> X </button>
+      <button class="header__close" aria-label="button para cerrar el menu"> X </button>
     </nav>
 
-    <button class="header__toggle">
+    <button class="header__toggle" aria-label="button para abrir el menu">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="26"
