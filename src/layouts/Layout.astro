@@ -1,7 +1,11 @@
 ---
-import '@fontsource-variable/onest';
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+
+import Header from '@components/header/Header.astro';
+import 'cal-sans';
 import '../styles/reset.css';
+
 interface Props {
   title: string;
 }
@@ -13,14 +17,15 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Joselu Porfolio - front-ned devloper - react - next.js - astro" />
+    <meta name="description" content="Joselu Porfolio - front-end devloper - react - next.js - astro" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/code.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
@@ -33,37 +38,16 @@ const { title } = Astro.props;
   .smoke {
     color: rgba(var(--color-text-muted), 1);
   }
-  .icon-section {
+
+  .section-icon {
     width: 1em;
     color: rgba(var(--color), 1);
   }
-  .section-title {
-    font-size: clamp(1.7rem, 5vw, 2.5rem);
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
+
   .building {
     color: rgb(var(--color), 1);
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 600;
-  }
-
-  html {
-    font-family: 'Onest Variable', system-ui, sans-serif;
-
-    scroll-behavior: smooth;
   }
 </style>

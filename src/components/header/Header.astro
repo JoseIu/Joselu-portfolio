@@ -1,0 +1,169 @@
+---
+const links = [
+  { href: '/', text: 'Inicio' },
+  { href: '/projects', text: 'Proyectos' },
+  { href: '/experience', text: 'Experiencia' }
+];
+
+const currentPage = Astro.url.pathname;
+---
+
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header') as HTMLElement;
+
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.querySelector('.header__toggle') as HTMLElement;
+    const close = document.querySelector('.header__close') as HTMLElement;
+    const nav = document.querySelector('.header__nav') as HTMLElement;
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('header__nav--active');
+    });
+
+    close.addEventListener('click', () => {
+      nav.classList.toggle('header__nav--active');
+    });
+  });
+</script>
+<header class="header">
+  <div class="header__container wrapper">
+    <nav class="header__nav">
+      <ul class="header__list">
+        {
+          links.map(({ href, text }) => (
+            <li class="header__item">
+              <a class="header__link" href={href}>
+                {text}
+              </a>
+              {currentPage === href && <div class="active" transition:name="menu-line" />}
+            </li>
+          ))
+        }
+      </ul>
+      <button class="header__close"> X </button>
+    </nav>
+
+    <button class="header__toggle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</header>
+<style>
+  .header {
+    width: 100%;
+    padding: 1.5rem;
+    position: fixed;
+    background-color: rgba(var(--color-fill), var(--tw-bg-opacity));
+    z-index: 1;
+  }
+  .scrolled {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header__container {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in;
+    background-color: rgba(var(--color-fill), var(--tw-bg-opacity));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__nav--active {
+    transform: translateY(0);
+  }
+  @media screen and (min-width: 650px) {
+    .header__nav {
+      position: relative;
+      transform: translateY(0);
+      top: auto;
+      left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  @media screen and (min-width: 650px) {
+    .header__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5em;
+    }
+  }
+  .header__item {
+    position: relative;
+    transition: color 0.2s ease-in;
+  }
+  .header__item:hover {
+    color: rgba(var(--color), 1);
+  }
+  .active {
+    position: absolute;
+    bottom: -0.325rem;
+    width: 100%;
+    background-color: rgba(var(--color), 1);
+    height: 0.125rem;
+  }
+  .header__toggle {
+    color: rgba(var(--color), 1);
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .header__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  @media screen and (min-width: 650px) {
+    .header__close {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    .header__toggle {
+      display: none;
+      pointer-events: none;
+    }
+  }
+</style>

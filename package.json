@@ -10,10 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.0.0",
     "@fontsource-variable/onest": "5.0.2",
-    "astro": "4.0.8",
+    "@types/react": "^18.3.13",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^5.0.2",
+    "cal-sans": "^1.0.1",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "0.14.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
     "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

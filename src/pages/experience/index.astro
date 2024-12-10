@@ -1,0 +1,54 @@
+---
+import ExperienceCard from '@components/experience-card/ExperienceCard.astro';
+import Layout from '@layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const collection = await getCollection('work');
+const hackathonCollection = await getCollection('hackathon');
+
+const hackathons = hackathonCollection.sort(
+  (a, b) => new Date(b.data.dateStart).getTime() - new Date(a.data.dateStart).getTime()
+);
+
+const experiences = collection.sort(
+  (a, b) => new Date(b.data.dateStart).getTime() - new Date(a.data.dateStart).getTime()
+);
+---
+
+<Layout title="experiencia">
+  <main class="experience wrapper">
+    <h1 class="experience__title">Experencia</h1>
+
+    <div class="experience__list">
+      {experiences.map(async work => <ExperienceCard work={work} />)}
+    </div>
+
+    <h2 class="experience__title">Hackathon</h2>
+
+    <div class="experience__list">
+      {hackathons.map(async hackathon => <ExperienceCard work={hackathon} />)}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .experience {
+    padding: 8rem 1rem 1rem 1rem;
+  }
+  .experience__title {
+    margin-bottom: 0.5rem;
+    font-size: 2em;
+  }
+  .experience__list {
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .experience__list:last-child {
+    border-bottom: none;
+  }
+</style>

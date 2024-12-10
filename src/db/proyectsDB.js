@@ -81,6 +81,7 @@ export const PROYECTS = [
     demo: 'https://github.com/JoseIu/dashboard_api',
     repo: 'https://github.com/JoseIu/dashboard_api'
   },
+  //6
   {
     id: uuidv4(),
     img: '/react/oxygen-shop.webp',
