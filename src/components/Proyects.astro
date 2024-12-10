@@ -1,33 +1,21 @@
 ---
-import { PROYECTS } from '../db/proyectsDB.js';
+import { getProjectsCollection } from 'src/utils/getProjectsCollection';
 import CodeIcon from './icons/Code.astro';
 import ProyectCard from './ProyectCard/ProyectCard.astro';
+import SectionTitle from './section-title/SectionTitle.astro';
 
-const proyectsAngular = structuredClone(PROYECTS);
+const projects = await getProjectsCollection();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-  <h2 class="section-title">
-    <CodeIcon class="proyects__icon" />
-    Proyectos
-  </h2>
+  <SectionTitle title="Proyectos recientes">
+    <CodeIcon class="section-icon" />
+  </SectionTitle>
 
-  <div class="proyects__container">
-    <div class="proyects__list">
-      {
-        proyectsAngular.map(proyect => (
-          <ProyectCard
-            id={proyect.id}
-            title={proyect.title}
-            demo={proyect.demo}
-            repo={proyect.repo}
-            descriptionList={proyect.descriptionList}
-            isInConstruction={proyect.isInConstruction}
-          />
-        ))
-      }
-    </div>
+  <div class="proyects__list">
+    {projects.map(proyect => <ProyectCard proyect={proyect} />).slice(0, 4)}
   </div>
+  <a href="/projects">Ver todos los proyectos</a>
 </section>
 
 <style>
@@ -40,28 +28,16 @@ const proyectsAngular = structuredClone(PROYECTS);
     flex-direction: column;
     row-gap: 2em;
   }
-  .proyects__subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: yellow;
-  }
-  .proyects__icon {
-    width: 1em;
-    color: rgba(var(--color), 1);
-  }
-
-  .proyects__container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-  }
   .proyects__list {
     width: 100%;
 
-    transition: all 0.2s ease-in-out;
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 2em;
+  }
+  @media screen and (max-width: 768px) {
+    .proyects__list {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
   }
 </style>

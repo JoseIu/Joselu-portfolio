@@ -1,0 +1,38 @@
+---
+import ArrowShortDown from '@components/icons/ArrowShortDown.astro';
+import type { CollectionEntry } from 'astro:content';
+import { formatter } from 'src/utils/formatter';
+import './experienceCard.css';
+
+type Props = {
+  work: CollectionEntry<'work'> | CollectionEntry<'hackathon'>;
+};
+
+const { work } = Astro.props;
+const { Content } = await work.render();
+---
+
+<article class="experience-card">
+  <time
+    class="experience-card__date smoke"
+    datetime={`${work.data.dateStart.toDateString()} - ${work.data.dateEnd.toDateString()}`}
+  >
+    {formatter(work.data.dateStart)} - {formatter(work.data.dateEnd)}
+  </time>
+  <h2 class="experience-card__company">
+    <a
+      href={work.data.companyUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="link para ir a la empresa"
+    >
+      {work.data.company}
+    </a>
+    <ArrowShortDown class="experience-card__icon" />
+  </h2>
+  <p class="experience-card__role smoke">{work.data.role}</p>
+
+  <div class="experience-card__desciption">
+    <Content />
+  </div>
+</article>

@@ -1,12 +1,12 @@
 ---
+import SectionTitle from '@components/section-title/SectionTitle.astro';
 import SoftSkillsIcon from '../icons/SoftSkillsIcon.astro';
 ---
 
 <section class="soft wrapper">
-  <h2 class="section-title">
-    <SoftSkillsIcon class="icon-section" />
-    Habilidades Blandas
-  </h2>
+  <SectionTitle title="Habilidades blandas">
+    <SoftSkillsIcon class="section-icon" />
+  </SectionTitle>
 
   <div class="soft__content">
     <article class="soft-skill">
@@ -66,7 +66,7 @@ import SoftSkillsIcon from '../icons/SoftSkillsIcon.astro';
     margin-bottom: 1rem;
   }
   .soft-text {
-    font-size: 0.875em;
     text-wrap: pretty;
+    line-height: 1.5;
   }
 </style>

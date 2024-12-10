@@ -3,168 +3,142 @@ import ArrowBackIcon from '../../components/icons/ArrowBack.astro';
 import Layout from '../../layouts/Layout.astro';
 
 import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
 import Chips from '../../components/Chips/Chips.astro';
 import GitHub from '../../components/icons/GitHub.astro';
 import WorldMap from '../../components/icons/WorldMap.astro';
-import { PROYECTS } from '../../db/proyectsDB.js';
+import LinkIcon from '@components/icons/LinkIcon.astro';
+
+export const getStaticPaths = (async () => {
+  const proyects = await getCollection('projects');
+
+  return proyects.map(proyect => ({
+    params: { id: proyect.slug },
+    props: { proyect }
+  }));
+}) satisfies GetStaticPaths;
 
 const { id } = Astro.params;
-
-const proyects = [...PROYECTS];
-const proyectSelected = proyects.find(proyet => proyet.id === id);
-
-export const getStaticPaths = (() => {
-  const proyects = [...PROYECTS];
-
-  const proyectsID = structuredClone(proyects);
-  return proyectsID.map(proyect => ({ params: { id: proyect.id } }));
-}) satisfies GetStaticPaths;
+const { proyect } = Astro.props;
+const { Content } = await proyect.render();
+const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
 ---
 
-<Layout title={proyectSelected.title}>
-  <header class="proyect-info__header wrapper">
-    <a href="/#proyects" class="proyect-info__back">
-      <ArrowBackIcon class="proyect-info__arrow" />
-      Regresar
-    </a>
-  </header>
+<Layout title={id}>
   <main class="proyect-info wrapper">
-    <img class="proyect-info__img" src={proyectSelected.img} alt={proyectSelected.title} />
-    <div class="proyect">
-      <div class="proyect__header">
-        <h1 class="proyect__title" transition:name=`title${id}` view-transition-name=`title-${id}`>
-          {proyectSelected.title}
-        </h1>
-        <div class="proyect__butons">
-          <a
-            class="proyect__buton"
-            href={proyectSelected.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="link para ver demo"
-          >
-            <WorldMap class="proyect__icon" />
-            <span class="visually-hidden">Demo</span>
-          </a>
-          <a
-            class="proyect__buton"
-            href={proyectSelected.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="link para ver demo"
-          >
-            <GitHub class="proyect__icon" />
-            <span class="visually-hidden">Repo</span>
-          </a>
-        </div>
+    <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">
+      <ArrowBackIcon class="go-back__arrow" />
+      Volver a proyectos
+    </button>
+    <h1 class="proyect__title" transition:name={`${title}-title`}>
+      {title}
+    </h1>
+    <span class="proyect__subtitle smoke">{summary}</span>
+    <img class="proyect-info__img" src={image.src} alt={title} />
+
+    <div class="proyect-info__datails">
+      <div class="proyect__links">
+        <a
+          class="proyect__link"
+          href={demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link para ver demo"
+        >
+          <WorldMap class="proyect__icon" />
+          <span>Ver demo</span>
+        </a>
+        <a
+          class="proyect__link"
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link para ver demo"
+        >
+          <LinkIcon class="proyect__icon" />
+          <span>Ver repositorio</span>
+        </a>
       </div>
-      <Chips tegnologies={proyectSelected.tegnologies} />
-      <p class="proyect__description">{proyectSelected.description}</p>
+      <Chips tegnologies={tags} withIcon />
     </div>
-    {
-      proyectSelected.features?.length > 0 && (
-        <div class="features">
-          <h3 class="features__title">Funcionalidades</h3>
-          <ul class="features__list">
-            {proyectSelected.features?.map(feature => (
-              <li class="features__li smoke"> {feature}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
+
+    <div class="test">
+      <Content />
+    </div>
   </main>
 
   <style>
-    .proyect-info {
-      padding: 1em;
+    .test {
+      max-width: 50rem;
+      line-height: 1.5;
+      text-wrap: pretty;
     }
-    .proyect-info__header {
-      padding: 1rem;
-    }
-    .proyect-info__back {
-      max-width: 10rem;
+
+    .go-back__btn {
       padding: 0.5em 1em;
-      border-radius: 0.5rem;
-      background-color: rgba(var(--color-button-accent), 0.2);
-      border: 1px solid rgba(var(--color), 0.2);
-      transition: transform 0.2s ease-in;
+      margin-bottom: 2rem;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s ease-in;
+      border: 1px solid rgb(255 255 255 / 0.25);
 
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    .proyect-info__arrow {
+    .go-back__arrow {
       width: 1.3rem;
     }
-    .proyect-info__back:hover {
-      transform: scale(1.1);
+    .go-back__btn:hover {
+      background-color: rgba(var(--color-button-muted), 0.5);
     }
-    .proyect-info__img {
-      max-width: 40rem;
-      margin-inline: auto;
-      margin-bottom: 4rem;
-      aspect-ratio: 16/9;
-      border-radius: 0.4em;
+    .proyect-info {
+      padding: 8rem 1rem 1rem 1rem;
     }
 
-    .proyect {
-      width: 100%;
+    .proyect-info__img {
+      max-width: 50rem;
+      aspect-ratio: 16/9;
+      border-radius: 0.3em;
+    }
+    .proyect-info__datails {
+      padding: 2rem 0;
       display: flex;
       flex-direction: column;
-      row-gap: 1rem;
-      margin-bottom: 1.5rem;
+      row-gap: 1.5rem;
     }
-    .proyect__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+
     .proyect__title {
       font-size: clamp(2em, 3vw, 1.3em);
       font-weight: 600;
       line-height: 1.3;
     }
+    .proyect__subtitle {
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 1.4rem;
+    }
     .proyect__icon {
-      width: 1.2rem;
+      width: 1.3rem;
     }
 
-    .proyect__description {
-      text-wrap: pretty;
-      max-width: 50rem;
-    }
-    .proyect__butons {
+    .proyect__links {
       font-weight: 400;
       display: flex;
       justify-items: center;
       gap: 2em;
     }
-    .proyect__buton {
-      padding: 0.2em 0.2em 0 0.2em;
-      transition: transform 0.3s ease-in;
-    }
-    .proyect__buton:hover {
-      transform: scale(1.2);
-    }
+    .proyect__link {
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: var(--border-color);
+      transition: background-color 0.2s ease-in;
 
-    .features__title {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .features__list {
-      max-width: 70rem;
-      padding: 1rem;
       display: flex;
-      flex-direction: column;
-      row-gap: 0.5rem;
-      font-size: 15px;
+      align-items: center;
+      gap: 0.3rem;
     }
-    .features__li {
-      text-wrap: pretty;
-      list-style: disc;
-      &::marker {
-        color: rgba(var(--color), 1);
-      }
+    .proyect__link:hover {
+      background-color: rgba(var(--color-button-muted), 0.5);
     }
   </style>
 </Layout>

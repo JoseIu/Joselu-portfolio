@@ -12,13 +12,14 @@ import SassIcon from './icons/dev/SassIcon.astro';
 import TsIcon from './icons/dev/TsIcon.astro';
 import GitHub from './icons/GitHub.astro';
 import SkillsIcon from './icons/SkillsIcon.astro';
+import SectionTitle from './section-title/SectionTitle.astro';
 ---
 
 <section class="skills wrapper" id="skills">
-  <h2 class="skills__title">
-    <SkillsIcon class="skills__img" />
-    Habilidades Técnicas
-  </h2>
+  <SectionTitle title="Stack tecnológico">
+    <SkillsIcon class="section-icon" />
+  </SectionTitle>
+
   <div class="skills__content">
     <h3 class="skills__subtitle smoke">Tecnologías</h3>
     <ul class="skills__ul">
@@ -34,10 +35,7 @@ import SkillsIcon from './icons/SkillsIcon.astro';
         <SassIcon class="skills__icon" />
         SASS
       </li>
-      <li class="skills__li">
-        <ReactIcon class="skills__icon" />
-        React
-      </li>
+
       <li class="skills__li">
         <JavaScriptIcon class="skills__icon" />
         JavaScript
@@ -45,6 +43,10 @@ import SkillsIcon from './icons/SkillsIcon.astro';
       <li class="skills__li">
         <TsIcon class="skills__icon" />
         TypeScript
+      </li>
+      <li class="skills__li">
+        <ReactIcon class="skills__icon" />
+        React
       </li>
       <li class="skills__li">
         <NodeIcon class="skills__icon" />
@@ -87,10 +89,6 @@ import SkillsIcon from './icons/SkillsIcon.astro';
     flex-direction: column;
     row-gap: 1em;
   }
-  .skills__img {
-    width: 1em;
-    color: rgba(var(--color), 1);
-  }
   .skills__title {
     font-size: clamp(1.7rem, 5vw, 2.5rem);
     font-weight: 700;
@@ -121,11 +119,11 @@ import SkillsIcon from './icons/SkillsIcon.astro';
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
 
   .skills__icon {
-    width: 2rem;
+    width: 2.5rem;
     color: rgba(var(--color), 1);
   }
 </style>

@@ -1,0 +1,29 @@
+---
+import { Proyects } from '@components/react/Proyects';
+import Layout from '@layouts/Layout.astro';
+import { getProjectsCollection } from 'src/utils/getProjectsCollection';
+
+const projects = await getProjectsCollection();
+---
+
+<Layout title="Proyectos">
+  <main class="wrapper">
+    <div class="projects">
+      <Proyects client:only="react" initialProyects={projects} />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .projects {
+    padding: 8rem 1rem 1rem 1rem;
+
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media screen and (min-width: 1200px) {
+    .projects {
+      grid-template-columns: 250px 1fr;
+    }
+  }
+</style>

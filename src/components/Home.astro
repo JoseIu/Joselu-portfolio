@@ -1,11 +1,6 @@
 ---
-import GitGubIcon from './icons/GitHub.astro';
-import LinkeInIcon from './icons/LinkedIn.astro';
-
-import Experience from './Experience.astro';
-import EmailIcon from './icons/Email.astro';
-import Phone from './icons/Phone.astro';
 import WorldMap from './icons/WorldMap.astro';
+import SocialList from './socials-list/SocialList.astro';
 ---
 
 <script>
@@ -16,7 +11,7 @@ import WorldMap from './icons/WorldMap.astro';
     if (textMain && path) {
       path.setAttribute(
         'd',
-        `M0,0 V${textMain.offsetHeight + 13} H${textMain.offsetWidth} v${textMain.offsetHeight}`
+        `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${textMain.offsetHeight}`
       );
       const pathLength = path.getTotalLength();
 
@@ -35,125 +30,86 @@ import WorldMap from './icons/WorldMap.astro';
 </script>
 
 <section class="home wrapper" id="home">
-  <div class="right">
-    <section class="home__content">
-      <figure class="figure">
-        <img src="/me_avatar.webp" alt="" class="figure__img" />
-        <div class="figure__lines">
-          <div class="figure__line figure__line--1"></div>
-          <div class="figure__line figure__line--2"></div>
-          <div class="figure__line figure__line--3"></div>
-          <div class="figure__line figure__line--4"></div>
-        </div>
-      </figure>
-
-      <div class="profile" id="anim-p">
-        <h1 class="profile__title">Joselu</h1>
-        <h2 class="profile__subtitle smoke">Front-end Developer</h2>
-        <div class="profile__location smoke">
-          <WorldMap class="profile__icon" />
-          <span>Madrid - Cádiz, España</span>
-        </div>
-        <ul class="socials">
-          <!-- <li class="socials__item">
-            <a
-              class="socials__link"
-              href="mailto:joseluissgz97@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="email"
-            >
-              <EmailIcon class="socials__icon" />
-              <span class="visually-hidden">Email</span>
-            </a>
-          </li> -->
-          <li class="socials__item">
-            <a
-              class="socials__link"
-              href="https://www.linkedin.com/in/j0selu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <LinkeInIcon class="socials__icon" />
-              <span class="visually-hidden">LinkedIn</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a
-              class="socials__link"
-              href="https://github.com/JoseIu"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <GitGubIcon class="socials__icon" />
-              <span class="visually-hidden">GitHub</span>
-            </a>
-          </li>
-        </ul>
-
-        <svg class="profile__fancy">
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style={{ stopColor: '#DC3A2B', stopOpacity: 1 }}></stop>
-              <stop offset="100%" style={{ stopColor: '#E18510', stopOpacity: 1 }}></stop>
-            </linearGradient>
-          </defs>
-          <path id="border-path" fill="none" stroke="url(#gradient)" stroke-width="1"></path>
-        </svg>
+  <section class="right">
+    <div class="profile" id="anim-p">
+      <span class="right__name smoke">Joselu</span>
+      <h1 class="profile__role">Front-end Developer</h1>
+      <div class="profile__location smoke">
+        <WorldMap class="profile__icon" />
+        <span>Madrid - Cádiz, España</span>
       </div>
-    </section>
-
-    <section class="about">
-      <h3 class="about__title">Sobre mí</h3>
-      <p class="about__description smoke">
-        Desarrollador front-end especializado en React y Next.js, con un enfoque en UX/UI para crear
-        interfaces intuitivas y atractivas. Me apasiona mantenerme al día con las tendencias tecnológicas y
-        aplicar soluciones modernas.
-      </p>
-      <!-- <p class="about__description smoke">
-        He trabajado en proyectos como dashboards y aplicaciones híbridas, logrando mejoras en la gestión de
-        reservas y personalización de la experiencia del usuario..
-      </p> -->
-    </section>
+      <svg class="profile__fancy">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style={{ stopColor: '#DC3A2B', stopOpacity: 1 }}></stop>
+            <stop offset="100%" style={{ stopColor: '#E18510', stopOpacity: 1 }}></stop>
+          </linearGradient>
+        </defs>
+        <path id="border-path" fill="none" stroke="url(#gradient)" stroke-width="1"></path>
+      </svg>
+    </div>
+    <p class="right__description smoke">
+      Desarrollador front-end especializado en React y Next.js, con un enfoque en UX/UI para crear interfaces
+      intuitivas y atractivas. Me apasiona mantenerme al día con las tendencias tecnológicas y aplicar
+      soluciones modernas.
+    </p>
+    <SocialList />
+  </section>
+  <div class="left">
+    <figure class="figure">
+      <img src="/me_avatar.webp" alt="" class="figure__img" />
+      <div class="figure__lines">
+        <div class="figure__line figure__line--1"></div>
+        <div class="figure__line figure__line--2"></div>
+        <div class="figure__line figure__line--3"></div>
+        <div class="figure__line figure__line--4"></div>
+      </div>
+    </figure>
   </div>
-
-  <Experience />
 </section>
 <style>
-  .right {
-    padding: 4rem 0 4rem 4rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-  }
-
   .home {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 2rem;
-    margin-bottom: 3em;
+    padding: 8rem 1rem 1rem 1rem;
+    width: 100%;
+    margin-bottom: 8rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 5rem;
   }
-  .home__content {
+  .right {
+    flex-basis: 35%;
+    flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-  }
-  @media screen and (max-width: 850px) {
-    .home {
-      grid-template-columns: 1fr;
+    .right__description {
+      max-width: 40rem;
+      line-height: 1.5;
+      text-wrap: pretty;
+      padding: 0 1rem 0 0;
     }
   }
+  .left {
+    flex-basis: 25rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .profile {
     position: relative;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-    .profile__title {
-      font-size: 2.25em;
+    .profile__role {
+      font-size: clamp(3em, 9vw, 5em);
       font-weight: 700;
-      line-height: 2.5rem;
+      line-height: clamp(3rem, 10vw, 5rem);
+      /* text-wrap: pretty; */
     }
     .profile__subtitle,
     .profile__location {
@@ -173,7 +129,6 @@ import WorldMap from './icons/WorldMap.astro';
     position: absolute;
     width: 100%;
     z-index: -1;
-    bottom: -3.1rem;
     left: -0.7rem;
     overflow: visible;
   }
@@ -182,7 +137,7 @@ import WorldMap from './icons/WorldMap.astro';
     width: fit-content;
     position: relative;
     .figure__img {
-      width: 8rem;
+      max-width: 15rem;
       border-radius: 1rem;
       aspect-ratio: 1/1;
       box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -201,7 +156,7 @@ import WorldMap from './icons/WorldMap.astro';
         height: 100%;
         background-color: rgba(var(--color), 0.2);
         border-radius: 100%;
-        filter: blur(60px);
+        filter: blur(100px);
       }
     }
     .figure__line {
@@ -248,46 +203,12 @@ import WorldMap from './icons/WorldMap.astro';
       align-items: center;
     }
   }
-  .socials {
-    padding-top: 0.5rem;
-    display: flex;
-    gap: 0.25rem;
-  }
-
-  .socials__link {
-    padding: 0.5rem;
-    color: rgba(var(--color));
-    border-radius: 0.375rem;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .socials__link:hover {
-    color: rgba(var(--color-text-base));
-
-    background-color: rgba(var(--color));
-  }
-  .socials__icon {
-    width: 1rem;
-    height: 1rem;
-  }
-
   .about {
     display: flex;
     flex-direction: column;
     row-gap: 1.2rem;
     .about__title {
       font-size: 1.875em;
-    }
-    .about__description {
-      font-size: 0.875em;
-      line-height: 1.5;
-      text-wrap: pretty;
-      padding: 0 1rem 0 0;
     }
   }
   #border-path {

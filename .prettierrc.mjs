@@ -4,16 +4,16 @@ export default {
   semi: true,
   singleQuote: true,
   tsxSingleQuote: true,
-  trailingComma: "none",
-  arrowParens: "avoid",
+  trailingComma: 'none',
+  arrowParens: 'avoid',
   printWidth: 110,
-  plugins: ["prettier-plugin-astro"],
+  plugins: ['prettier-plugin-astro'],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
-      },
-    },
-  ],
+        parser: 'astro'
+      }
+    }
+  ]
 };

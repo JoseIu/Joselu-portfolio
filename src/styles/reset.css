@@ -1,4 +1,19 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Light.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Regular.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-SemiBold.woff') format('woff');
+  font-weight: 600;
+}
 
 :root {
   --color-text-base: 255, 255, 255;
@@ -15,6 +30,12 @@
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
+
+  --primary-font: 'Geist', system-ui, sans-serif;
+  --border-color: 0.0625rem solid rgb(255 255 255 / 0.25);
+  --tw-ring-color: rgba(var(--muted), 1);
+  --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
+  --box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 /* .dark {
   --color-text-base: 0, 0, 0;
@@ -87,10 +108,10 @@ figure {
   max-width: 100%;
   width: 100%;
   display: block;
-  /* opcional */
+
   -o-object-fit: cover;
   object-fit: cover;
-  /* opcional */
+
   -o-object-position: center center;
   object-position: center center;
 }
@@ -109,6 +130,14 @@ p a {
 li {
   list-style-type: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cal Sans', system-ui, sans-serif;
+}
 
 h1,
 h2,
@@ -125,7 +154,6 @@ i,
 b,
 u,
 em {
-  font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
@@ -156,8 +184,8 @@ body {
   position: relative;
   color: rgba(var(--color-text-base));
   background-color: rgba(var(--color-fill), var(--tw-bg-opacity));
+  font-family: var(--primary-font);
   min-height: 100vh;
   font-size: 100%;
-
-  line-height: 1.4em;
+  scroll-behavior: smooth;
 }

@@ -13,8 +13,9 @@ import TsIcon from '../icons/dev/TsIcon.astro';
 
 interface Props {
   tegnologies: string[];
+  withIcon?: boolean;
 }
-const { tegnologies } = Astro.props;
+const { tegnologies, withIcon } = Astro.props;
 
 const iconShip = {
   React: ReactIcon,
@@ -37,7 +38,7 @@ const iconShip = {
       const IconComponent = iconShip[teg];
       return (
         <li class="chip">
-          {IconComponent && <IconComponent class="ship__icon" />} {teg}
+          {withIcon && IconComponent && <IconComponent class="ship__icon" />} {teg}
         </li>
       );
     })
@@ -53,7 +54,6 @@ const iconShip = {
   .chip {
     padding: 0.3rem 0.6rem;
     border-radius: 0.4rem;
-    /* color: #ffd400; */
     background-color: rgba(var(--color-button-accent), 0.2);
     border: 1px solid rgba(var(--color), 0.2);
 
@@ -61,7 +61,8 @@ const iconShip = {
     gap: 0.2em;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
   }
   .ship__icon {
     width: 1.1rem;
