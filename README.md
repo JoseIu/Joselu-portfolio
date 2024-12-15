@@ -1,10 +1,8 @@
-# Bienvenido a [Joselu.dev](https://joselu-portfolio.vercel.app/)!
+# Bienvenido al **Dashboard Hotel Miranda** ✨🏨
 
 ![alt text](/public/readme_image.webp)
 
-Este es un proyecto de portfolio desarrollado con **Astro**, **TypeScript**, **React**, y **CSS**. Este repositorio muestra mi trayectoria como Desarrollador Front-end, ofreciendo una plataforma para compartir mis proyectos y avances.
-
-*Actualmente el proyecto sigue en desarrollo.*
+Este es un sistema de gestión desarrollado para el **Hotel Miranda**, enfocado en ser intuitivo, eficiente y funcional. El panel está diseñado para facilitar la administración de reservas, habitaciones, usuarios y contactos por parte del personal del hotel.
 
 ---
 
