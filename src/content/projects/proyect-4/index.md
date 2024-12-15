@@ -4,6 +4,7 @@ image: '../images/react/dasboard_images.webp'
 summary: 'Banco de imagenes con unsplash'
 draft: false
 isInConstruction: false
+isFeatured: true
 tags:
   - React
   - TypeScript

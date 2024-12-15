@@ -4,6 +4,7 @@ image: '../images/react/shop_jl.webp'
 summary: 'eCommerce desarrollado con Next.js'
 draft: false
 isInConstruction: true
+isFeatured: true
 tags:
   - NEXT.JS
   - TypeScript

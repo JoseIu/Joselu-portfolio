@@ -11,7 +11,7 @@ const TAGS = ['React', 'Angular', 'Astro', 'JavaScript', 'TypeScript'];
 export const Proyects = ({ initialProyects }: Props) => {
   const [proyects, setProyects] = useState(initialProyects);
   const [filterByTag, setFilterByTag] = useState<Set<string>>(new Set());
-
+  console.log({ proyects });
   const toggleTag = (tag: string) => {
     setFilterByTag(prev => {
       const newFilters = new Set(prev);

@@ -4,6 +4,8 @@ image: '../images/project/chat-openAi.webp'
 summary: 'Asiste con chats utilizando OpenAi'
 draft: false
 isInConstruction: false
+isFeatured: false
+
 tags:
   - Angular
   - TypeScript

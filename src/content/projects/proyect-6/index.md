@@ -4,6 +4,7 @@ image: '../images/react/oxygen-shop.webp'
 summary: 'Landing page para Oxygen Shop'
 draft: false
 isInConstruction: false
+isFeatured: false
 tags:
   - HTML
   - CSS

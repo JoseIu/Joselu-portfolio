@@ -1,10 +1,10 @@
 ---
-import { getProjectsCollection } from 'src/utils/getProjectsCollection';
+import { getProjectsFetaturd } from 'src/utils/getProjectsCollection';
 import CodeIcon from './icons/Code.astro';
 import ProyectCard from './ProyectCard/ProyectCard.astro';
 import SectionTitle from './section-title/SectionTitle.astro';
 
-const projects = await getProjectsCollection();
+const projects = await getProjectsFetaturd();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
@@ -13,7 +13,7 @@ const projects = await getProjectsCollection();
   </SectionTitle>
 
   <div class="proyects__list">
-    {projects.map(proyect => <ProyectCard proyect={proyect} />).slice(0, 4)}
+    {projects.map(proyect => <ProyectCard proyect={proyect} />)}
   </div>
   <a href="/projects" class="smoke">Ver todos los proyectos....</a>
 </section>
