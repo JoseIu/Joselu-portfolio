@@ -4,6 +4,7 @@ image: '../images/project/map-box.webp'
 summary: 'Mapa consumiendo la API de Map-Box'
 draft: false
 isInConstruction: false
+isFeatured: false
 tags:
   - HTML
   - SASS

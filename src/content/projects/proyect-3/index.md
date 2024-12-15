@@ -4,6 +4,7 @@ image: '../images/react/dasboard_miranda.webp'
 summary: 'Panel de control para gestionar el hotel'
 draft: false
 isInConstruction: false
+isFeatured: true
 tags:
   - React
   - TypeScript

@@ -4,6 +4,7 @@ image: '../images/react/jabiertzo-web.webp'
 summary: 'Landing page sobre el youtuber Jabiertzo'
 draft: false
 isInConstruction: false
+isFeatured: false
 tags:
   - HTML
   - CSS

@@ -31,9 +31,10 @@ const projects = defineCollection({
       image: image(),
       summary: z.string(),
       isInConstruction: z.boolean(),
+      isFeatured: z.boolean(),
       tags: z.array(z.string()),
       draft: z.boolean().optional(),
-      demoUrl: z.string(),
+      demoUrl: z.string().optional(),
       repoUrl: z.string()
     })
 });

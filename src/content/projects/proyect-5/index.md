@@ -4,6 +4,8 @@ image: '../images/react/miranda_api.webp'
 summary: 'API RESTful para el Hotel Miranda'
 draft: false
 isInConstruction: false
+isFeatured: false
+
 tags:
   - Node.JS
   - Express

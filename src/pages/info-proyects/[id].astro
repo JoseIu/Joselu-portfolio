@@ -39,16 +39,20 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
 
       <div class="proyect-info__datails">
         <div class="proyect__links">
-          <a
-            class="proyect__link"
-            href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="link para ver demo"
-          >
-            <WorldMap class="proyect__icon" />
-            <span>Ver demo</span>
-          </a>
+          {
+            demoUrl && (
+              <a
+                class="proyect__link"
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="link para ver demo"
+              >
+                <WorldMap class="proyect__icon" />
+                <span>Ver demo</span>
+              </a>
+            )
+          }
           <a
             class="proyect__link"
             href={repoUrl}
@@ -74,6 +78,18 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
       max-width: 50rem;
       line-height: 1.5;
       text-wrap: pretty;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      a {
+        color: rgba(var(--color), 1);
+      }
+      ul {
+        padding-left: 1rem;
+      }
+      li {
+        list-style: initial;
+      }
     }
 
     .go-back__btn {

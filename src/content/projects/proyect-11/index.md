@@ -4,6 +4,7 @@ image: '../images/project/pomodoro.webp'
 summary: 'PomoDoro app para estudiar'
 draft: false
 isInConstruction: false
+isFeatured: false
 tags:
   - HTML
   - SASS
