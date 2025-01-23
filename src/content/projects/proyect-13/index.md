@@ -1,29 +1,20 @@
 ---
-title: 'Hackathon CRM @AdoptaUnJunior '
-image: '../images/project/adopta_un_junior.webp'
-summary: 'Proyecto propuesto por Impact Social Capital '
+title: 'Map-Box'
+image: '../images/project/map-box.webp'
+summary: 'Mapa consumiendo la API de Map-Box'
 draft: false
 isInConstruction: false
-isFeatured: true
+isFeatured: false
 tags:
   - HTML
   - SASS
-  - React
-  - JavaScript
+  - Angular
   - TypeScript
+  - JavaScript
+  - NestJS
 
-
-repoUrl: https://github.com/DiegoPertierraM/hackathon-auj-isc?tab=readme-ov-file
+demoUrl: https://mapbox-app-lemon.vercel.app/maps/markers
+repoUrl: https://github.com/JoseIu/mapbox-app
 ---
 
-
-
-Participé en el desarrollo de un CRM propuesto por [Impact Social Capital](https://impactsocialcup.com/) enfocado en la gestión de oportunidades y relaciones con clientes. El proyecto fue creado durante un hackathon, y mi contribución incluyó:
-
-- Diseño y desarrollo de la **interfaz de usuario** para la gestión de oportunidades.  
-- Configuración de rutas protegidas con sistemas de **autenticación** (login).  
-- Implementación de **skeletons** para mejorar la experiencia del usuario durante la carga de tablas de datos.  
-- Creación de componentes para los formularios, validados con Zod
-- Trabajo en equipo para garantizar la rápida adaptación a las necesidades específicas del cliente.  
-
-Este proyecto me permitió consolidar mis habilidades técnicas en React, TypeScript y Redux, además de fortalecer habilidades blandas como el trabajo colaborativo y la comunicación efectiva.  
+Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.

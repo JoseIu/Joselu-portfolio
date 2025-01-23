@@ -1,7 +1,7 @@
 ---
-title: 'Map-Box'
-image: '../images/project/map-box.webp'
-summary: 'Mapa consumiendo la API de Map-Box'
+title: 'Pomodoro'
+image: '../images/project/pomodoro.webp'
+summary: 'PomoDoro app para estudiar'
 draft: false
 isInConstruction: false
 isFeatured: false
@@ -11,10 +11,9 @@ tags:
   - Angular
   - TypeScript
   - JavaScript
-  - NestJS
 
-demoUrl: https://mapbox-app-lemon.vercel.app/maps/markers
-repoUrl: https://github.com/JoseIu/mapbox-app
+demoUrl: https://pomodoro-rho-weld.vercel.app/
+repoUrl: https://github.com/JoseIu/pomodoro
 ---
 
-Durante mi tiempo trabajando en el proyecto Map-box Demo con Angular, logré aplicar y poner en práctica de manera efectiva conceptos avanzados como standalone components, signals y la estrategia de componentización. Este proyecto se centró en la potenciación de la API de Map-box, donde mi objetivo era incorporar funcionalidades, tales como la implementación de características como la adición de marcadores, personalización de los mismos y la capacidad de desplazarlos por el mapa, manteniendo los datos persistentes.
+PomoDoro con tareas es una aplicación que permite al usuario organizar su tiempo de trabajo y descanso. El usuario puede añadir tareas. La aplicación cuenta con un temporizador que avisa al usuario cuando el tiempo de trabajo o descanso ha terminado. Además, la aplicación cuenta con acciones sobre cada tareas como el de terminar la tarea, editar y eliminar.

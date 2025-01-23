@@ -1,19 +1,19 @@
 ---
-title: 'Pomodoro'
-image: '../images/project/pomodoro.webp'
-summary: 'PomoDoro app para estudiar'
+title: 'Asistente virtual con OpenAi'
+image: '../images/project/chat-openAi.webp'
+summary: 'Asiste con chats utilizando OpenAi'
 draft: false
 isInConstruction: false
 isFeatured: false
+
 tags:
-  - HTML
-  - SASS
   - Angular
   - TypeScript
   - JavaScript
+  - NestJS
 
-demoUrl: https://pomodoro-rho-weld.vercel.app/
-repoUrl: https://github.com/JoseIu/pomodoro
+demoUrl: https://angular-gpt-gilt.vercel.app/orthography
+repoUrl: https://github.com/JoseIu/angular-gpt
 ---
 
-PomoDoro con tareas es una aplicación que permite al usuario organizar su tiempo de trabajo y descanso. El usuario puede añadir tareas. La aplicación cuenta con un temporizador que avisa al usuario cuando el tiempo de trabajo o descanso ha terminado. Además, la aplicación cuenta con acciones sobre cada tareas como el de terminar la tarea, editar y eliminar.
+Este proyecto fue toda una aventura! Aprendí un montón mientras desarrollaba un asistente virtual para ayudar a la gente a encontrar información sobre cómo comprar productos Samsung en México. En el frontend, me sumergí en Tailwind CSS, creando una interfaz de usuario que es tanto bonita como funcional. Por otro lado, en el backend, utilicé Nest.js y Multer para manejar archivos y gestionar la lógica de la aplicación.

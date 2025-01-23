@@ -1,5 +1,5 @@
 ---
-company: 'Programación en Español'
+company: 'Programación en Español (Devathon - Ganadores)'
 role: 'Front end developer'
 dateStart: 2024-11-10
 dateEnd: 2024-12-13
@@ -7,10 +7,10 @@ location: Madrid, España
 companyUrl: hhttps://programacion-es.dev/devathon-viii-edition/
 ---
 
-Como Front-end en la devathon, tuve la oportunidad de trabajar en el desarrollo de una aplicación MVP para la gestión de reservas en un restaurante.
+Como Front-end en esta Devathon temática navideña, trabajé en el desarrollo de un MVP de dashboard Neo Brutalista diseñado para ayudar a Santa en la gestión de sus tareas y operaciones. Este proyecto no solo me permitió aplicar y perfeccionar mis habilidades técnicas, sino también fortalecer mis soft skills, especialmente en trabajo en equipo y colaboración.
 
-- Desarrollo de aplicación MVP para gestión de reservas en restaurante.
-- Creación y protección de rutas.
+- Desarrollé la interfaz ganadora del dashboard Neo Brutalista para Santa, con enfoque enaccesibilidad y experiencia de usuario.
+- Implementé un GPS navideño con búsqueda inteligente, rutas dinámicas y gestión de historial..
 - Implementación de calendario interactivo y sistema de reservas.
 - Visualización de turnos y estados.
-- Mejora de habilidades blandas: trabajo en equipo, comunicación efectiva y adaptación.
+- Implemente un sistema CRUD para la gestión duendes y lector de cartas con paginación, filtrosavanzados y persistencia de resultados mediante query params.
