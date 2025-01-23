@@ -4,7 +4,7 @@ role: 'Front end developer'
 dateStart: 2024-11-10
 dateEnd: 2024-12-13
 location: Madrid, España
-companyUrl: hhttps://programacion-es.dev/devathon-viii-edition/
+companyUrl: https://programacion-es.dev/devathon-viii-edition/
 ---
 
 Como Front-end en esta Devathon temática navideña, trabajé en el desarrollo de un MVP de dashboard Neo Brutalista diseñado para ayudar a Santa en la gestión de sus tareas y operaciones. Este proyecto no solo me permitió aplicar y perfeccionar mis habilidades técnicas, sino también fortalecer mis soft skills, especialmente en trabajo en equipo y colaboración.
