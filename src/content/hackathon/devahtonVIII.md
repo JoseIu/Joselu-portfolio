@@ -1,5 +1,5 @@
 ---
-company: 'Programación en Español (Devathon - Ganadores)'
+company: 'Programación en Español'
 role: 'Front end developer'
 dateStart: 2024-11-10
 dateEnd: 2024-12-13
