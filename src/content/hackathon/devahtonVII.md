@@ -1,5 +1,5 @@
 ---
-company: 'Programación en Español'
+company: 'Programación en Español (Devathon)'
 role: 'Front end developer'
 dateStart: 2024-08-20
 dateEnd: 2024-09-25

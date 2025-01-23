@@ -1,20 +1,25 @@
 ---
-title: 'Landing Page - Jabiertzo'
-image: '../images/react/jabiertzo-web.webp'
-summary: 'Landing page sobre el youtuber Jabiertzo'
+title: 'Al-Andalus Doner Kebab'
+image: '../images/react/al-andalus.webp'
+summary: 'Página web para un restaurante local'
 draft: false
 isInConstruction: false
 isFeatured: false
 tags:
   - HTML
   - CSS
-  - SASS
   - JavaScript
-  - TypeScript
-  - Astro
 
-demoUrl: https://jabiertzo-web.vercel.app/
-repoUrl: https://github.com/JoseIu/jabiertzo-web
+demoUrl: https://al-andalus-doner-kebab.netlify.app/
+repoUrl: https://github.com/JoseIu/al-andalus-kebab.github.io
 ---
 
-Esta es una landing page diseñada para el canal de YouTube Jabiertzo, desarrollada con Astro, TypeScript y SASS. La página es completamente e, garantizando una experiencia de usuario óptima en cualquier dispositivo. Los vídeos de YouTube se cargan de manera eficiente, permitiendo que solo se reproduzcan al hacer clic, lo que mejora el rendimiento de la página. Además, se incluye un enlace destacado al canal de Twitch, facilitando a los usuarios la conexión con todo el contenido del creador.
+Durante mis estudios, trabajé como freelance desarrollando una página web para un restaurante local, aportando soluciones digitales para mejorar la experiencia del cliente:
+
+- Diseñé y desarrollé una página web con enfoque "Mobile First", asegurando que se adaptara perfectamente a cualquier dispositivo, desde móviles hasta ordenadores.
+
+- Utilicé la metodología BEM para organizar el código de forma clara y eficiente, lo que facilitó su mantenimiento y futuras actualizaciones.
+
+- Creé un menú interactivo que muestra todas las opciones de la carta de manera intuitiva, ofreciendo a los usuarios una experiencia práctica y agradable.
+
+- Implementé un sistema de menú QR que permite a los clientes en el local escanearlo desde sus mesas y acceder al menú directamente en sus teléfonos, mejorando la comodidad y reduciendo la necesidad de menús físicos.
