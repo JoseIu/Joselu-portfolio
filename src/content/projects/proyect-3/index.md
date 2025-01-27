@@ -15,7 +15,7 @@ tags:
   - PostgreSQL
   - SASS
 
-demoUrl: https://github.com/JoseIu/hotel-miranda-dashboard-next.js
+demoUrl: https://hotel-miranda-dashboard-next-js.vercel.app
 repoUrl: https://github.com/JoseIu/hotel-miranda-dashboard-next.js
 ---
 
