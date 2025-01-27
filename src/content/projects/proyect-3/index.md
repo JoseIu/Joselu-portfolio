@@ -20,16 +20,6 @@ repoUrl: https://github.com/JoseIu/hotel-miranda-dashboard-next.js
 ---
 
 Este proyecto es una versión mejorada y migrada del dashboard original, desarrollado previamente con React y MongoDB. La nueva implementación utiliza Next.js, React, TypeScript, Sass, PostgreSQL y Docker, aprovechando las características más avanzadas para una aplicación más robusta, eficiente y moderna.
-## Tecnologías Utilizadas
-
-- **Next.js**: Framework de React para aplicaciones web con renderizado híbrido (SSR y SSG).
-- **React**: Biblioteca para construir interfaces de usuario.
-- **TypeScript**: Superconjunto tipado de JavaScript para mayor seguridad y mantenibilidad.
-- **Sass**: Preprocesador CSS para estilos más flexibles y mantenibles.
-- **PostgreSQL**: Sistema de gestión de bases de datos relacional.
-- **Docker**: Para tener almacenado la base de datos en local.
-
-## Mejoras y Ventajas de la Migración a Next.js
 
 ### 1. **Server Actions**
 
