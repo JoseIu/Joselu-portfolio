@@ -18,7 +18,7 @@ export const ProyectCard = ({ proyect }: Props) => {
           </h2>
         </header>
         <div className="proyect__content">
-          {isInConstruction && <span className="building">En construcción</span>}
+          {isInConstruction && <span className="building">En desarrollo</span>}
           <span className="smoke">{summary}</span>
 
           <Chips tegnologies={tags} />
