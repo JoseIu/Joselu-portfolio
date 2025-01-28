@@ -1,5 +1,6 @@
 ---
 import Chips from '@components/Chips/Chips.astro';
+import type { Technology } from '@interfaces/types';
 import type { CollectionEntry } from 'astro:content';
 import Folder from '../icons/Folder.astro';
 
@@ -9,6 +10,7 @@ type Props = {
 
 const { proyect } = Astro.props;
 const { title, summary, isInConstruction, tags } = proyect.data;
+const tegnologiesTags = tags as Technology[];
 ---
 
 <article class="proyect">
@@ -21,10 +23,10 @@ const { title, summary, isInConstruction, tags } = proyect.data;
       </h2>
     </header>
     <div class="proyect__content">
-      {isInConstruction && <span class="building">En construcción</span>}
+      {isInConstruction && <span class="building">En desarrollo</span>}
       <span class="smoke">{summary}</span>
 
-      <Chips tegnologies={tags} />
+      <Chips tegnologies={tegnologiesTags} />
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
