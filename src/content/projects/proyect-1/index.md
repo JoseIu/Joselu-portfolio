@@ -6,7 +6,7 @@ draft: false
 isInConstruction: true
 isFeatured: true
 tags:
-  - NEXT.JS
+  - Next.js
   - TypeScript
   - Tailwind
   - Docker
