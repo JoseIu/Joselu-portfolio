@@ -1,0 +1,16 @@
+export type Technology =
+  | 'HTML'
+  | 'CSS'
+  | 'SASS'
+  | 'JavaScript'
+  | 'TypeScript'
+  | 'React'
+  | 'Next.js'
+  | 'Node.JS'
+  | 'Astro'
+  | 'Angular'
+  | 'Redux'
+  | 'MongoDB'
+  | 'PostgreSQL'
+  | 'Docker'
+  | 'Tailwind';
