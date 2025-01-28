@@ -1,13 +1,12 @@
 ---
 import ArrowBackIcon from '../../components/icons/ArrowBack.astro';
 import Layout from '../../layouts/Layout.astro';
-
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import Chips from '../../components/Chips/Chips.astro';
-import GitHub from '../../components/icons/GitHub.astro';
 import WorldMap from '../../components/icons/WorldMap.astro';
 import LinkIcon from '@components/icons/LinkIcon.astro';
+import type { Technology } from '@interfaces/types';
 
 export const getStaticPaths = (async () => {
   const proyects = await getCollection('projects');
@@ -22,6 +21,7 @@ const { id } = Astro.params;
 const { proyect } = Astro.props;
 const { Content } = await proyect.render();
 const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
+const tegnologiesTags = tags as Technology[];
 ---
 
 <Layout title={id}>
@@ -64,7 +64,7 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
             <span>Ver repositorio</span>
           </a>
         </div>
-        <Chips tegnologies={tags} withIcon />
+        <Chips tegnologies={tegnologiesTags} withIcon />
       </div>
 
       <div class="test">

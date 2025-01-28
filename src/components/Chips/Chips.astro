@@ -1,4 +1,9 @@
 ---
+import DockerIcon from '@components/icons/dev/DockerIcon.astro';
+import NextJS from '@components/icons/dev/NextJS.astro';
+import PostgreSQL from '@components/icons/dev/PostgreSQL.astro';
+import Tailwind from '@components/icons/dev/Tailwind.astro';
+import type { Technology } from '@interfaces/types';
 import AngularIcon from '../icons/dev/AngularIcon.astro';
 import AstroIcon from '../icons/dev/AstroIcon.astro';
 import CssIcon from '../icons/dev/CssIcon.astro';
@@ -12,23 +17,27 @@ import SassIcon from '../icons/dev/SassIcon.astro';
 import TsIcon from '../icons/dev/TsIcon.astro';
 
 interface Props {
-  tegnologies: string[];
+  tegnologies: Technology[];
   withIcon?: boolean;
 }
 const { tegnologies, withIcon } = Astro.props;
 
 const iconShip = {
-  React: ReactIcon,
+  HTML: HtmlIcon,
   CSS: CssIcon,
   SASS: SassIcon,
-  HTML: HtmlIcon,
   JavaScript: JavaScriptIcon,
   TypeScript: TsIcon,
+  React: ReactIcon,
+  'Next.js': NextJS,
   'Node.JS': NodeIcon,
   Astro: AstroIcon,
   Angular: AngularIcon,
   Redux: ReduxIcon,
-  MongoDB: MongoIcon
+  MongoDB: MongoIcon,
+  PostgreSQL: PostgreSQL,
+  Docker: DockerIcon,
+  Tailwind: Tailwind
 };
 ---
 
