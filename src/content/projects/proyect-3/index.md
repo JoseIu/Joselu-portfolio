@@ -9,8 +9,6 @@ tags:
   - Next.js
   - React
   - TypeScript
-  - JavaScript
-  - Zustand
   - Docker
   - PostgreSQL
   - SASS
