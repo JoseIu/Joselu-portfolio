@@ -32,7 +32,7 @@ import SocialList from './socials-list/SocialList.astro';
 <section class="home wrapper" id="home">
   <section class="right">
     <div class="profile" id="anim-p">
-      <span class="right__name smoke">Joselu</span>
+      <span class="right__name">Joselu</span>
       <h1 class="profile__role">Front-end Developer</h1>
       <div class="profile__location smoke">
         <WorldMap class="profile__icon" />
@@ -91,6 +91,10 @@ import SocialList from './socials-list/SocialList.astro';
       text-wrap: pretty;
       padding: 0 1rem 0 0;
     }
+  }
+  .right__name {
+    font-size: 1.3rem;
+    color: rgba(var(--color), 1);
   }
   .left {
     padding-right: 2rem;
