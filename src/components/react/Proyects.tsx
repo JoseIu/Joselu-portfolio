@@ -7,7 +7,7 @@ type Props = {
   initialProyects: CollectionEntry<'projects'>[];
 };
 
-const TAGS = ['React', 'Angular', 'Astro', 'JavaScript', 'TypeScript', 'Next.js', 'Astro'];
+const TAGS = ['React', 'Next.js', 'Astro', 'Angular', 'JavaScript', 'TypeScript'];
 export const Proyects = ({ initialProyects }: Props) => {
   const [proyects, setProyects] = useState(initialProyects);
   const [filterByTag, setFilterByTag] = useState<Set<string>>(new Set());
