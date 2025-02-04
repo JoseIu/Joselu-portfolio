@@ -3,6 +3,9 @@ dist/
 
 # generated types
 .astro/
+/public/proyects/*
+/public/react/*
+
 
 # dependencies
 node_modules/
