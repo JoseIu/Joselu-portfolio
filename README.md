@@ -1,4 +1,4 @@
-# Bienvenido a [Joselu.dev](https://joselu-portfolio.vercel.app/)!
+# Bienvenido a [Joselu.dev](https://joselu-portfolio.vercel.app/)
 
 ![alt text](/public/readme_image.webp)
 
