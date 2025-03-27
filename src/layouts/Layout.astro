@@ -16,21 +16,29 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Joselu Front-end Developer - React - Next.js - Astro" />
     <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/code.svg" />
-    <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph Meta Tags -->
+    <meta property="description" content="Joselu Frontend Developer - React - Next.js - Astro" />
     <meta property="og:title" content="Joselu Frontend Developer" />
-    <meta
-      property="og:description"
-      content="Mira mi portafolio y mis proyectos hechos con React, Next.js y Astro."
-    />
+    <meta property="og:description" content="Joselu Frontend Developer - React - Next.js - Astro" />
+    <meta property="og:url" content="https://joselu-portfolio.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://joselu-portfolio.vercel.app/me_avatar.webp" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Joselu Frontend Developer" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Joselu" />
+    <meta name="twitter:creator" content="@Joselu" />
+    <meta name="twitter:title" content="Joselu Frontend Developer" />
+    <meta name="twitter:description" content="Joselu Frontend Developer - React - Next.js - Astro" />
+
     <meta property="og:url" content="https://joselu-portfolio.vercel.app/" />
     <link rel="canonical" href="https://joselu-portfolio.vercel.app/" />
 
-    <title>{title}</title>
     <ClientRouter />
   </head>
   <body>
