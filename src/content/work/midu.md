@@ -7,6 +7,6 @@ location: Barcelona
 companyUrl: https://www.linkedin.com/company/midudev/posts/?feedView=all
 ---
 
-Para este proyecto, tuve la oportunidad de trabajar en la web de [LolaLolitaLand](https://www.lolalolitaland.com/) , el que implemente funcionaldes de un sitio web para la como una galería de imagenes haciendo uso de las view transitions, accesibilidad y responsive del mismo.
+Para este proyecto, tuve la oportunidad de trabajar en la web de [LolaLolitaLand](https://www.lolalolitaland.com/).
 
-Tambien tuve que ayudar con la optimizacion de la web, mejorando el SEO y la accesibilidad.
+Mi aportación se centró en diseño, accesibilidad, optimización del rendimiento y la implementación de view transitions.
