@@ -4,14 +4,39 @@
   gap: 1rem;
 }
 .social__item {
+  filter: url('#goo');
+
+  padding: 0.3rem 1rem;
+  position: relative;
   border-radius: 0.3rem;
   background-color: rgba(var(--color), 1);
   border: 1px solid transparent;
-  transition: background-color 0.3s ease-in;
 }
-.social__item:hover {
-  background-color: rgba(var(--color-button-accent), 0.2);
-  border: 1px solid rgba(var(--color), 0.2);
+
+.social__item::before,
+.social__item::after {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background-color: rgba(var(--color), 1);
+  border-radius: 50%;
+  transition: transform 0.8s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+.social__item::before {
+  top: -25%;
+  left: 20%;
+}
+.social__item::after {
+  bottom: -25%;
+  right: 20%;
+}
+.social__item:hover::before,
+.social__item:hover::after {
+  transform: none;
 }
 
 .social__icon {
