@@ -1,10 +1,11 @@
 ---
-import { getProjectsFetaturd } from 'src/utils/getProjectsCollection';
+import { getProjectsFeatured } from 'src/utils/getProjectsCollection';
 import CodeIcon from './icons/Code.astro';
 import ProyectCard from './ProyectCard/ProyectCard.astro';
+import ProyectCardFeatured from './proyectCardFeatured/ProyectCardFeatured.astro';
 import SectionTitle from './section-title/SectionTitle.astro';
 
-const projects = await getProjectsFetaturd();
+const projects = await getProjectsFeatured();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
@@ -13,7 +14,15 @@ const projects = await getProjectsFetaturd();
   </SectionTitle>
 
   <div class="proyects__list">
-    {projects.map(proyect => <ProyectCard proyect={proyect} />)}
+    {
+      projects.map(proyect =>
+        proyect.data.isFeatured ? (
+          <ProyectCardFeatured proyect={proyect} />
+        ) : (
+          <ProyectCard proyect={proyect} />
+        )
+      )
+    }
   </div>
   <a href="/projects" class="proyects__more">Ver más . . . . . . . . .</a>
 </section>
