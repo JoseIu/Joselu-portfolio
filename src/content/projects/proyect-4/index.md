@@ -4,7 +4,8 @@ image: '../images/react/readmatic.webp'
 summary: 'Generador de readme'
 draft: false
 isInConstruction: false
-isFeatured: true
+isForHome: true
+isFeatured: false
 tags:
   - React
   - TypeScript

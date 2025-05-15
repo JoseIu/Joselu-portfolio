@@ -4,7 +4,8 @@ image: '../images/project/dashboard.webp'
 summary: 'Panel de control para gestionar el hotel'
 draft: false
 isInConstruction: false
-isFeatured: true
+isForHome: true
+isFeatured: false
 tags:
   - Next.js
   - React
