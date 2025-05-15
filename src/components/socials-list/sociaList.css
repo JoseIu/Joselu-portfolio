@@ -2,20 +2,30 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-.social__item {
   filter: url('#goo');
+}
 
-  padding: 0.3rem 1rem;
+.social__icon {
+  width: 1.25rem;
+  color: rgba(var(--color-text-base));
+
+  transition: color 0.3s ease-in;
+}
+.social__link {
   position: relative;
-  border-radius: 0.3rem;
   background-color: rgba(var(--color), 1);
   border: 1px solid transparent;
+  padding: 0.6rem 1rem;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.social__item::before,
-.social__item::after {
-  width: 40%;
+.social__link::before,
+.social__link::after {
+  width: 30%;
   height: 100%;
   position: absolute;
   content: '';
@@ -26,29 +36,15 @@
   transform: scale(0);
   z-index: -1;
 }
-.social__item::before {
-  top: -25%;
+.social__link::before {
+  top: -40%;
   left: 20%;
 }
-.social__item::after {
-  bottom: -25%;
+.social__link::after {
+  bottom: -40%;
   right: 20%;
 }
-.social__item:hover::before,
-.social__item:hover::after {
+.social__link:hover::before,
+.social__link:hover::after {
   transform: none;
-}
-
-.social__icon {
-  width: 1.25rem;
-  color: rgba(var(--color-text-base));
-
-  transition: color 0.3s ease-in;
-}
-.social__link {
-  padding: 0.5rem 1rem;
-
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
 }
