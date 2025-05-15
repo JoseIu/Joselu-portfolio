@@ -4,8 +4,8 @@ image: '../images/project/miranda-astro.webp'
 summary: 'Página web para el hotel miranda'
 draft: false
 isInConstruction: false
-isFeatured: true
-
+isForHome: true
+isFeatured: false
 tags:
   - HTML
   - CSS
@@ -15,7 +15,6 @@ tags:
 demoUrl: https://miranda-astro-nux4.vercel.app/
 repoUrl: https://github.com/JoseIu/miranda-astro
 ---
-
 
 Este proyecto es una versión mejorada y migrada de la Landing Page original del Hotel Miranda, previamente desarrollada con HTML, CSS Y JS. La nueva implementación utiliza Astro con una isla de React, lo que permite crear una página estática ultrarrápida sin perder la interactividad donde más se necesita. Esta migración está orientada a obtener una mejor experiencia de usuario, un rendimiento superior y una mayor facilidad en el desarrollo.
 

@@ -31,6 +31,7 @@ const projects = defineCollection({
       image: image(),
       summary: z.string(),
       isInConstruction: z.boolean(),
+      isForHome: z.boolean(),
       isFeatured: z.boolean(),
       tags: z.array(z.string()),
       draft: z.boolean().optional(),

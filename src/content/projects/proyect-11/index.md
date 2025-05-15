@@ -4,6 +4,7 @@ image: '../images/project/chat-openAi.webp'
 summary: 'Asiste con chats utilizando OpenAi'
 draft: false
 isInConstruction: false
+isForHome: false
 isFeatured: false
 
 tags:

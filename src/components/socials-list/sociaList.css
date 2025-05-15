@@ -2,16 +2,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-.social__item {
-  border-radius: 0.3rem;
-  background-color: rgba(var(--color), 1);
-  border: 1px solid transparent;
-  transition: background-color 0.3s ease-in;
-}
-.social__item:hover {
-  background-color: rgba(var(--color-button-accent), 0.2);
-  border: 1px solid rgba(var(--color), 0.2);
+  filter: url('#goo');
 }
 
 .social__icon {
@@ -21,9 +12,39 @@
   transition: color 0.3s ease-in;
 }
 .social__link {
-  padding: 0.5rem 1rem;
+  position: relative;
+  background-color: rgba(var(--color), 1);
+  border: 1px solid transparent;
+  padding: 0.6rem 1rem;
+  z-index: 1;
 
   display: flex;
   align-items: center;
   gap: 0.3rem;
+}
+
+.social__link::before,
+.social__link::after {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background-color: rgba(var(--color), 1);
+  border-radius: 50%;
+  transition: transform 0.8s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+.social__link::before {
+  top: -40%;
+  left: 20%;
+}
+.social__link::after {
+  bottom: -40%;
+  right: 20%;
+}
+.social__link:hover::before,
+.social__link:hover::after {
+  transform: none;
 }

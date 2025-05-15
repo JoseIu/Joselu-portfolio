@@ -4,7 +4,9 @@ image: '../images/project/lolalolita.webp'
 summary: 'Una iniciativa de la influencer @lolalolita'
 draft: false
 isInConstruction: false
+isForHome: true
 isFeatured: true
+
 tags:
   - Astro
   - JavaScript

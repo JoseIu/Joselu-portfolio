@@ -4,7 +4,9 @@ image: '../images/react/al-andalus.webp'
 summary: 'Página web para un restaurante local'
 draft: false
 isInConstruction: false
+isForHome: false
 isFeatured: false
+
 tags:
   - HTML
   - CSS

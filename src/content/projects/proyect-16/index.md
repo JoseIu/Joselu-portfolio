@@ -4,6 +4,7 @@ image: '../images/react/miranda.webp'
 summary: 'Página web para el hotel miranda'
 draft: false
 isInConstruction: false
+isForHome: false
 isFeatured: false
 
 tags:

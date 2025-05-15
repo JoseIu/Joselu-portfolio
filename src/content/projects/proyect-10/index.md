@@ -4,7 +4,9 @@ image: '../images/project/reading-list.webp'
 summary: 'Prueba técnica propuesta por Midudev'
 draft: false
 isInConstruction: false
+isForHome: false
 isFeatured: false
+
 tags:
   - HTML
   - SASS
