@@ -9,11 +9,11 @@ const projects = await getProjectsFeatured();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-  <SectionTitle title="Proyectos destacados">
-    <CodeIcon class="section-icon" />
+  <SectionTitle title="Proyectos destacados" id="proyects-list">
+    <CodeIcon class="section-icon" aria-hidden="true" />
   </SectionTitle>
 
-  <div class="proyects__list">
+  <ul class="proyects__list" aria-describedby="proyects-list">
     {
       projects.map(proyect =>
         proyect.data.isFeatured ? (
@@ -23,8 +23,10 @@ const projects = await getProjectsFeatured();
         )
       )
     }
-  </div>
-  <a href="/projects" class="proyects__more">Ver más . . . . . . . . .</a>
+  </ul>
+  <a href="/projects" class="proyects__more" aria-label="Ver más proyectos destacados"
+    >Ver más . . . . . . . . .</a
+  >
 </section>
 
 <style>

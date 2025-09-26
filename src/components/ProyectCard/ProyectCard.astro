@@ -13,20 +13,26 @@ const { title, summary, isInConstruction, tags } = proyect.data;
 const tegnologiesTags = tags as Technology[];
 ---
 
-<article class="proyect">
-  <a class="proyect__link" href={`/info-proyects/${proyect.slug}`}>
+<li class="proyect">
+  <a
+    class="proyect__link"
+    href={`/info-proyects/${proyect.slug}`}
+    aria-label={`Ver detalles del proyecto ${title}`}
+    aria-labelledby={`proyect-title-${proyect.slug}`}
+    aria-describedby={`proyect-summary-${proyect.slug} proyect-tech-${proyect.slug}`}
+  >
     <header class="proyect__header">
-      <h2 class="proyect__title" transition:name={`${title}-title`}>
-        <Folder class="proyect__icon" />
+      <h2 class="proyect__title" transition:name={`${title}-title`} id={`proyect-title-${proyect.slug}`}>
+        <Folder class="proyect__icon" aria-hidden="true" />
         {title}
         <!-- <ArrowShortDown class="proyect__icon proyect__arrow" /> -->
       </h2>
     </header>
     <div class="proyect__content">
-      {isInConstruction && <span class="building">En desarrollo</span>}
-      <span class="smoke">{summary}</span>
+      {isInConstruction && <p class="building">En desarrollo</p>}
+      <p class="smoke" id={`proyect-summary-${proyect.slug}`}>{summary}</p>
 
-      <Chips tegnologies={tegnologiesTags} />
+      <Chips tegnologies={tegnologiesTags} slug={proyect.slug} />
     </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -38,30 +44,35 @@ const tegnologiesTags = tags as Technology[];
       stroke-linecap="round"
       stroke-linejoin="round"
       class="icon"
+      aria-hidden="true"
     >
       <line x1="5" y1="12" x2="19" y2="12" class="line"></line>
       <polyline points="12 5 19 12 12 19" class="arrow"></polyline>
     </svg>
   </a>
-</article>
+</li>
 
 <style>
   .proyect {
     position: relative;
+  }
+  .proyect__link {
+    height: 100%;
     padding: 1.4rem;
     border-radius: 0.375rem;
 
     --tw-ring-color: rgba(var(--muted), 1);
     --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
     box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  }
-  .proyect__link {
-    height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: 1rem;
+    &:focus-visible {
+      outline: 2px dashed red;
+      outline-offset: 2px;
+    }
   }
   .proyect:hover {
     background-color: rgba(var(--color-button-muted), 0.5);

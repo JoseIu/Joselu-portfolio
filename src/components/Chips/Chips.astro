@@ -19,8 +19,9 @@ import TsIcon from '../icons/dev/TsIcon.astro';
 interface Props {
   tegnologies: Technology[];
   withIcon?: boolean;
+  slug?: string;
 }
-const { tegnologies, withIcon } = Astro.props;
+const { tegnologies, withIcon, slug } = Astro.props;
 
 const iconShip = {
   HTML: HtmlIcon,
@@ -41,13 +42,17 @@ const iconShip = {
 };
 ---
 
-<ul class="chips">
+<ul
+  class="chips"
+  id={`proyect-tech-${slug}`}
+  aria-label={`Tecnologías usadas en el proyecto ${tegnologies.join(', ')}`}
+>
   {
     tegnologies.map(teg => {
       const IconComponent = iconShip[teg];
       return (
         <li class="chip">
-          {withIcon && IconComponent && <IconComponent class="ship__icon" />} {teg}
+          {withIcon && IconComponent && <IconComponent class="ship__icon" aria-hidden="true" />} {teg}
         </li>
       );
     })
