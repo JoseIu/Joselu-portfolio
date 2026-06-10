@@ -2,14 +2,33 @@
 import { ClientRouter } from 'astro:transitions';
 
 import Header from '@components/header/Header.astro';
+// @ts-expect-error": side-effect font import without type declarations
 import 'cal-sans';
 import '../styles/reset.css';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const siteName = 'Joselu | Frontend Developer';
+const siteUrl = 'https://joselu-portfolio.vercel.app';
+const defaultDescription =
+  'Portfolio de Joselu, desarrollador frontend especializado en React, Next.js y Astro. Proyectos, experiencia y habilidades en desarrollo web moderno.';
+const metaDescription = description || defaultDescription;
+const pageTitle = title === 'Joselu' ? siteName : `${title} | Joselu`;
+
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Joselu',
+  url: siteUrl,
+  jobTitle: 'Frontend Developer',
+  description: metaDescription,
+  knowsAbout: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript'],
+  sameAs: ['https://github.com/joselu', 'https://linkedin.com/in/joselu']
+});
 ---
 
 <!doctype html>
@@ -17,27 +36,41 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={metaDescription} />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/svg+xml" href="/code.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href={siteUrl} />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="description" content="Joselu Frontend Developer - React - Next.js - Astro" />
-    <meta property="og:title" content="Joselu Frontend Developer" />
-    <meta property="og:description" content="Joselu Frontend Developer - React - Next.js - Astro" />
-    <meta property="og:url" content="https://joselu-portfolio.vercel.app" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://joselu-portfolio.vercel.app/me_avatar.webp" />
+    <meta property="og:image" content={`${siteUrl}/og-image.webp`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Joselu Frontend Developer - Avatar" />
     <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="Joselu Frontend Developer" />
+    <meta property="og:site_name" content={siteName} />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Joselu" />
     <meta name="twitter:creator" content="@Joselu" />
-    <meta name="twitter:title" content="Joselu Frontend Developer" />
-    <meta name="twitter:description" content="Joselu Frontend Developer - React - Next.js - Astro" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.webp`} />
 
-    <meta property="og:url" content="https://joselu-portfolio.vercel.app/" />
-    <link rel="canonical" href="https://joselu-portfolio.vercel.app" />
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={structuredData} />
 
     <ClientRouter />
   </head>

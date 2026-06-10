@@ -24,7 +24,7 @@ const { demoUrl, image, repoUrl, title, tags, summary } = proyect.data;
 const tegnologiesTags = tags as Technology[];
 ---
 
-<Layout title={id}>
+<Layout title={title} description={`Proyecto ${title} - ${summary}. Desarrollado por Joselu.`}>
   <main class="proyect-info wrapper">
     <div>
       <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">

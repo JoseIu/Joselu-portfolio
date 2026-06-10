@@ -6,7 +6,7 @@ import { getProjectsCollection } from 'src/utils/getProjectsCollection';
 const projects = await getProjectsCollection();
 ---
 
-<Layout title="Proyectos">
+<Layout title="Proyectos" description="Proyectos de desarrollo web realizados por Joselu, incluyendo aplicaciones con React, Next.js, Astro y otras tecnologías modernas.">
   <main class="wrapper">
     <div class="projects">
       <Proyects client:only="react" initialProyects={projects} />
